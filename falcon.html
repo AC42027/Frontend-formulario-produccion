@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Inspecciones Falcon X4 - Goodyear</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f9;
+            color: #111111;
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+        }
+
+        .app-container {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 10px;
+            background-color: #ffffff;
+            min-height: 100vh;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-left: 3px solid #FFD200;
+            border-right: 3px solid #FFD200;
+            box-sizing: border-box;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #003399;
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+        }
+
+        .logo {
+            max-width: 140px;
+            height: auto;
+            display: block;
+            margin: 0 auto 5px auto;
+        }
+
+        .app-title {
+            font-size: 15px;
+            color: #003399;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 5px 0 0 0;
+        }
+
+        .top-bar {
+            display: table;
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 6px;
+            margin-bottom: 10px;
+        }
+
+        .top-bar-cell {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .lbl-usuario {
+            font-weight: bold;
+            color: #003399;
+            font-size: 11px;
+            line-height: 1.2;
+        }
+
+        .btn-logout {
+            background-color: #dc2626;
+            color: white;
+            border: none;
+            padding: 5px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+            cursor: pointer;
+            float: right;
+        }
+
+        /* CARDS */
+        .card {
+            background: #ffffff;
+            border: 1px solid #dddddd;
+            border-radius: 6px;
+            padding: 12px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .card-title {
+            font-size: 13px;
+            color: #003399;
+            font-weight: bold;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 4px;
+        }
+
+        /* FORM ELEMENTS */
+        .form-group {
+            margin-bottom: 8px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            color: #003399;
+            font-size: 12px;
+            margin-bottom: 3px;
+        }
+
+        .touch-input,
+        select {
+            width: 100%;
+            height: 42px;
+            border: 2px solid #003399;
+            border-radius: 6px;
+            padding: 0 8px;
+            font-size: 14px;
+            background-color: #ffffff;
+            color: #111111;
+            box-sizing: border-box;
+        }
+
+        .touch-input:focus,
+        select:focus {
+            border-color: #FFD200;
+            background-color: #fffdec;
+            outline: none;
+        }
+
+        .touch-input:disabled,
+        select:disabled {
+            background-color: #e9ecef;
+            border-color: #cccccc;
+            color: #495057;
+            opacity: 1;
+        }
+
+        /* SCANNER SECTION */
+        .scanner-container {
+            background-color: #e8f0fe;
+            border: 2px dashed #003399;
+            border-radius: 6px;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        .scanner-container label {
+            color: #003399;
+            font-weight: bold;
+            font-size: 12px;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        /* BUTTONS */
+        .btn-primary {
+            width: 100%;
+            height: 46px;
+            background-color: #003399;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 14px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary:active {
+            background-color: #002266;
+        }
+
+        /* QUESTION CARD */
+        .question-card {
+            border: 1px solid #003399;
+            border-radius: 6px;
+            background-color: #fafafa;
+            padding: 10px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+
+        .question-desc {
+            font-weight: bold;
+            font-size: 13px;
+            color: #003399;
+            margin-bottom: 8px;
+            word-wrap: break-word;
+            word-break: break-all;
+            line-height: 1.3;
+        }
+
+        .question-row {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+            margin-bottom: 6px;
+        }
+
+        .option-group {
+            display: table-cell;
+            width: 70%;
+            vertical-align: middle;
+        }
+
+        .btn-opt {
+            width: 31%;
+            height: 38px;
+            font-size: 12px;
+            font-weight: bold;
+            border: 1px solid #cccccc;
+            background-color: #f1f3f6;
+            color: #333333;
+            cursor: pointer;
+            box-sizing: border-box;
+            margin-right: 1.5%;
+            padding: 0;
+            text-align: center;
+        }
+
+        .btn-opt:last-child {
+            margin-right: 0;
+        }
+
+        .btn-opt.selected {
+            background-color: #003399;
+            color: #ffffff;
+            border-color: #003399;
+        }
+
+        .btn-opt.selected-nok {
+            background-color: #dc2626;
+            color: #ffffff;
+            border-color: #dc2626;
+        }
+
+        .critico-container {
+            display: table-cell;
+            width: 30%;
+            text-align: right;
+            vertical-align: middle;
+        }
+
+        .critico-lbl {
+            font-size: 11px;
+            color: #dc2626;
+            font-weight: bold;
+            margin-right: 4px;
+            vertical-align: middle;
+        }
+
+        .touch-checkbox {
+            width: 30px;
+            height: 30px;
+            border: 2px solid #cccccc;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: middle;
+            cursor: pointer;
+            background-color: #ffffff;
+            text-align: center;
+            line-height: 26px;
+            font-weight: bold;
+            font-size: 16px;
+            color: transparent;
+            box-sizing: border-box;
+        }
+
+        .touch-checkbox.checked {
+            background-color: #dc2626;
+            border-color: #dc2626;
+            color: #ffffff;
+        }
+
+        .comment-container {
+            margin-top: 6px;
+        }
+
+        .txt-comment {
+            height: 36px !important;
+            font-size: 12px !important;
+            border: 1px solid #cccccc !important;
+        }
+
+        /* SUCCESS CARD */
+        .success-card {
+            text-align: center;
+            border: 2px solid #22c55e;
+            background-color: #f0fdf4;
+            padding: 20px;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .success-icon {
+            font-size: 40px;
+            color: #22c55e;
+            margin-bottom: 10px;
+        }
+
+        .success-card h2 {
+            color: #166534;
+            font-size: 18px;
+            margin-bottom: 8px;
+            margin-top: 0;
+        }
+
+        .success-card p {
+            color: #333333;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .success-btn-group {
+            margin-top: 15px;
+        }
+
+        .btn-success {
+            width: 100%;
+            height: 42px;
+            background-color: #22c55e;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-bottom: 8px;
+        }
+
+        .btn-success:active {
+            background-color: #15803d;
+        }
+
+        .btn-gray {
+            background-color: #64748b;
+        }
+
+        .btn-gray:active {
+            background-color: #475569;
+        }
+
+        /* SYSTEM UTILS */
+        .msg-box {
+            padding: 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 12px;
+            margin-bottom: 10px;
+            display: none;
+            box-sizing: border-box;
+            word-wrap: break-word;
+        }
+
+        .msg-box.success {
+            background-color: #d1e7dd;
+            color: #0f5132;
+            border: 1px solid #badbcc;
+        }
+
+        .msg-box.error {
+            background-color: #f8d7da;
+            color: #842029;
+            border: 1px solid #f5c2c7;
+        }
+
+        .msg-box.info {
+            background-color: #cff4fc;
+            color: #055160;
+            border: 1px solid #b6effb;
+        }
+
+        .loader-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+            display: none;
+        }
+
+        .loader-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+            border-left: 4px solid #003399;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .config-link {
+            display: block;
+            margin-top: 15px;
+            font-size: 11px;
+            color: #666;
+            text-decoration: underline;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .no-questions {
+            text-align: center;
+            color: #666;
+            padding: 20px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="app-container">
+        <!-- Header -->
+        <div class="header">
+            <img src="logo-goodyear.png" alt="Goodyear" class="logo">
+            <h1 class="app-title">Inspección Técnica</h1>
+        </div>
+
+        <!-- Alert Message Box -->
+        <div id="msg-box" class="msg-box"></div>
+
+        <!-- CARD 1: LOGIN -->
+        <div id="card-login" class="card">
+            <div class="card-title">Iniciar Sesión (LDAP)</div>
+            <form id="frmLogin" onsubmit="return handleLoginSubmit(event);">
+                <div class="form-group">
+                    <label for="txtUser">Usuario:</label>
+                    <input type="text" id="txtUser" class="touch-input" placeholder="Ingrese su usuario"
+                        autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label for="txtPass">Contraseña:</label>
+                    <input type="password" id="txtPass" class="touch-input" placeholder="Ingrese su contraseña"
+                        required>
+                </div>
+                <button type="submit" class="btn-primary" style="margin-top: 15px;">INGRESAR</button>
+                <span class="config-link" onclick="configureServerUrl();">Configurar Servidor</span>
+            </form>
+        </div>
+
+        <!-- CARD 2: INSPECTION FORM -->
+        <div id="card-inspection" class="card" style="display: none;">
+            <!-- User Top Bar Info -->
+            <div class="top-bar">
+                <div class="top-bar-cell">
+                    <span id="lblUsuario" class="lbl-usuario">Usuario: -</span>
+                </div>
+                <div class="top-bar-cell" style="text-align: right;">
+                    <button type="button" class="btn-logout" onclick="handleLogoutClick();">Salir</button>
+                </div>
+            </div>
+
+            <!-- Scanner / Quick Search -->
+            <div class="scanner-container">
+                <label for="txtScanEquipo">Escanear Barra de Equipo:</label>
+                <input type="text" id="txtScanEquipo" class="touch-input" placeholder="Acerque lector / Escriba ID..."
+                    inputmode="none" autocomplete="off">
+            </div>
+
+            <form id="frmInspection" onsubmit="return handleFormSubmit(event);">
+                <!-- Divisiones/Areas/Zonas/Equipos selects (Read-only representation) -->
+                <div class="form-group">
+                    <label for="selDivision">División:</label>
+                    <select id="selDivision" disabled>
+                        <option value="">Seleccione...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="selArea">Área:</label>
+                    <select id="selArea" disabled>
+                        <option value="">Seleccione...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="selZona">Zona:</label>
+                    <select id="selZona" disabled>
+                        <option value="">Seleccione...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="selEquipo">Equipo:</label>
+                    <select id="selEquipo" disabled>
+                        <option value="">Seleccione...</option>
+                    </select>
+                </div>
+
+                <!-- SAP Info Panel (dynamic display) -->
+                <div id="sap-info-panel" style="display: none; margin-top: 8px;">
+                    <div class="form-group">
+                        <label for="txtTPLNR">SAP Ubic. Técnica (TPLNR):</label>
+                        <input type="text" id="txtTPLNR" class="touch-input" disabled value="N/A">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtEQUNR">SAP Equipo (EQUNR):</label>
+                        <input type="text" id="txtEQUNR" class="touch-input" disabled value="N/A">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtGEWRK">SAP Puesto Trabajo (GEWRK):</label>
+                        <input type="text" id="txtGEWRK" class="touch-input" disabled value="N/A">
+                    </div>
+                </div>
+
+                <hr style="border: 0; border-top: 1px solid #ddd; margin: 15px 0;">
+
+                <!-- Checklist Container -->
+                <div class="card-title">Lista de Chequeo</div>
+                <div id="checklist-container">
+                    <div class="no-questions">Escanee o seleccione un equipo para comenzar.</div>
+                </div>
+
+                <!-- Observations Field -->
+                <div class="form-group" style="margin-top: 15px;">
+                    <label for="txtObservacionesGral">Observaciones Generales:</label>
+                    <input type="text" id="txtObservacionesGral" class="touch-input"
+                        placeholder="Comentarios generales..." onchange="formData.observaciones = this.value;">
+                </div>
+
+                <button type="submit" class="btn-primary" style="margin-top: 20px;">ENVIAR REGISTRO</button>
+            </form>
+        </div>
+
+        <!-- CARD 3: SUCCESS VIEW -->
+        <div id="card-success" class="card" style="display: none;">
+            <div class="success-card">
+                <div class="success-icon">✓</div>
+                <h2>¡Inspección Guardada!</h2>
+                <p>El registro del equipo ha sido enviado correctamente al Dashboard.</p>
+                <div class="success-btn-group">
+                    <button type="button" class="btn-success" onclick="resetInspectionForm();">Nueva Inspección</button>
+                    <button type="button" class="btn-success btn-gray" onclick="closeWindow();">Cerrar Ahora</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading overlay -->
+    <div id="loader" class="loader-overlay">
+        <div class="loader-content">Cargando datos...</div>
+    </div>
+
+    <script>
+        // Configuración global (ES3/ES5 compatible)
+        var API_URL = localStorage.getItem("api_url") || "http://10.107.194.110/insp";
+
+        // Mapeos y datos locales
+        var djangoToSapMap = null;
+        var userToPuestoMap = null;
+        var equipos = [];
+        var divisiones = [];
+        var areas = [];
+        var zonas = [];
+
+        // Información de sesión
+        var username = "";
+        var fullName = "";
+        var puestoTrabajoUsuario = "";
+        var puestoTrabajoDesc = "";
+
+        // Bucle polling del escáner
+        var searchInput = document.getElementById("txtScanEquipo");
+        var searchInterval = null;
+        var lastSearchValue = "";
+
+        // Formulario de envío
+        var now = new Date();
+        var formData = {
+            fecha: getLocalDateString(now),
+            horaInicio: getLocalTimeString(now),
+            horaFin: '',
+            division: '',
+            area: '',
+            zona: '',
+            equipo: '',
+            sap_tplnr: '',
+            sap_equnr: '',
+            sap_puesto_trabajo: '',
+            tipo_aviso: 'N2',
+            observaciones: '',
+            tecnicos: {},         // desc -> OK/NOK/NA
+            criticos: {},         // desc -> boolean
+            observacionesTecnicas: {} // desc -> string
+        };
+
+        // Helper: Formateadores de fecha y hora local (resilientes a ES3/ES5 y zonas horarias)
+        function getLocalDateString(d) {
+            var year = d.getFullYear();
+            var month = d.getMonth() + 1;
+            if (month < 10) month = "0" + month;
+            var day = d.getDate();
+            if (day < 10) day = "0" + day;
+            return year + "-" + month + "-" + day;
+        }
+
+        function getLocalTimeString(d) {
+            var hours = d.getHours();
+            if (hours < 10) hours = "0" + hours;
+            var minutes = d.getMinutes();
+            if (minutes < 10) minutes = "0" + minutes;
+            var seconds = d.getSeconds();
+            if (seconds < 10) seconds = "0" + seconds;
+            return hours + ":" + minutes + ":" + seconds;
+        }
+
+        // Helper: Remover acentos de forma segura sin String.normalize NFD
+        function removeAccents(str) {
+            if (!str) return "";
+            var accents = "áéíóúüñÁÉÍÓÚÜÑ";
+            var replacement = "aeiouunAEIOUUN";
+            var res = "";
+            for (var i = 0; i < str.length; i++) {
+                var c = str.charAt(i);
+                var idx = accents.indexOf(c);
+                if (idx !== -1) {
+                    res += replacement.charAt(idx);
+                } else {
+                    res += c;
+                }
+            }
+            return res;
+        }
+
+        // Helper: Escapes seguros de strings para inyecciones HTML y JS
+        function escapeJS(str) {
+            if (!str) return "";
+            return str.replace(/'/g, "\\'").replace(/"/g, '\\"');
+        }
+
+        function escapeHTML(str) {
+            if (!str) return "";
+            return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+        }
+
+        // Helper: JSON parser resiliente (ES3/ES5 fallback)
+        function safeParseJSON(text) {
+            try {
+                if (typeof JSON !== "undefined" && typeof JSON.parse === "function") {
+                    return JSON.parse(text);
+                }
+                return eval("(" + text + ")");
+            } catch (e) {
+                return null;
+            }
+        }
+
+        // Helper: JSON Stringifier resiliente para el envío de payloads POST
+        function safeStringify(obj) {
+            if (typeof JSON !== "undefined" && typeof JSON.stringify === "function") {
+                return JSON.stringify(obj);
+            }
+            if (obj === null) return "null";
+            var type = typeof obj;
+            if (type === "number") return String(obj);
+            if (type === "boolean") return obj ? "true" : "false";
+            if (type === "string") return '"' + obj.replace(/"/g, '\\"') + '"';
+            if (type === "object") {
+                if (obj instanceof Array) {
+                    var arrParts = [];
+                    for (var i = 0; i < obj.length; i++) {
+                        arrParts.push(safeStringify(obj[i]));
+                    }
+                    return "[" + arrParts.join(",") + "]";
+                }
+                var objParts = [];
+                for (var key in obj) {
+                    if (obj.hasOwnProperty(key)) {
+                        objParts.push('"' + key + '":' + safeStringify(obj[key]));
+                    }
+                }
+                return "{" + objParts.join(",") + "}";
+            }
+            return '""';
+        }
+
+        // Helper: Manejadores de AJAX XMLHttpRequest
+        function ajaxGet(url, successCallback, errorCallback) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", url, true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    var isLocal = window.location.protocol === "file:";
+                    var isSuccess = (xhr.status >= 200 && xhr.status < 300) ||
+                        xhr.status === 304 ||
+                        (isLocal && xhr.status === 0);
+                    if (isSuccess) {
+                        var data = safeParseJSON(xhr.responseText);
+                        if (data !== null) {
+                            successCallback(data);
+                        } else {
+                            if (errorCallback) errorCallback("Error parseando respuesta JSON");
+                        }
+                    } else {
+                        if (errorCallback) errorCallback("HTTP " + xhr.status);
+                    }
+                }
+            };
+            xhr.send();
+        }
+
+        function ajaxPost(url, dataObj, successCallback, errorCallback) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", url, true);
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        var data = safeParseJSON(xhr.responseText);
+                        successCallback(data);
+                    } else {
+                        if (errorCallback) errorCallback("HTTP " + xhr.status + ": " + xhr.responseText);
+                    }
+                }
+            };
+            xhr.send(safeStringify(dataObj));
+        }
+
+        // Cambiar de pantalla / SPA Navigation
+        function showCard(cardId) {
+            document.getElementById("card-login").style.display = "none";
+            document.getElementById("card-inspection").style.display = "none";
+            document.getElementById("card-success").style.display = "none";
+            document.getElementById(cardId).style.display = "block";
+        }
+
+        function showLoader(show) {
+            document.getElementById("loader").style.display = show ? "block" : "none";
+        }
+
+        function showMsg(text, type) {
+            var msgDiv = document.getElementById("msg-box");
+            if (!msgDiv) return;
+            msgDiv.innerHTML = text;
+            msgDiv.className = "msg-box " + type;
+            msgDiv.style.display = "block";
+            window.scrollTo(0, 0);
+            if (type === "success") {
+                setTimeout(function () {
+                    msgDiv.style.display = "none";
+                }, 5000);
+            }
+        }
+
+        // Configuración interactiva del servidor URL
+        function configureServerUrl() {
+            var newUrl = prompt("Ingrese la URL del API (ej: http://10.107.194.110/insp):", API_URL);
+            if (newUrl !== null) {
+                newUrl = newUrl.replace(/\/+$/, ""); // Remove trailing slash
+                localStorage.setItem("api_url", newUrl);
+                API_URL = newUrl;
+                showMsg("Dirección de servidor actualizada a: " + API_URL, "info");
+            }
+        }
+
+        // Enviar formulario Login (LDAP)
+        function handleLoginSubmit(e) {
+            var ev = e || window.event;
+            if (ev.preventDefault) ev.preventDefault();
+            else ev.returnValue = false;
+
+            var user = document.getElementById("txtUser").value;
+            var pass = document.getElementById("txtPass").value;
+
+            showLoader(true);
+            ajaxPost(API_URL + "/api/login-ldap/", { username: user, password: pass }, function (res) {
+                showLoader(false);
+                if (res && res.status === 'ok') {
+                    localStorage.setItem('usuario_inspeccion', user);
+                    var full = (res.first_name || "") + " " + (res.last_name || "");
+                    if (full.replace(/^\s+|\s+$/g, "") === "") full = user;
+                    localStorage.setItem('usuario_nombre', full);
+
+                    initSession(user, full);
+                } else {
+                    showMsg(res.message || "Credenciales inválidas", "error");
+                }
+            }, function (err) {
+                showLoader(false);
+                showMsg("Error al iniciar sesión: " + err, "error");
+            });
+
+            return false;
+        }
+
+        // Inicializar sesión de usuario
+        function initSession(user, full) {
+            username = user;
+            fullName = full;
+            document.getElementById("lblUsuario").innerHTML = "Usuario: " + fullName + " (" + username + ")";
+
+            showCard("card-inspection");
+            showLoader(true);
+
+            // Resolve puesto del usuario
+            resolveUserPuesto();
+
+            // Cargar catálogos principales de la API y mapeos
+            loadAppData();
+        }
+
+        // Cerrar sesión
+        function handleLogoutClick() {
+            localStorage.removeItem('usuario_inspeccion');
+            localStorage.removeItem('usuario_nombre');
+            username = "";
+            fullName = "";
+            puestoTrabajoUsuario = "";
+            puestoTrabajoDesc = "";
+            showCard("card-login");
+            showMsg("Sesión cerrada correctamente", "info");
+        }
+
+        // Resolver el Puesto de Trabajo basado en el mapeo local
+        function resolveUserPuesto() {
+            if (!fullName || !userToPuestoMap) return;
+
+            var normalized = removeAccents(fullName)
+                .toLowerCase()
+                .replace(/[^a-z0-9 ]/g, "")
+                .replace(/\s+/g, ' ')
+                .replace(/^\s+|\s+$/g, '');
+
+            var matched = userToPuestoMap[normalized];
+            if (matched) {
+                puestoTrabajoUsuario = matched.puesto_codigo || "";
+                puestoTrabajoDesc = matched.puesto_desc || "";
+            } else {
+                puestoTrabajoUsuario = "";
+                puestoTrabajoDesc = "";
+            }
+
+            // Actualizar caja SAP si ya está renderizada
+            document.getElementById("txtGEWRK").value = puestoTrabajoUsuario || "N/A";
+        }
+
+        // Cargar catálogos y JSON locales
+        function loadAppData() {
+            var loadedCount = 0;
+            var totalLoads = 6;
+            var errorOccurred = false;
+
+            function checkCompletion() {
+                loadedCount++;
+                if (loadedCount === totalLoads) {
+                    showLoader(false);
+                    if (!errorOccurred) {
+                        decorateEquipos();
+                        resolveUserPuesto();
+                        populateFormDropdowns();
+                        checkUrlParameters();
+                    }
+                }
+            }
+
+            function handleError(msg) {
+                errorOccurred = true;
+                showLoader(false);
+                showMsg(msg, "error");
+            }
+
+            // 1. Divisiones
+            ajaxGet(API_URL + "/api/divisiones/", function (data) {
+                divisiones = data;
+                checkCompletion();
+            }, function (err) { handleError("Error al cargar divisiones: " + err); });
+
+            // 2. Áreas
+            ajaxGet(API_URL + "/api/areas/", function (data) {
+                areas = data;
+                checkCompletion();
+            }, function (err) { handleError("Error al cargar áreas: " + err); });
+
+            // 3. Zonas
+            ajaxGet(API_URL + "/api/zonas/", function (data) {
+                zonas = data;
+                checkCompletion();
+            }, function (err) { handleError("Error al cargar zonas: " + err); });
+
+            // 4. Equipos
+            ajaxGet(API_URL + "/api/equipos/", function (data) {
+                equipos = data;
+                checkCompletion();
+            }, function (err) { handleError("Error al cargar equipos: " + err); });
+
+            // 5. Mapeo Django -> SAP (local public) - Opcional
+            ajaxGet("./django_to_sap_map.json", function (data) {
+                djangoToSapMap = data;
+                checkCompletion();
+            }, function (err) {
+                ajaxGet("django_to_sap_map.json", function (data) {
+                    djangoToSapMap = data;
+                    checkCompletion();
+                }, function (err2) {
+                    // Degradación graciosa: continuar sin error
+                    console.log("No se pudo cargar django_to_sap_map.json: " + err2);
+                    djangoToSapMap = {};
+                    checkCompletion();
+                });
+            });
+
+            // 6. Mapeo Usuario -> Puesto (local public) - Opcional
+            ajaxGet("./user_to_puesto_map.json", function (data) {
+                userToPuestoMap = data;
+                checkCompletion();
+            }, function (err) {
+                ajaxGet("user_to_puesto_map.json", function (data) {
+                    userToPuestoMap = data;
+                    checkCompletion();
+                }, function (err2) {
+                    // Degradación graciosa: continuar sin error
+                    console.log("No se pudo cargar user_to_puesto_map.json: " + err2);
+                    userToPuestoMap = {};
+                    checkCompletion();
+                });
+            });
+        }
+
+        // Decorar objetos del listado de equipos con campos de SAP
+        function decorateEquipos() {
+            if (!equipos || !djangoToSapMap) return;
+            for (var i = 0; i < equipos.length; i++) {
+                var eq = equipos[i];
+                var mapping = djangoToSapMap[String(eq.id)];
+                if (mapping) {
+                    eq.sap_tplnr = mapping.sap_tplnr || "";
+                    eq.sap_equnr = mapping.sap_equnr || "";
+                    eq.sap_puesto_trabajo = mapping.sap_puesto_trabajo || "";
+                } else {
+                    eq.sap_tplnr = "";
+                    eq.sap_equnr = "";
+                    eq.sap_puesto_trabajo = "";
+                }
+            }
+        }
+
+        // Llenar dropdowns (División, Área, Zona, Equipo)
+        function populateFormDropdowns() {
+            populateSelect("selDivision", divisiones, "id", "nombre");
+            populateSelect("selArea", areas, "id", "nombre");
+            populateSelect("selZona", zonas, "id", "nombre");
+            populateSelect("selEquipo", equipos, "id", "nombre");
+        }
+
+        function populateSelect(selectId, list, valField, textField) {
+            var sel = document.getElementById(selectId);
+            if (!sel) return;
+            var firstOpt = sel.options[0];
+            sel.options.length = 0;
+            sel.appendChild(firstOpt);
+
+            for (var i = 0; i < list.length; i++) {
+                var opt = document.createElement("option");
+                opt.value = list[i][valField];
+                opt.text = list[i][textField];
+                sel.appendChild(opt);
+            }
+        }
+
+        // Chequear query parameter `?equipo=X`
+        function checkUrlParameters() {
+            var eqParam = getQueryParam("equipo");
+            if (eqParam && equipos && equipos.length > 0) {
+                for (var i = 0; i < equipos.length; i++) {
+                    if (String(equipos[i].id) === String(eqParam)) {
+                        selectEquipment(equipos[i]);
+                        break;
+                    }
+                }
+            }
+        }
+
+        function getQueryParam(name) {
+            var search = window.location.search.substring(1);
+            if (!search) return null;
+            var params = search.split('&');
+            for (var i = 0; i < params.length; i++) {
+                var pair = params[i].split('=');
+                if (decodeURIComponent(pair[0]) === name) {
+                    return decodeURIComponent(pair[1]);
+                }
+            }
+            return null;
+        }
+
+        // Acción al buscar/escanear equipo
+        function lookupEquipment(val) {
+            if (!equipos || equipos.length === 0) return;
+            var searchVal = val.toLowerCase().replace(/^\s+|\s+$/g, "");
+            if (searchVal === "") return;
+
+            var found = null;
+
+            // Búsqueda 1: Coincidencia exacta de ID, Nombre o campos SAP
+            for (var i = 0; i < equipos.length; i++) {
+                var eq = equipos[i];
+                if (String(eq.id) === searchVal ||
+                    (eq.nombre && eq.nombre.toLowerCase() === searchVal) ||
+                    (eq.sap_equnr && eq.sap_equnr.toLowerCase() === searchVal) ||
+                    (eq.sap_tplnr && eq.sap_tplnr.toLowerCase() === searchVal)) {
+                    found = eq;
+                    break;
+                }
+            }
+
+            // Búsqueda 2: Coincidencia parcial (contains)
+            if (!found) {
+                for (var i = 0; i < equipos.length; i++) {
+                    var eq = equipos[i];
+                    if ((eq.nombre && eq.nombre.toLowerCase().indexOf(searchVal) !== -1) ||
+                        (eq.sap_equnr && eq.sap_equnr.toLowerCase().indexOf(searchVal) !== -1) ||
+                        (eq.sap_tplnr && eq.sap_tplnr.toLowerCase().indexOf(searchVal) !== -1)) {
+                        found = eq;
+                        break;
+                    }
+                }
+            }
+
+            if (found) {
+                selectEquipment(found);
+                showMsg("Equipo encontrado: " + found.nombre, "success");
+            } else {
+                showMsg("No se encontró ningún equipo con: '" + val + "'", "error");
+            }
+        }
+
+        // Seleccionar y cargar equipo en el formulario
+        function selectEquipment(eq) {
+            formData.equipo = String(eq.id);
+            formData.division = String(eq.division_id || eq.division || '');
+            formData.area = String(eq.area_id || eq.area || '');
+            formData.zona = String(eq.zona_id || eq.zona || '');
+            formData.sap_tplnr = eq.sap_tplnr || '';
+            formData.sap_equnr = eq.sap_equnr || '';
+
+            // Actualizar selectores visuales
+            document.getElementById("selDivision").value = formData.division;
+            document.getElementById("selArea").value = formData.area;
+            document.getElementById("selZona").value = formData.zona;
+            document.getElementById("selEquipo").value = formData.equipo;
+
+            // Actualizar SAP panel
+            document.getElementById("txtTPLNR").value = formData.sap_tplnr || "N/A";
+            document.getElementById("txtEQUNR").value = formData.sap_equnr || "N/A";
+            document.getElementById("txtGEWRK").value = puestoTrabajoUsuario || "N/A";
+
+            if (formData.sap_tplnr) {
+                document.getElementById("sap-info-panel").style.display = "block";
+            } else {
+                document.getElementById("sap-info-panel").style.display = "none";
+            }
+
+            // Cargar preguntas técnicas según la categoría del equipo
+            if (eq.categoria) {
+                fetchChecklistQuestions(eq.categoria);
+            } else {
+                preguntasTecnicas = [];
+                renderChecklist();
+            }
+        }
+
+        // Cargar preguntas técnicas de la categoría
+        function fetchChecklistQuestions(categoria) {
+            showLoader(true);
+            ajaxGet(API_URL + "/api/preguntas/" + encodeURIComponent(categoria) + "/", function (data) {
+                showLoader(false);
+                preguntasTecnicas = data;
+
+                // Reiniciar respuestas anteriores de checklist
+                formData.tecnicos = {};
+                formData.criticos = {};
+                formData.observacionesTecnicas = {};
+
+                renderChecklist();
+            }, function (err) {
+                showLoader(false);
+                showMsg("Error al obtener preguntas del equipo: " + err, "error");
+                preguntasTecnicas = [];
+                renderChecklist();
+            });
+        }
+
+        // Renderizar listado de preguntas como tarjetas táctiles
+        function renderChecklist() {
+            var container = document.getElementById("checklist-container");
+            if (!container) return;
+
+            if (!preguntasTecnicas || preguntasTecnicas.length === 0) {
+                container.innerHTML = '<div class="no-questions">No hay preguntas técnicas cargadas para este equipo.</div>';
+                return;
+            }
+
+            var html = "";
+            for (var i = 0; i < preguntasTecnicas.length; i++) {
+                var p = preguntasTecnicas[i];
+                var desc = p.descripcion;
+                var pId = p.id;
+
+                // Inicializar estados
+                formData.tecnicos[desc] = "";
+                formData.criticos[desc] = false;
+                formData.observacionesTecnicas[desc] = "";
+
+                html += '<div class="question-card" id="q-card-' + pId + '">';
+                html += '  <div class="question-desc">' + (i + 1) + '. ' + escapeHTML(desc) + '</div>';
+                html += '  <div class="question-row">';
+
+                // Botones OK / NOK / NA
+                html += '    <div class="option-group">';
+                html += '      <button type="button" class="btn-opt" onclick="setQuestionOption(\'' + escapeJS(desc) + '\', \'OK\', ' + pId + ')">OK</button>';
+                html += '      <button type="button" class="btn-opt" onclick="setQuestionOption(\'' + escapeJS(desc) + '\', \'NOK\', ' + pId + ')">NOK</button>';
+                html += '      <button type="button" class="btn-opt" onclick="setQuestionOption(\'' + escapeJS(desc) + '\', \'NA\', ' + pId + ')">N/A</button>';
+                html += '    </div>';
+
+                // Checkbox Crítico
+                html += '    <div class="critico-container">';
+                html += '      <span class="critico-lbl">¿Crítico?</span>';
+                html += '      <div class="touch-checkbox" onclick="toggleQuestionCritico(\'' + escapeJS(desc) + '\', ' + pId + ')">✓</div>';
+                html += '    </div>';
+
+                html += '  </div>';
+
+                // Comentario individual
+                html += '  <div class="comment-container">';
+                html += '    <input type="text" class="touch-input txt-comment" placeholder="Detalle de hallazgo..." onchange="setQuestionComment(\'' + escapeJS(desc) + '\', this.value)">';
+                html += '  </div>';
+                html += '</div>';
+            }
+
+            container.innerHTML = html;
+        }
+
+        // Eventos interactivos en la tarjeta de preguntas
+        function setQuestionOption(desc, val, pId) {
+            formData.tecnicos[desc] = val;
+
+            var qCard = document.getElementById("q-card-" + pId);
+            if (qCard) {
+                var buttons = qCard.getElementsByTagName("button");
+                for (var i = 0; i < buttons.length; i++) {
+                    buttons[i].className = "btn-opt";
+                }
+
+                var targetBtn = null;
+                if (val === "OK") targetBtn = buttons[0];
+                else if (val === "NOK") targetBtn = buttons[1];
+                else if (val === "NA") targetBtn = buttons[2];
+
+                if (targetBtn) {
+                    targetBtn.className = "btn-opt " + (val === "NOK" ? "selected-nok" : "selected");
+                }
+            }
+        }
+
+        function toggleQuestionCritico(desc, pId) {
+            var current = !!formData.criticos[desc];
+            var newVal = !current;
+            formData.criticos[desc] = newVal;
+
+            var qCard = document.getElementById("q-card-" + pId);
+            if (qCard) {
+                var checks = qCard.getElementsByClassName("touch-checkbox");
+                if (checks.length > 0) {
+                    var cb = checks[0];
+                    if (newVal) {
+                        cb.className = "touch-checkbox checked";
+                    } else {
+                        cb.className = "touch-checkbox";
+                    }
+                }
+            }
+        }
+
+        function setQuestionComment(desc, val) {
+            formData.observacionesTecnicas[desc] = val;
+        }
+
+        // Enviar Inspección Técnica al backend Django
+        function handleFormSubmit(e) {
+            var ev = e || window.event;
+            if (ev.preventDefault) ev.preventDefault();
+            else ev.returnValue = false;
+
+            if (!formData.equipo) {
+                showMsg("Debe escanear o seleccionar un equipo antes de guardar.", "error");
+                return false;
+            }
+
+            // Formatear y agrupar fallas NOK con sus comentarios individuales
+            var nokItems = [];
+            for (var desc in formData.tecnicos) {
+                if (formData.tecnicos.hasOwnProperty(desc)) {
+                    if (formData.tecnicos[desc] === "NOK") {
+                        var obs = formData.observacionesTecnicas[desc] || "";
+                        var item = desc + (obs ? ": " + obs : "");
+                        nokItems.push(item);
+                    }
+                }
+            }
+            var nokDetailsText = nokItems.join(". ");
+
+            // Hora fin
+            var nowTime = new Date();
+            formData.horaFin = getLocalTimeString(nowTime);
+
+            // Armar objeto a enviar idéntico al de page.tsx
+            var payload = {
+                fecha: formData.fecha,
+                horaInicio: formData.horaInicio,
+                horaFin: formData.horaFin,
+                division: formData.division,
+                area: formData.area,
+                zona: formData.zona,
+                equipo: formData.equipo,
+                sap_tplnr: formData.sap_tplnr,
+                sap_equnr: formData.sap_equnr,
+                sap_puesto_trabajo: puestoTrabajoUsuario,
+                tipo_aviso: formData.tipo_aviso,
+                observaciones: formData.observaciones,
+                tecnicos: formData.tecnicos,
+                criticos: formData.criticos,
+                observacionesTecnicas: formData.observacionesTecnicas,
+                usuario: fullName,
+                owner: username,
+                user: username,
+                comentario_hallazgo: nokDetailsText,
+                comentarios_nok: nokDetailsText
+            };
+
+            showLoader(true);
+            ajaxPost(API_URL + "/api/guardar/", payload, function (res) {
+                showLoader(false);
+                showCard("card-success");
+            }, function (err) {
+                showLoader(false);
+                showMsg("Error al enviar registro: " + err, "error");
+            });
+
+            return false;
+        }
+
+        // Reiniciar formulario para una nueva inspección
+        function resetInspectionForm() {
+            var resetDate = new Date();
+            formData = {
+                fecha: getLocalDateString(resetDate),
+                horaInicio: getLocalTimeString(resetDate),
+                horaFin: '',
+                division: '',
+                area: '',
+                zona: '',
+                equipo: '',
+                sap_tplnr: '',
+                sap_equnr: '',
+                sap_puesto_trabajo: '',
+                tipo_aviso: 'N2',
+                observaciones: '',
+                tecnicos: {},
+                criticos: {},
+                observacionesTecnicas: {}
+            };
+
+            // Reset selects
+            document.getElementById("selDivision").value = "";
+            document.getElementById("selArea").value = "";
+            document.getElementById("selZona").value = "";
+            document.getElementById("selEquipo").value = "";
+
+            // Reset SAP
+            document.getElementById("txtTPLNR").value = "N/A";
+            document.getElementById("txtEQUNR").value = "N/A";
+            document.getElementById("txtGEWRK").value = puestoTrabajoUsuario || "N/A";
+            document.getElementById("sap-info-panel").style.display = "none";
+
+            // Reset inputs
+            searchInput.value = "";
+            lastSearchValue = "";
+            document.getElementById("txtObservacionesGral").value = "";
+
+            // Reset questions
+            preguntasTecnicas = [];
+            renderChecklist();
+
+            showCard("card-inspection");
+        }
+
+        // Intentar cerrar la pestaña del navegador
+        function closeWindow() {
+            window.close();
+            setTimeout(function () {
+                if (!window.closed) {
+                    try {
+                        window.opener = null;
+                        window.open('', '_self');
+                        window.close();
+                    } catch (e) {
+                        showMsg("No se puede cerrar la ventana directamente en este navegador.", "info");
+                    }
+                }
+            }, 200);
+        }
+
+        // ----------------------------------------------------
+        // INICIALIZACIÓN Y BUCLE POLLING TECLADO FÍSICO
+        // ----------------------------------------------------
+
+        // Polling del Scanner
+        function checkSearchSuggestions() {
+            var val = searchInput.value;
+            if (val !== lastSearchValue) {
+                lastSearchValue = val;
+                if (val.replace(/^\s+|\s+$/g, "") !== "") {
+                    lookupEquipment(val);
+                }
+            }
+        }
+
+        searchInput.onfocus = function () {
+            if (searchInterval) clearInterval(searchInterval);
+            searchInterval = setInterval(checkSearchSuggestions, 250);
+        };
+
+        searchInput.onblur = function () {
+            setTimeout(function () {
+                if (searchInterval) {
+                    clearInterval(searchInterval);
+                    searchInterval = null;
+                }
+            }, 300);
+        };
+
+        // Prevenir submit de Enter en el input de scanner
+        searchInput.onkeydown = function (e) {
+            var ev = e || window.event;
+            var code = ev.keyCode || ev.which;
+            if (code === 13) {
+                if (ev.preventDefault) ev.preventDefault();
+                else ev.returnValue = false;
+
+                var val = searchInput.value;
+                lookupEquipment(val);
+                return false;
+            }
+        };
+
+        // Al cargar la página, validar sesión existente
+        window.onload = function () {
+            var savedUser = localStorage.getItem('usuario_inspeccion');
+            var savedName = localStorage.getItem('usuario_nombre');
+
+            if (savedUser && savedName) {
+                initSession(savedUser, savedName);
+            } else {
+                showCard("card-login");
+            }
+        };
+    </script>
+
+</body>
+
+</html>

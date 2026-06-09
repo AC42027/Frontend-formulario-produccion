@@ -1,0 +1,3098 @@
+{
+    "alineacion extrusion": {
+        "puesto_codigo": "ALIN_02",
+        "puesto_desc": "ALINEACION EXTRUSION"
+    },
+    "alineacion steelastic": {
+        "puesto_codigo": "ALIN_03",
+        "puesto_desc": "ALINEACION STEELASTIC"
+    },
+    "alineacion calandras": {
+        "puesto_codigo": "ALIN_04",
+        "puesto_desc": "ALINEACION CALANDRAS"
+    },
+    "alineacion apexer": {
+        "puesto_codigo": "ALIN_05",
+        "puesto_desc": "ALINEACION APEXER"
+    },
+    "alineacion pestanas": {
+        "puesto_codigo": "ALIN_06",
+        "puesto_desc": "ALINEACION PESTAÑAS"
+    },
+    "alineacion cortadoras": {
+        "puesto_codigo": "ALIN_07",
+        "puesto_desc": "ALINEACION CORTADORAS"
+    },
+    "alineacion construccion": {
+        "puesto_codigo": "ALIN_08",
+        "puesto_desc": "ALINEACION CONSTRUCCION"
+    },
+    "alineacion vulcanizacion": {
+        "puesto_codigo": "ALIN_09",
+        "puesto_desc": "ALINEACION VULCANIZACION"
+    },
+    "alineacion asrs y plummer": {
+        "puesto_codigo": "ALIN_10",
+        "puesto_desc": "ALINEACION ASRS Y PLUMMER"
+    },
+    "alineacion balanceadoras": {
+        "puesto_codigo": "ALIN_11",
+        "puesto_desc": "ALINEACION BALANCEADORAS"
+    },
+    "alineacion forzadoras": {
+        "puesto_codigo": "ALIN_12",
+        "puesto_desc": "ALINEACION FORZADORAS"
+    },
+    "alineacion pulidoras": {
+        "puesto_codigo": "ALIN_13",
+        "puesto_desc": "ALINEACION PULIDORAS"
+    },
+    "alineacion facilities": {
+        "puesto_codigo": "ALIN_14",
+        "puesto_desc": "ALINEACION FACILITIES"
+    },
+    "alineacion casa de maquinas": {
+        "puesto_codigo": "ALIN_15",
+        "puesto_desc": "ALINEACION CASA DE MAQUINAS"
+    },
+    "alineacion compresores": {
+        "puesto_codigo": "ALIN_16",
+        "puesto_desc": "ALINEACION COMPRESORES"
+    },
+    "alineacion subestaciones": {
+        "puesto_codigo": "ALIN_17",
+        "puesto_desc": "ALINEACION SUBESTACIONES"
+    },
+    "alineacion conveyors final": {
+        "puesto_codigo": "ALIN_18",
+        "puesto_desc": "ALINEACION CONVEYORS FINAL"
+    },
+    "apex applier": {
+        "puesto_codigo": "BEADWRAP",
+        "puesto_desc": "APEX APPLIER"
+    },
+    "maquina balanceo estaticodinamico": {
+        "puesto_codigo": "BALANCE",
+        "puesto_desc": "Maquina Balanceo Estatico&dinamico"
+    },
+    "tipo 11d 112w3040rpm17878650 hp": {
+        "puesto_codigo": "BBY1",
+        "puesto_desc": "TIPO 11D, 11/2W/30-40RPM,178,78,650 HP"
+    },
+    "tipo 270 6w2070rpm3000hptrsd": {
+        "puesto_codigo": "BBY5",
+        "puesto_desc": "TIPO 270, 6W/20-70RPM,3000HP,TRSD"
+    },
+    "tipo 270 4w 1500hp": {
+        "puesto_codigo": "BBY4",
+        "puesto_desc": "TIPO 270, 4W ,1500HP,"
+    },
+    "qtech area construccion": {
+        "puesto_codigo": "BUILDING",
+        "puesto_desc": "QTECH area construccion"
+    },
+    "calibracion banbury": {
+        "puesto_codigo": "CAL_01",
+        "puesto_desc": "CALIBRACION BANBURY"
+    },
+    "calibracion extrusion": {
+        "puesto_codigo": "CAL_02",
+        "puesto_desc": "CALIBRACION EXTRUSION"
+    },
+    "calibracion steelastic": {
+        "puesto_codigo": "CAL_03",
+        "puesto_desc": "CALIBRACION STEELASTIC"
+    },
+    "calibracion calandras": {
+        "puesto_codigo": "CAL_04",
+        "puesto_desc": "CALIBRACION CALANDRAS"
+    },
+    "calibracion apexer": {
+        "puesto_codigo": "CAL_05",
+        "puesto_desc": "CALIBRACION APEXER"
+    },
+    "calibracion pestanas": {
+        "puesto_codigo": "CAL_06",
+        "puesto_desc": "CALIBRACION PESTAÑAS"
+    },
+    "calibracion cortadoras": {
+        "puesto_codigo": "CAL_07",
+        "puesto_desc": "CALIBRACION CORTADORAS"
+    },
+    "calibracion construccion": {
+        "puesto_codigo": "CAL_08",
+        "puesto_desc": "CALIBRACION CONSTRUCCION"
+    },
+    "calibracion vulcanizacion": {
+        "puesto_codigo": "CAL_09",
+        "puesto_desc": "CALIBRACION VULCANIZACION"
+    },
+    "calibracion asrs y plummer": {
+        "puesto_codigo": "CAL_10",
+        "puesto_desc": "CALIBRACION ASRS Y PLUMMER"
+    },
+    "calibracion balanceadoras": {
+        "puesto_codigo": "CAL_11",
+        "puesto_desc": "CALIBRACION BALANCEADORAS"
+    },
+    "calibracion forzadoras": {
+        "puesto_codigo": "CAL_12",
+        "puesto_desc": "CALIBRACION FORZADORAS"
+    },
+    "calibracion pulidoras": {
+        "puesto_codigo": "CAL_13",
+        "puesto_desc": "CALIBRACION PULIDORAS"
+    },
+    "calibracion facilities": {
+        "puesto_codigo": "CAL_14",
+        "puesto_desc": "CALIBRACION FACILITIES"
+    },
+    "calibracion casa de maquinas": {
+        "puesto_codigo": "CAL_15",
+        "puesto_desc": "CALIBRACION CASA DE MAQUINAS"
+    },
+    "calibracion compresores": {
+        "puesto_codigo": "CAL_16",
+        "puesto_desc": "CALIBRACION COMPRESORES"
+    },
+    "calibracion subestaciones": {
+        "puesto_codigo": "CAL_17",
+        "puesto_desc": "CALIBRACION SUBESTACIONES"
+    },
+    "calibracion conveyors final": {
+        "puesto_codigo": "CAL_18",
+        "puesto_desc": "CALIBRACION CONVEYORS FINAL"
+    },
+    "laminated gum roll": {
+        "puesto_codigo": "CAMERON",
+        "puesto_desc": "LAMINATED GUM ROLL"
+    },
+    "automatizacion div c 001": {
+        "puesto_codigo": "CATN_001",
+        "puesto_desc": "AUTOMATIZACION (DIV C) 001"
+    },
+    "coordinador facilities 001": {
+        "puesto_codigo": "CCOF_001",
+        "puesto_desc": "COORDINADOR (FACILITIES) 001"
+    },
+    "coordinador facilities 002": {
+        "puesto_codigo": "CCOF_002",
+        "puesto_desc": "COORDINADOR (FACILITIES) 002"
+    },
+    "cambio tambores div b 001": {
+        "puesto_codigo": "CCTB_001",
+        "puesto_desc": "CAMBIO TAMBORES (DIV B) 001"
+    },
+    "dibujante tecnico": {
+        "puesto_codigo": "CDIB_001",
+        "puesto_desc": "Dibujante técnico - Gonzalo Cordero"
+    },
+    "electrico div a 001": {
+        "puesto_codigo": "CELE_001",
+        "puesto_desc": "ELECTRICO (DIV A) 001"
+    },
+    "electrico div a 002 jfredes": {
+        "puesto_codigo": "CELE_002",
+        "puesto_desc": "ELECTRICO (DIV A) 002 J.FREDES"
+    },
+    "electrico div a 003 jmunoz": {
+        "puesto_codigo": "CELE_003",
+        "puesto_desc": "ELECTRICO (DIV A) 003 J.MUÑOZ"
+    },
+    "electrico div a 004": {
+        "puesto_codigo": "CELE_004",
+        "puesto_desc": "ELECTRICO (DIV A) 004"
+    },
+    "electrico div a 005": {
+        "puesto_codigo": "CELE_005",
+        "puesto_desc": "ELECTRICO (DIV A) 005"
+    },
+    "electrico div b 006": {
+        "puesto_codigo": "CELE_006",
+        "puesto_desc": "ELECTRICO (DIV B) 006"
+    },
+    "electrico div b 007": {
+        "puesto_codigo": "CELE_007",
+        "puesto_desc": "ELECTRICO (DIV B) 007"
+    },
+    "electrico div b 008": {
+        "puesto_codigo": "CELE_008",
+        "puesto_desc": "ELECTRICO (DIV B) 008"
+    },
+    "electrico div b 009": {
+        "puesto_codigo": "CELE_009",
+        "puesto_desc": "ELECTRICO (DIV B) 009"
+    },
+    "electrico div b 010": {
+        "puesto_codigo": "CELE_010",
+        "puesto_desc": "ELECTRICO (DIV B) 010"
+    },
+    "electrico div b 011": {
+        "puesto_codigo": "CELE_011",
+        "puesto_desc": "ELECTRICO (DIV B) 011"
+    },
+    "electrico div c 012": {
+        "puesto_codigo": "CELE_012",
+        "puesto_desc": "ELECTRICO (DIV C) 012"
+    },
+    "electrico div c 013": {
+        "puesto_codigo": "CELE_013",
+        "puesto_desc": "ELECTRICO (DIV C) 013"
+    },
+    "electrico div c 014": {
+        "puesto_codigo": "CELE_014",
+        "puesto_desc": "ELECTRICO (DIV C) 014"
+    },
+    "electrico div c 015": {
+        "puesto_codigo": "CELE_015",
+        "puesto_desc": "ELECTRICO (DIV C) 015"
+    },
+    "electrico div c 016": {
+        "puesto_codigo": "CELE_016",
+        "puesto_desc": "ELECTRICO (DIV C) 016"
+    },
+    "electrico div c 017": {
+        "puesto_codigo": "CELE_017",
+        "puesto_desc": "ELECTRICO (DIV C) 017"
+    },
+    "electrico div c 018": {
+        "puesto_codigo": "CELE_018",
+        "puesto_desc": "ELECTRICO (DIV C) 018"
+    },
+    "electrico div c 019": {
+        "puesto_codigo": "CELE_019",
+        "puesto_desc": "ELECTRICO (DIV C) 019"
+    },
+    "electrico div c 020": {
+        "puesto_codigo": "CELE_020",
+        "puesto_desc": "ELECTRICO (DIV C) 020"
+    },
+    "electrico facilities 022": {
+        "puesto_codigo": "CELE_022",
+        "puesto_desc": "ELECTRICO (FACILITIES) 022"
+    },
+    "electrico facilities 023": {
+        "puesto_codigo": "CELE_023",
+        "puesto_desc": "ELECTRICO (FACILITIES) 023"
+    },
+    "electrico facilities 024": {
+        "puesto_codigo": "CELE_024",
+        "puesto_desc": "ELECTRICO (FACILITIES) 024"
+    },
+    "electrico facilities 025": {
+        "puesto_codigo": "CELE_025",
+        "puesto_desc": "ELECTRICO (FACILITIES) 025"
+    },
+    "electrico facilities 026": {
+        "puesto_codigo": "CELE_026",
+        "puesto_desc": "ELECTRICO (FACILITIES) 026"
+    },
+    "electrico facilities 027": {
+        "puesto_codigo": "CELE_027",
+        "puesto_desc": "ELECTRICO (FACILITIES) 027"
+    },
+    "electrico facilities 028": {
+        "puesto_codigo": "CELE_028",
+        "puesto_desc": "ELECTRICO (FACILITIES) 028"
+    },
+    "electrico facilities 029": {
+        "puesto_codigo": "CELE_029",
+        "puesto_desc": "ELECTRICO (FACILITIES) 029"
+    },
+    "electrico utilities 030": {
+        "puesto_codigo": "CELE_030",
+        "puesto_desc": "ELECTRICO (UTILITIES) 030"
+    },
+    "electrico utilities 031": {
+        "puesto_codigo": "CELE_031",
+        "puesto_desc": "ELECTRICO (UTILITIES) 031"
+    },
+    "electrico utilities 032": {
+        "puesto_codigo": "CELE_032",
+        "puesto_desc": "ELECTRICO (UTILITIES) 032"
+    },
+    "electronico div a 001 cjeldres": {
+        "puesto_codigo": "CETO_001",
+        "puesto_desc": "ELECTRONICO (DIV A) 001 C.JELDRES"
+    },
+    "electronico div b 002": {
+        "puesto_codigo": "CETO_002",
+        "puesto_desc": "ELECTRONICO (DIV B) 002"
+    },
+    "electronico div a 003": {
+        "puesto_codigo": "CETO_003",
+        "puesto_desc": "ELECTRONICO (DIV A) 003"
+    },
+    "electronico div a 004": {
+        "puesto_codigo": "CETO_004",
+        "puesto_desc": "ELECTRONICO (DIV A) 004"
+    },
+    "electronico div a 005": {
+        "puesto_codigo": "CETO_005",
+        "puesto_desc": "ELECTRONICO (DIV A) 005"
+    },
+    "electronico div b 006": {
+        "puesto_codigo": "CETO_006",
+        "puesto_desc": "ELECTRONICO (DIV B) 006"
+    },
+    "electronico div b 007": {
+        "puesto_codigo": "CETO_007",
+        "puesto_desc": "ELECTRONICO (DIV B) 007"
+    },
+    "electronico div b 008": {
+        "puesto_codigo": "CETO_008",
+        "puesto_desc": "ELECTRONICO (DIV B) 008"
+    },
+    "electronico div c 009": {
+        "puesto_codigo": "CETO_009",
+        "puesto_desc": "ELECTRONICO (DIV C) 009"
+    },
+    "electronico div c 010": {
+        "puesto_codigo": "CETO_010",
+        "puesto_desc": "ELECTRONICO (DIV C) 010"
+    },
+    "electronico div c 011": {
+        "puesto_codigo": "CETO_011",
+        "puesto_desc": "ELECTRONICO (DIV C) 011"
+    },
+    "electronico div c 012": {
+        "puesto_codigo": "CETO_012",
+        "puesto_desc": "ELECTRONICO (DIV C) 012"
+    },
+    "electronico facilities 013": {
+        "puesto_codigo": "CETO_013",
+        "puesto_desc": "ELECTRONICO (FACILITIES) 013"
+    },
+    "electronico facilities 014": {
+        "puesto_codigo": "CETO_014",
+        "puesto_desc": "ELECTRONICO (FACILITIES) 014"
+    },
+    "cfe 8 quadruplex": {
+        "puesto_codigo": "PBL1",
+        "puesto_desc": "\"CFE 8\"\" QUADRUPLEX\""
+    },
+    "cfe 10 hexaplex": {
+        "puesto_codigo": "CFE02",
+        "puesto_desc": "\"CFE 10\"\" HEXAPLEX\""
+    },
+    "mecatronico div b 001": {
+        "puesto_codigo": "CMCT_001",
+        "puesto_desc": "MECATRONICO (DIV B ) 001"
+    },
+    "mecatronico div b 002": {
+        "puesto_codigo": "CMCT_002",
+        "puesto_desc": "MECATRONICO (DIV B ) 002"
+    },
+    "mecatronico div b 003": {
+        "puesto_codigo": "CMCT_003",
+        "puesto_desc": "MECATRONICO (DIV B ) 003"
+    },
+    "mecatronico div b 004": {
+        "puesto_codigo": "CMCT_004",
+        "puesto_desc": "MECATRONICO (DIV B ) 004"
+    },
+    "mecatronico div b 005": {
+        "puesto_codigo": "CMCT_005",
+        "puesto_desc": "MECATRONICO (DIV B ) 005"
+    },
+    "mecatronico div b 006": {
+        "puesto_codigo": "CMCT_006",
+        "puesto_desc": "MECATRONICO (DIV B ) 006"
+    },
+    "mecatronico div b 007": {
+        "puesto_codigo": "CMCT_007",
+        "puesto_desc": "MECATRONICO (DIV B ) 007"
+    },
+    "mecatronico div b 008": {
+        "puesto_codigo": "CMCT_008",
+        "puesto_desc": "MECATRONICO (DIV B ) 008"
+    },
+    "mecatronico div b 009": {
+        "puesto_codigo": "CMCT_009",
+        "puesto_desc": "MECATRONICO (DIV B ) 009"
+    },
+    "mecatronico div b 010": {
+        "puesto_codigo": "CMCT_010",
+        "puesto_desc": "MECATRONICO (DIV B ) 010"
+    },
+    "mecatronico div b 011": {
+        "puesto_codigo": "CMCT_011",
+        "puesto_desc": "MECATRONICO (DIV B ) 011"
+    },
+    "mecatronico div b 012": {
+        "puesto_codigo": "CMCT_012",
+        "puesto_desc": "MECATRONICO (DIV B ) 012"
+    },
+    "mecatronico div b 013": {
+        "puesto_codigo": "CMCT_013",
+        "puesto_desc": "MECATRONICO (DIV B ) 013"
+    },
+    "mecatronico div b 014": {
+        "puesto_codigo": "CMCT_014",
+        "puesto_desc": "MECATRONICO (DIV B ) 014"
+    },
+    "mecatronico div b 015": {
+        "puesto_codigo": "CMCT_015",
+        "puesto_desc": "MECATRONICO (DIV B ) 015"
+    },
+    "mecanico div a 001 cliberona": {
+        "puesto_codigo": "CMEC_001",
+        "puesto_desc": "MECANICO (DIV A) 001 C.LIBERONA"
+    },
+    "no usar debe usar gmec103": {
+        "puesto_codigo": "CMEC_002",
+        "puesto_desc": "NO USAR DEBE USAR GMEC_103"
+    },
+    "mecanico div a 003 frosas": {
+        "puesto_codigo": "CMEC_003",
+        "puesto_desc": "MECANICO (DIV A) 003 F.ROSAS"
+    },
+    "mecanico div a 004 cahumada": {
+        "puesto_codigo": "CMEC_004",
+        "puesto_desc": "MECANICO (DIV A) 004 C.AHUMADA"
+    },
+    "mecanico div a 005 cgonzalez": {
+        "puesto_codigo": "CMEC_005",
+        "puesto_desc": "MECANICO (DIV A) 005 C.GONZALEZ"
+    },
+    "mecanico div a 006 jdiaz": {
+        "puesto_codigo": "CMEC_006",
+        "puesto_desc": "MECANICO (DIV A) 006 J.DIAZ"
+    },
+    "mecanico div a 007 amendoza": {
+        "puesto_codigo": "CMEC_007",
+        "puesto_desc": "MECANICO (DIV A) 007 A.MENDOZA"
+    },
+    "mecanico div a 008 framirez": {
+        "puesto_codigo": "CMEC_008",
+        "puesto_desc": "MECANICO (DIV A) 008 F.RAMIREZ"
+    },
+    "mecanico div a 009 jchar": {
+        "puesto_codigo": "CMEC_009",
+        "puesto_desc": "MECANICO (DIV A) 009 J.CHAR"
+    },
+    "mecanico div a 010 cgonzalez": {
+        "puesto_codigo": "CMEC_010",
+        "puesto_desc": "MECANICO (DIV A) 010 C.GONZALEZ"
+    },
+    "mecanico div a 011 ncarreno": {
+        "puesto_codigo": "CMEC_011",
+        "puesto_desc": "MECANICO (DIV A) 011 N.CARREÑO"
+    },
+    "mecanico div a 012": {
+        "puesto_codigo": "CMEC_012",
+        "puesto_desc": "MECANICO (DIV A) 012"
+    },
+    "mecanico div a 013": {
+        "puesto_codigo": "CMEC_013",
+        "puesto_desc": "MECANICO (DIV A) 013"
+    },
+    "mecanico div a 014": {
+        "puesto_codigo": "CMEC_014",
+        "puesto_desc": "MECANICO (DIV A) 014"
+    },
+    "mecanico div a 015": {
+        "puesto_codigo": "CMEC_015",
+        "puesto_desc": "MECANICO (DIV A) 015"
+    },
+    "mecanico div a 016": {
+        "puesto_codigo": "CMEC_016",
+        "puesto_desc": "MECANICO (DIV A) 016"
+    },
+    "mecanico div a 017": {
+        "puesto_codigo": "CMEC_017",
+        "puesto_desc": "MECANICO (DIV A) 017"
+    },
+    "mecanico div a 018": {
+        "puesto_codigo": "CMEC_018",
+        "puesto_desc": "MECANICO (DIV A) 018"
+    },
+    "mecanico div a 019": {
+        "puesto_codigo": "CMEC_019",
+        "puesto_desc": "MECANICO (DIV A) 019"
+    },
+    "mecanico div a 020": {
+        "puesto_codigo": "CMEC_020",
+        "puesto_desc": "MECANICO (DIV A) 020"
+    },
+    "mecanico div a 021": {
+        "puesto_codigo": "CMEC_021",
+        "puesto_desc": "MECANICO (DIV A) 021"
+    },
+    "mecanico div a 022": {
+        "puesto_codigo": "CMEC_022",
+        "puesto_desc": "MECANICO (DIV A) 022"
+    },
+    "mecanico div b 023": {
+        "puesto_codigo": "CMEC_023",
+        "puesto_desc": "MECANICO (DIV B) 023"
+    },
+    "mecanico div b 024": {
+        "puesto_codigo": "CMEC_024",
+        "puesto_desc": "MECANICO (DIV B) 024"
+    },
+    "mecanico div b 025": {
+        "puesto_codigo": "CMEC_025",
+        "puesto_desc": "MECANICO (DIV B) 025"
+    },
+    "mecanico div b 026": {
+        "puesto_codigo": "CMEC_026",
+        "puesto_desc": "MECANICO (DIV B) 026"
+    },
+    "mecanico div b 027": {
+        "puesto_codigo": "CMEC_027",
+        "puesto_desc": "MECANICO (DIV B) 027"
+    },
+    "mecanico div b 028": {
+        "puesto_codigo": "CMEC_028",
+        "puesto_desc": "MECANICO (DIV B) 028"
+    },
+    "mecanico div b 029": {
+        "puesto_codigo": "CMEC_029",
+        "puesto_desc": "MECANICO (DIV B) 029"
+    },
+    "mecanico div b 030": {
+        "puesto_codigo": "CMEC_030",
+        "puesto_desc": "MECANICO (DIV B) 030"
+    },
+    "mecanico div b 031": {
+        "puesto_codigo": "CMEC_031",
+        "puesto_desc": "MECANICO (DIV B) 031"
+    },
+    "mecanico div b 032": {
+        "puesto_codigo": "CMEC_032",
+        "puesto_desc": "MECANICO (DIV B) 032"
+    },
+    "mecanico div b 033": {
+        "puesto_codigo": "CMEC_033",
+        "puesto_desc": "MECANICO (DIV B) 033"
+    },
+    "mecanico div b 034": {
+        "puesto_codigo": "CMEC_034",
+        "puesto_desc": "MECANICO (DIV B) 034"
+    },
+    "mecanico div b 035": {
+        "puesto_codigo": "CMEC_035",
+        "puesto_desc": "MECANICO (DIV B) 035"
+    },
+    "mecanico div c 036 jsalgado": {
+        "puesto_codigo": "CMEC_036",
+        "puesto_desc": "MECANICO (DIV C) 036 J.SALGADO"
+    },
+    "mecanico div c 037": {
+        "puesto_codigo": "CMEC_037",
+        "puesto_desc": "MECANICO (DIV C) 037"
+    },
+    "mecanico div c 038": {
+        "puesto_codigo": "CMEC_038",
+        "puesto_desc": "MECANICO (DIV C) 038"
+    },
+    "mecanico div c 039": {
+        "puesto_codigo": "CMEC_039",
+        "puesto_desc": "MECANICO (DIV C) 039"
+    },
+    "mecanico div c 040": {
+        "puesto_codigo": "CMEC_040",
+        "puesto_desc": "MECANICO (DIV C) 040"
+    },
+    "mecanico div c 041": {
+        "puesto_codigo": "CMEC_041",
+        "puesto_desc": "MECANICO (DIV C) 041"
+    },
+    "mecanico div c 042": {
+        "puesto_codigo": "CMEC_042",
+        "puesto_desc": "MECANICO (DIV C) 042"
+    },
+    "mecanico div c 043": {
+        "puesto_codigo": "CMEC_043",
+        "puesto_desc": "MECANICO (DIV C) 043"
+    },
+    "mecanico div c 044": {
+        "puesto_codigo": "CMEC_044",
+        "puesto_desc": "MECANICO (DIV C) 044"
+    },
+    "mecanico div c 045": {
+        "puesto_codigo": "CMEC_045",
+        "puesto_desc": "MECANICO (DIV C) 045"
+    },
+    "mecanico div c 046": {
+        "puesto_codigo": "CMEC_046",
+        "puesto_desc": "MECANICO (DIV C) 046"
+    },
+    "mecanico div c 047": {
+        "puesto_codigo": "CMEC_047",
+        "puesto_desc": "MECANICO (DIV C) 047"
+    },
+    "mecanico div c 048": {
+        "puesto_codigo": "CMEC_048",
+        "puesto_desc": "MECANICO (DIV C) 048"
+    },
+    "mecanico div c 049": {
+        "puesto_codigo": "CMEC_049",
+        "puesto_desc": "MECANICO (DIV C) 049"
+    },
+    "mecanico div c 050": {
+        "puesto_codigo": "CMEC_050",
+        "puesto_desc": "MECANICO (DIV C) 050"
+    },
+    "mecanico div c 051": {
+        "puesto_codigo": "CMEC_051",
+        "puesto_desc": "MECANICO (DIV C) 051"
+    },
+    "mecanico div c 052": {
+        "puesto_codigo": "CMEC_052",
+        "puesto_desc": "MECANICO (DIV C) 052"
+    },
+    "mecanico div c 053": {
+        "puesto_codigo": "CMEC_053",
+        "puesto_desc": "MECANICO (DIV C) 053"
+    },
+    "mecanico div c 054": {
+        "puesto_codigo": "CMEC_054",
+        "puesto_desc": "MECANICO (DIV C) 054"
+    },
+    "mecanico div c 055": {
+        "puesto_codigo": "CMEC_055",
+        "puesto_desc": "MECANICO (DIV C) 055"
+    },
+    "mecanico div c 056": {
+        "puesto_codigo": "CMEC_056",
+        "puesto_desc": "MECANICO (DIV C) 056"
+    },
+    "mecanico div c 057": {
+        "puesto_codigo": "CMEC_057",
+        "puesto_desc": "MECANICO (DIV C) 057"
+    },
+    "mecanico div c 058": {
+        "puesto_codigo": "CMEC_058",
+        "puesto_desc": "MECANICO (DIV C) 058"
+    },
+    "mecanico div c 059": {
+        "puesto_codigo": "CMEC_059",
+        "puesto_desc": "MECANICO (DIV C) 059"
+    },
+    "mecanico div c 060": {
+        "puesto_codigo": "CMEC_060",
+        "puesto_desc": "MECANICO (DIV C) 060"
+    },
+    "mecanico div c 061": {
+        "puesto_codigo": "CMEC_061",
+        "puesto_desc": "MECANICO (DIV C) 061"
+    },
+    "mecanico div c 062": {
+        "puesto_codigo": "CMEC_062",
+        "puesto_desc": "MECANICO (DIV C) 062"
+    },
+    "mecanico div c 063": {
+        "puesto_codigo": "CMEC_063",
+        "puesto_desc": "MECANICO (DIV C) 063"
+    },
+    "mecanico div c 064": {
+        "puesto_codigo": "CMEC_064",
+        "puesto_desc": "MECANICO (DIV C) 064"
+    },
+    "mecanico div c 065": {
+        "puesto_codigo": "CMEC_065",
+        "puesto_desc": "MECANICO (DIV C) 065"
+    },
+    "mecanico facilities 066": {
+        "puesto_codigo": "CMEC_066",
+        "puesto_desc": "MECANICO (FACILITIES) 066"
+    },
+    "mecanico facilities 067": {
+        "puesto_codigo": "CMEC_067",
+        "puesto_desc": "MECANICO (FACILITIES) 067"
+    },
+    "mecanico facilities 068": {
+        "puesto_codigo": "CMEC_068",
+        "puesto_desc": "MECANICO (FACILITIES) 068"
+    },
+    "mecanico facilities 069": {
+        "puesto_codigo": "CMEC_069",
+        "puesto_desc": "MECANICO (FACILITIES) 069"
+    },
+    "mecanico facilities 070": {
+        "puesto_codigo": "CMEC_070",
+        "puesto_desc": "MECANICO (FACILITIES) 070"
+    },
+    "mecanico facilities 071": {
+        "puesto_codigo": "CMEC_071",
+        "puesto_desc": "MECANICO (FACILITIES) 071"
+    },
+    "mecanico facilities 072": {
+        "puesto_codigo": "CMEC_072",
+        "puesto_desc": "MECANICO (FACILITIES) 072"
+    },
+    "mecanico facilities 073": {
+        "puesto_codigo": "CMEC_073",
+        "puesto_desc": "MECANICO (FACILITIES) 073"
+    },
+    "mecanico facilities 074": {
+        "puesto_codigo": "CMEC_074",
+        "puesto_desc": "MECANICO (FACILITIES) 074"
+    },
+    "mecanico facilities 075": {
+        "puesto_codigo": "CMEC_075",
+        "puesto_desc": "MECANICO (FACILITIES) 075"
+    },
+    "mecanico facilities 076": {
+        "puesto_codigo": "CMEC_076",
+        "puesto_desc": "MECANICO (FACILITIES) 076"
+    },
+    "mecanico facilities 077": {
+        "puesto_codigo": "CMEC_077",
+        "puesto_desc": "MECANICO (FACILITIES) 077"
+    },
+    "mecanico moldes 078": {
+        "puesto_codigo": "CMEC_078",
+        "puesto_desc": "MECANICO (MOLDES) 078"
+    },
+    "mecanico moldes 079": {
+        "puesto_codigo": "CMEC_079",
+        "puesto_desc": "MECANICO (MOLDES) 079"
+    },
+    "mecanico moldes 080": {
+        "puesto_codigo": "CMEC_080",
+        "puesto_desc": "MECANICO (MOLDES) 080"
+    },
+    "mecanico moldes 081": {
+        "puesto_codigo": "CMEC_081",
+        "puesto_desc": "MECANICO (MOLDES) 081"
+    },
+    "mecanico moldes 082": {
+        "puesto_codigo": "CMEC_082",
+        "puesto_desc": "MECANICO (MOLDES) 082"
+    },
+    "mecanico moldes 083": {
+        "puesto_codigo": "CMEC_083",
+        "puesto_desc": "MECANICO (MOLDES) 083"
+    },
+    "mecanico moldes 084": {
+        "puesto_codigo": "CMEC_084",
+        "puesto_desc": "MECANICO (MOLDES) 084"
+    },
+    "mecanico moldes 085": {
+        "puesto_codigo": "CMEC_085",
+        "puesto_desc": "MECANICO (MOLDES) 085"
+    },
+    "mecanico moldes 086": {
+        "puesto_codigo": "CMEC_086",
+        "puesto_desc": "MECANICO (MOLDES) 086"
+    },
+    "mecanico moldes 087": {
+        "puesto_codigo": "CMEC_087",
+        "puesto_desc": "MECANICO (MOLDES) 087"
+    },
+    "mecanico tambores 088": {
+        "puesto_codigo": "CMEC_088",
+        "puesto_desc": "MECANICO (TAMBORES) 088"
+    },
+    "mecanico tambores 089": {
+        "puesto_codigo": "CMEC_089",
+        "puesto_desc": "MECANICO (TAMBORES) 089"
+    },
+    "mecanico tambores 090": {
+        "puesto_codigo": "CMEC_090",
+        "puesto_desc": "MECANICO (TAMBORES) 090"
+    },
+    "mecanico utilities 091": {
+        "puesto_codigo": "CMEC_091",
+        "puesto_desc": "MECANICO (UTILITIES) 091"
+    },
+    "mecanico utilities 092": {
+        "puesto_codigo": "CMEC_092",
+        "puesto_desc": "MECANICO (UTILITIES) 092"
+    },
+    "mecanico utilities 093": {
+        "puesto_codigo": "CMEC_093",
+        "puesto_desc": "MECANICO (UTILITIES) 093"
+    },
+    "mecanico utilities 094": {
+        "puesto_codigo": "CMEC_094",
+        "puesto_desc": "MECANICO (UTILITIES) 094"
+    },
+    "mecanico utilities 095": {
+        "puesto_codigo": "CMEC_095",
+        "puesto_desc": "MECANICO (UTILITIES) 095"
+    },
+    "mecanico hva tambores 096": {
+        "puesto_codigo": "CMEC_096",
+        "puesto_desc": "MECANICO HVA (TAMBORES) 096"
+    },
+    "mecanico hva tambores 097": {
+        "puesto_codigo": "CMEC_097",
+        "puesto_desc": "MECANICO HVA (TAMBORES) 097"
+    },
+    "mecanico hva tambores 098": {
+        "puesto_codigo": "CMEC_098",
+        "puesto_desc": "MECANICO HVA (TAMBORES) 098"
+    },
+    "mecanico hva tambores 099": {
+        "puesto_codigo": "CMEC_099",
+        "puesto_desc": "MECANICO HVA (TAMBORES) 099"
+    },
+    "mecanico lva tambores 100": {
+        "puesto_codigo": "CMEC_100",
+        "puesto_desc": "MECANICO LVA (TAMBORES) 100"
+    },
+    "mecanico lva tambores 101": {
+        "puesto_codigo": "CMEC_101",
+        "puesto_desc": "MECANICO LVA (TAMBORES) 101"
+    },
+    "mecanico lva tambores 102": {
+        "puesto_codigo": "CMEC_102",
+        "puesto_desc": "MECANICO LVA (TAMBORES) 102"
+    },
+    "mecanico lva tambores 103": {
+        "puesto_codigo": "CMEC_103",
+        "puesto_desc": "MECANICO LVA (TAMBORES) 103"
+    },
+    "mecanico proyecto div a 105": {
+        "puesto_codigo": "CMEC_105",
+        "puesto_desc": "MECANICO PROYECTO  (DIV A) 105"
+    },
+    "matricero moldes 001": {
+        "puesto_codigo": "CMTC_001",
+        "puesto_desc": "MATRICERO (MOLDES) 001"
+    },
+    "matricero moldes 002": {
+        "puesto_codigo": "CMTC_002",
+        "puesto_desc": "MATRICERO (MOLDES) 002"
+    },
+    "matricero moldes 003": {
+        "puesto_codigo": "CMTC_003",
+        "puesto_desc": "MATRICERO (MOLDES) 003"
+    },
+    "matricero moldes 004": {
+        "puesto_codigo": "CMTC_004",
+        "puesto_desc": "MATRICERO (MOLDES) 004"
+    },
+    "hexagonal and pentagonal bead w8": {
+        "puesto_codigo": "CONFHEX2",
+        "puesto_desc": "HEXAGONAL AND PENTAGONAL BEAD W/8"
+    },
+    "strap bead w24 multiple bead unit": {
+        "puesto_codigo": "CONFPES1",
+        "puesto_desc": "STRAP BEAD W/24 MULTIPLE BEAD UNIT"
+    },
+    "hexagonal and strap bead winder": {
+        "puesto_codigo": "CONFPH",
+        "puesto_desc": "HEXAGONAL AND STRAP BEAD WINDER"
+    },
+    "programador div c 001": {
+        "puesto_codigo": "CPRG_001",
+        "puesto_desc": "PROGRAMADOR (DIV C) 001"
+    },
+    "programador facilities 002": {
+        "puesto_codigo": "CPRG_002",
+        "puesto_desc": "PROGRAMADOR (FACILITIES) 002"
+    },
+    "programador preparatoria div b 003": {
+        "puesto_codigo": "CPRG_003",
+        "puesto_desc": "PROGRAMADOR PREPARATORIA (DIV B) 003"
+    },
+    "programador div c 004": {
+        "puesto_codigo": "CPRG_004",
+        "puesto_desc": "PROGRAMADOR (DIV C) 004"
+    },
+    "programador div a 005": {
+        "puesto_codigo": "CPRG_005",
+        "puesto_desc": "PROGRAMADOR (DIV A) 005"
+    },
+    "programador div b 006": {
+        "puesto_codigo": "CPRG_006",
+        "puesto_desc": "PROGRAMADOR (DIV B) 006"
+    },
+    "soldador facilities 001": {
+        "puesto_codigo": "CSOL_001",
+        "puesto_desc": "SOLDADOR (FACILITIES) 001"
+    },
+    "soldador facilities 002": {
+        "puesto_codigo": "CSOL_002",
+        "puesto_desc": "SOLDADOR (FACILITIES) 002"
+    },
+    "soldador moldes 003": {
+        "puesto_codigo": "CSOL_003",
+        "puesto_desc": "SOLDADOR (MOLDES) 003"
+    },
+    "soldador moldes 004": {
+        "puesto_codigo": "CSOL_004",
+        "puesto_desc": "SOLDADOR (MOLDES) 004"
+    },
+    "soldador moldes 005": {
+        "puesto_codigo": "CSOL_005",
+        "puesto_desc": "SOLDADOR (MOLDES) 005"
+    },
+    "supervisor div c 001": {
+        "puesto_codigo": "CSUP_001",
+        "puesto_desc": "SUPERVISOR (DIV C) 001"
+    },
+    "supervisor fac facilities 002": {
+        "puesto_codigo": "CSUP_002",
+        "puesto_desc": "SUPERVISOR FAC (FACILITIES) 002"
+    },
+    "supervisor fac facilities 003": {
+        "puesto_codigo": "CSUP_003",
+        "puesto_desc": "SUPERVISOR FAC (FACILITIES) 003"
+    },
+    "supervisor mant y cambio de tambor 004": {
+        "puesto_codigo": "CSUP_004",
+        "puesto_desc": "SUPERVISOR MANT. Y CAMBIO DE TAMBOR 004"
+    },
+    "supervisor taller moldes 005": {
+        "puesto_codigo": "CSUP_005",
+        "puesto_desc": "SUPERVISOR TALLER (MOLDES) 005"
+    },
+    "tornero moldes 001": {
+        "puesto_codigo": "CTOR_001",
+        "puesto_desc": "TORNERO (MOLDES) 001"
+    },
+    "tornero matricero moldes 002": {
+        "puesto_codigo": "CTOR_002",
+        "puesto_desc": "TORNERO MATRICERO (MOLDES) 002"
+    },
+    "tornero matricero moldes 003": {
+        "puesto_codigo": "CTOR_003",
+        "puesto_desc": "TORNERO MATRICERO (MOLDES) 003"
+    },
+    "tornero fresador moldes 004": {
+        "puesto_codigo": "CTOR_004",
+        "puesto_desc": "TORNERO / FRESADOR (MOLDES) 004"
+    },
+    "tornero fresador moldes 005": {
+        "puesto_codigo": "CTOR_005",
+        "puesto_desc": "TORNERO / FRESADOR (MOLDES) 005"
+    },
+    "tornero fresador moldes 006": {
+        "puesto_codigo": "CTOR_006",
+        "puesto_desc": "TORNERO / FRESADOR (MOLDES) 006"
+    },
+    "qtech area vulcanizacao": {
+        "puesto_codigo": "CURING",
+        "puesto_desc": "QTECH area vulcanizacao"
+    },
+    "35 cold feed extruder machine": {
+        "puesto_codigo": "DUMSW",
+        "puesto_desc": "\"3.5\"\" COLD FEED EXTRUDER MACHINE\""
+    },
+    "dummy belts and tread assembly": {
+        "puesto_codigo": "DUMB&T",
+        "puesto_desc": "DUMMY BELTS AND TREAD ASSEMBLY"
+    },
+    "dummy bead machine": {
+        "puesto_codigo": "DUMBEAD",
+        "puesto_desc": "DUMMY BEAD MACHINE"
+    },
+    "steelastic cutter machine": {
+        "puesto_codigo": "DUMBELT",
+        "puesto_desc": "STEELASTIC CUTTER MACHINE"
+    },
+    "dummy cg4 24 x 70 4 roll vertical": {
+        "puesto_codigo": "DUMZCAL",
+        "puesto_desc": "\"DUMMY CG4/ 24\"\" x 70\"\" 4 ROLL VERTICAL\""
+    },
+    "dummy building carcass assembly": {
+        "puesto_codigo": "DUMCARC",
+        "puesto_desc": "DUMMY BUILDING CARCASS ASSEMBLY"
+    },
+    "dummy fisher ply cutter machine": {
+        "puesto_codigo": "DUMCUTER",
+        "puesto_desc": "DUMMY FISHER PLY CUTTER MACHINE"
+    },
+    "creel room wire wind up": {
+        "puesto_codigo": "DUMSTEEL",
+        "puesto_desc": "CREEL ROOM WIRE WIND UP"
+    },
+    "dummy bead wrap machine": {
+        "puesto_codigo": "DUMWRAP",
+        "puesto_desc": "DUMMY BEAD WRAP MACHINE"
+    },
+    "mantenimiento electrico banbury": {
+        "puesto_codigo": "EL_IMA01",
+        "puesto_desc": "MANTENIMIENTO ELECTRICO BANBURY"
+    },
+    "mantenimiento electrico extrusion": {
+        "puesto_codigo": "EL_IMA02",
+        "puesto_desc": "MANTENIMIENTO ELECTRICO EXTRUSION"
+    },
+    "mantenimiento electrico steelastic": {
+        "puesto_codigo": "EL_IMA03",
+        "puesto_desc": "MANTENIMIENTO ELECTRICO STEELASTIC"
+    },
+    "mantenimiento electrico calandras": {
+        "puesto_codigo": "EL_IMA04",
+        "puesto_desc": "MANTENIMIENTO ELECTRICO CALANDRAS"
+    },
+    "mantenimiento electrico apexer": {
+        "puesto_codigo": "EL_IMA05",
+        "puesto_desc": "MANTENIMIENTO ELECTRICO APEXER"
+    },
+    "mantenimiento electrico pestanas": {
+        "puesto_codigo": "EL_IMA06",
+        "puesto_desc": "MANTENIMIENTO ELECTRICO PESTAÑAS"
+    },
+    "mantenimiento electrico cortadoras": {
+        "puesto_codigo": "EL_IMA07",
+        "puesto_desc": "MANTENIMIENTO ELECTRICO CORTADORAS"
+    },
+    "mantenimiento electrico construccion": {
+        "puesto_codigo": "EL_IMA08",
+        "puesto_desc": "MANTENIMIENTO ELECTRICO CONSTRUCCION"
+    },
+    "mantenimiento electrico vulcanizacion": {
+        "puesto_codigo": "EL_IMA09",
+        "puesto_desc": "MANTENIMIENTO ELECTRICO VULCANIZACION"
+    },
+    "mantenimiento electrico asrs y plummer": {
+        "puesto_codigo": "EL_IMA10",
+        "puesto_desc": "MANTENIMIENTO ELECTRICO ASRS Y PLUMMER"
+    },
+    "mantenimiento electrico balanceadoras": {
+        "puesto_codigo": "EL_IMA11",
+        "puesto_desc": "MANTENIMIENTO ELECTRICO BALANCEADORAS"
+    },
+    "mantenimiento electrico forzadoras": {
+        "puesto_codigo": "EL_IMA12",
+        "puesto_desc": "MANTENIMIENTO ELECTRICO FORZADORAS"
+    },
+    "mantenimiento electrico pulidoras": {
+        "puesto_codigo": "EL_IMA13",
+        "puesto_desc": "MANTENIMIENTO ELECTRICO PULIDORAS"
+    },
+    "mantenimiento electrico facilities": {
+        "puesto_codigo": "EL_IMA14",
+        "puesto_desc": "MANTENIMIENTO ELECTRICO FACILITIES"
+    },
+    "mantenimiento electrico casa de maquinas": {
+        "puesto_codigo": "EL_IMA15",
+        "puesto_desc": "MANTENIMIENTO ELECTRICO CASA DE MAQUINAS"
+    },
+    "mantenimiento electrico compresores": {
+        "puesto_codigo": "EL_IMA16",
+        "puesto_desc": "MANTENIMIENTO ELECTRICO COMPRESORES"
+    },
+    "mantenimiento electrico subestaciones": {
+        "puesto_codigo": "EL_IMA17",
+        "puesto_desc": "MANTENIMIENTO ELECTRICO SUBESTACIONES"
+    },
+    "mantenimiento electrico conveyors final": {
+        "puesto_codigo": "EL_IMA18",
+        "puesto_desc": "MANTENIMIENTO ELECTRICO CONVEYORS FINAL"
+    },
+    "control ambiental y normas": {
+        "puesto_codigo": "ENV-NORM",
+        "puesto_desc": "Control Ambiental y Normas."
+    },
+    "santiago final finish": {
+        "puesto_codigo": "FFINISH",
+        "puesto_desc": "SANTIAGO FINAL FINISH"
+    },
+    "inspeccion en terminacion": {
+        "puesto_codigo": "FINALFIN",
+        "puesto_desc": "Inspeccion en terminacion."
+    },
+    "fischer ply cutter machine 180": {
+        "puesto_codigo": "SPAD01",
+        "puesto_desc": "\"FISCHER PLY CUTTER MACHINE 180\"\"\""
+    },
+    "maquina variacion de fuerza": {
+        "puesto_codigo": "FVM",
+        "puesto_desc": "Maquina variacion de fuerza"
+    },
+    "jose cadiz": {
+        "puesto_codigo": "GASF_001",
+        "puesto_desc": "José Cadiz - Gasfiter"
+    },
+    "coord mant turno div ab 001 p leon": {
+        "puesto_codigo": "GCOM_001",
+        "puesto_desc": "COORD. MANT. TURNO DIV A-B 001 P LEON"
+    },
+    "coord mant turno div ab 002 s toro": {
+        "puesto_codigo": "GCOM_002",
+        "puesto_desc": "COORD. MANT. TURNO DIV A-B 002 S TORO"
+    },
+    "coord mant turno div ab 003 h acevedo": {
+        "puesto_codigo": "GCOM_003",
+        "puesto_desc": "COORD. MANT. TURNO DIV A-B 003 H ACEVEDO"
+    },
+    "coord mant turno div ab 004 h torres": {
+        "puesto_codigo": "GCOM_004",
+        "puesto_desc": "COORD. MANT. TURNO DIV A-B 004 H TORRES"
+    },
+    "coord mant turno div c 005 m pina": {
+        "puesto_codigo": "GCOM_005",
+        "puesto_desc": "COORD. MANT. TURNO DIV C 005 M PIÑA"
+    },
+    "coord mant turno div c 006 m munoz": {
+        "puesto_codigo": "GCOM_006",
+        "puesto_desc": "COORD. MANT. TURNO DIV C 006 M MUÑOZ"
+    },
+    "coord mant turno div c 007 g mariqueo": {
+        "puesto_codigo": "GCOM_007",
+        "puesto_desc": "COORD. MANT. TURNO DIV C 007 G MARIQUEO"
+    },
+    "coord mant turno div c 008 j acevedo": {
+        "puesto_codigo": "GCOM_008",
+        "puesto_desc": "COORD. MANT. TURNO DIV C 008  J ACEVEDO"
+    },
+    "coord mant tambores 009 d maldonado": {
+        "puesto_codigo": "GCOM_009",
+        "puesto_desc": "COORD. MANT. TAMBORES 009 D MALDONADO"
+    },
+    "miguel munoz": {
+        "puesto_codigo": "GTPO_003",
+        "puesto_desc": "Miguel Muñoz - TPO"
+    },
+    "jose lillo": {
+        "puesto_codigo": "GCOR_002",
+        "puesto_desc": "José Lillo - Coordinador Mtto."
+    },
+    "pablo leon": {
+        "puesto_codigo": "GCOR_003",
+        "puesto_desc": "Pablo León - Coordinador Mtto."
+    },
+    "ivan bastardo": {
+        "puesto_codigo": "GCOR_004",
+        "puesto_desc": "Iván Bastardo - Coordinador Mtto."
+    },
+    "luis delgado": {
+        "puesto_codigo": "GELE_002",
+        "puesto_desc": "Luis Delgado - Eléctrico"
+    },
+    "luis benavides": {
+        "puesto_codigo": "GELE_003",
+        "puesto_desc": "Luis Benavides - Eléctrico"
+    },
+    "jorge silva": {
+        "puesto_codigo": "GSFW_010",
+        "puesto_desc": "Jorge Silva - Ing.Software"
+    },
+    "cristian alvarez": {
+        "puesto_codigo": "GELE_005",
+        "puesto_desc": "Cristian Álvarez - Eléctrico"
+    },
+    "diego ramirez v": {
+        "puesto_codigo": "GELE_006",
+        "puesto_desc": "Diego Ramírez V. - Eléctrico"
+    },
+    "alejandro castillo": {
+        "puesto_codigo": "GELE_008",
+        "puesto_desc": "Alejandro Castillo - Eléctrico"
+    },
+    "diego valenzuela": {
+        "puesto_codigo": "GELE_009",
+        "puesto_desc": "Diego Valenzuela  - Eléctrico"
+    },
+    "jonathan lineros": {
+        "puesto_codigo": "GELE_010",
+        "puesto_desc": "Jonathan Lineros - Eléctrico"
+    },
+    "jaime angel": {
+        "puesto_codigo": "GELE_011",
+        "puesto_desc": "Jaime Angel - Eléctrico"
+    },
+    "ignacio gaete": {
+        "puesto_codigo": "GELE_012",
+        "puesto_desc": "Ignacio Gaete - Eléctrico"
+    },
+    "richard vargas": {
+        "puesto_codigo": "GELE_013",
+        "puesto_desc": "Richard Vargas - Eléctrico"
+    },
+    "carlos urbina": {
+        "puesto_codigo": "GELE_015",
+        "puesto_desc": "Carlos Urbina - Eléctrico"
+    },
+    "juan carlos munoz": {
+        "puesto_codigo": "GELE_016",
+        "puesto_desc": "Juan Carlos Muñoz - Eléctrico"
+    },
+    "franco godoy": {
+        "puesto_codigo": "GELE_017",
+        "puesto_desc": "Franco Godoy - Eléctrico"
+    },
+    "jose mendez": {
+        "puesto_codigo": "GELE_018",
+        "puesto_desc": "José Mendez - Eléctrico"
+    },
+    "claudio quezada": {
+        "puesto_codigo": "GELE_019",
+        "puesto_desc": "Claudio Quezada - Eléctrico"
+    },
+    "dagoberto lopez": {
+        "puesto_codigo": "GELE_020",
+        "puesto_desc": "Dagoberto López - Eléctrico"
+    },
+    "simon saez": {
+        "puesto_codigo": "GELE_021",
+        "puesto_desc": "Simón Saez - Eléctrico"
+    },
+    "luis cancino": {
+        "puesto_codigo": "GELE_022",
+        "puesto_desc": "Luis Cancino - Eléctrico"
+    },
+    "oscar figueroa": {
+        "puesto_codigo": "GELE_024",
+        "puesto_desc": "Oscar Figueroa - Eléctrico"
+    },
+    "rigoberto martinez": {
+        "puesto_codigo": "GELE_025",
+        "puesto_desc": "Rigoberto Martínez - Eléctrico"
+    },
+    "juan larrosa": {
+        "puesto_codigo": "GELE_026",
+        "puesto_desc": "Juan Larrosa - Eléctrico"
+    },
+    "luis silva": {
+        "puesto_codigo": "GELE_027",
+        "puesto_desc": "Luis Silva - Eléctrico"
+    },
+    "nelson manriquez": {
+        "puesto_codigo": "GELE_028",
+        "puesto_desc": "Nelson Manriquez - Eléctrico"
+    },
+    "patricio ramirez": {
+        "puesto_codigo": "GELE_029",
+        "puesto_desc": "Patricio Ramírez - Eléctrico"
+    },
+    "claudio barrera": {
+        "puesto_codigo": "GETO_001",
+        "puesto_desc": "Claudio Barrera - Electrónico"
+    },
+    "alberto cespedes": {
+        "puesto_codigo": "GETO_002",
+        "puesto_desc": "Alberto Céspedes - Electrónico"
+    },
+    "christian bravo": {
+        "puesto_codigo": "GETO_003",
+        "puesto_desc": "Christian Bravo - Electrónico"
+    },
+    "marco uribe": {
+        "puesto_codigo": "GETO_004",
+        "puesto_desc": "Marco Uribe - Electrónico"
+    },
+    "luis romero": {
+        "puesto_codigo": "GETO_005",
+        "puesto_desc": "Luis Romero - Electrónico"
+    },
+    "pablo penna": {
+        "puesto_codigo": "GETO_006",
+        "puesto_desc": "Pablo Penna - Electrónico"
+    },
+    "sergio lagos": {
+        "puesto_codigo": "GETO_007",
+        "puesto_desc": "Sergio Lagos - Electrónico"
+    },
+    "jose fredes": {
+        "puesto_codigo": "GETO_008",
+        "puesto_desc": "José Fredes - Electrónico"
+    },
+    "manuel huerta": {
+        "puesto_codigo": "GETO_009",
+        "puesto_desc": "Manuel Huerta - Electrónico"
+    },
+    "alejandro neculhueque": {
+        "puesto_codigo": "GETO_010",
+        "puesto_desc": "Alejandro Neculhueque - Electrónico"
+    },
+    "nicolas martinez": {
+        "puesto_codigo": "GETO_011",
+        "puesto_desc": "Nicolas Martinez - Electrónico"
+    },
+    "pedro montecinos": {
+        "puesto_codigo": "GETO_012",
+        "puesto_desc": "Pedro Montecinos - Electrónico"
+    },
+    "dany delgado": {
+        "puesto_codigo": "GETO_013",
+        "puesto_desc": "Dany Delgado  - Electrónico"
+    },
+    "leonardo pico": {
+        "puesto_codigo": "GETO_014",
+        "puesto_desc": "Leonardo Pico - Electrónico"
+    },
+    "fernando lopez": {
+        "puesto_codigo": "GETO_015",
+        "puesto_desc": "Fernando López - Electrónico"
+    },
+    "daniel gatica": {
+        "puesto_codigo": "GETO_016",
+        "puesto_desc": "Daniel Gatica - Electrónico"
+    },
+    "erick valdes": {
+        "puesto_codigo": "GETO_017",
+        "puesto_desc": "Erick Valdes - Electrónico"
+    },
+    "rodrigo gorigoitia": {
+        "puesto_codigo": "GETO_018",
+        "puesto_desc": "Rodrigo Gorigoitia - Electrónico"
+    },
+    "patricia ojeda": {
+        "puesto_codigo": "GETO_019",
+        "puesto_desc": "PATRICIA OJEDA -  Electrónico"
+    },
+    "eloy durant": {
+        "puesto_codigo": "GETO_020",
+        "puesto_desc": "Eloy Durant - Electrónico"
+    },
+    "felipe acosta": {
+        "puesto_codigo": "GETO_021",
+        "puesto_desc": "Felipe Acosta - Electrónico"
+    },
+    "marco villalon": {
+        "puesto_codigo": "GETO_022",
+        "puesto_desc": "Marco Villalón - Electrónico"
+    },
+    "pedro castillo": {
+        "puesto_codigo": "GETO_023",
+        "puesto_desc": "Pedro Castillo - Electrónico"
+    },
+    "osvaldo meza": {
+        "puesto_codigo": "GINT_001",
+        "puesto_desc": "Osvaldo Meza - Instrumentista"
+    },
+    "daniel recio": {
+        "puesto_codigo": "GINT_002",
+        "puesto_desc": "Daniel Recio - Instrumentista"
+    },
+    "rodrigo vasquez": {
+        "puesto_codigo": "GMCT_001",
+        "puesto_desc": "Rodrigo Vásquez - Mecatrónico"
+    },
+    "darwin sanchez": {
+        "puesto_codigo": "GMCT_002",
+        "puesto_desc": "Darwin Sanchez - Mecatrónico"
+    },
+    "cristopher bahamonde": {
+        "puesto_codigo": "GMCT_003",
+        "puesto_desc": "Cristopher Bahamonde - Mecatrónico"
+    },
+    "rodrigo vergara": {
+        "puesto_codigo": "GMCT_004",
+        "puesto_desc": "Rodrigo Vergara - Mecatrónico"
+    },
+    "gabriel leite": {
+        "puesto_codigo": "GMCT_005",
+        "puesto_desc": "Gabriel Leite - Mecatrónico"
+    },
+    "jose sanchez": {
+        "puesto_codigo": "GMCT_006",
+        "puesto_desc": "José Sánchez - Mecatrónico"
+    },
+    "daniel callejas": {
+        "puesto_codigo": "GMCT_007",
+        "puesto_desc": "Daniel Callejas  - Mecatrónico"
+    },
+    "luis lopez": {
+        "puesto_codigo": "GMCT_008",
+        "puesto_desc": "Luis López - Mecatrónico"
+    },
+    "enzo munoz": {
+        "puesto_codigo": "GMCT_009",
+        "puesto_desc": "Enzo Muñoz - Mecatrónico"
+    },
+    "matias ossa": {
+        "puesto_codigo": "GMCT_010",
+        "puesto_desc": "Matias Ossa - Mecatronico"
+    },
+    "rodrigo martinez": {
+        "puesto_codigo": "GMCT_012",
+        "puesto_desc": "Rodrigo Martínez - Mecatrónico"
+    },
+    "alexis fernandez": {
+        "puesto_codigo": "GMCT_013",
+        "puesto_desc": "Alexis Fernández - Mecatrónico"
+    },
+    "deny diaz": {
+        "puesto_codigo": "GMCT_015",
+        "puesto_desc": "Deny Diaz - Mecatrónico"
+    },
+    "lizeth rebolledo": {
+        "puesto_codigo": "GMCT_016",
+        "puesto_desc": "Lizeth Rebolledo - Mecatrónico"
+    },
+    "ricardo alarcon": {
+        "puesto_codigo": "GMCT_017",
+        "puesto_desc": "Ricardo Alarcón - Mecatrónico"
+    },
+    "nelson ingles": {
+        "puesto_codigo": "GMCT_018",
+        "puesto_desc": "Nelson Inglés - Mecatrónico"
+    },
+    "fabian cumsille": {
+        "puesto_codigo": "GMCT_019",
+        "puesto_desc": "Fabian Cumsille - Mecatrónico"
+    },
+    "francisco villar": {
+        "puesto_codigo": "GMCT_020",
+        "puesto_desc": "Francisco Villar - Mecatrónico"
+    },
+    "cristopher valenzuela": {
+        "puesto_codigo": "GMCT_021",
+        "puesto_desc": "Cristopher Valenzuela - Mecatrónico"
+    },
+    "christian vera": {
+        "puesto_codigo": "GMCT_022",
+        "puesto_desc": "Christian Vera - Mecatrónico"
+    },
+    "sebastian vera": {
+        "puesto_codigo": "GMCT_023",
+        "puesto_desc": "Sebastian Vera - Mecatrónico"
+    },
+    "jose saez": {
+        "puesto_codigo": "GMCT_024",
+        "puesto_desc": "Jose Saez - Mecatrónico"
+    },
+    "joaquin martinez": {
+        "puesto_codigo": "GMCT_025",
+        "puesto_desc": "Joaquín Martínez - Mecatrónico"
+    },
+    "manuel rivera": {
+        "puesto_codigo": "GMCT_026",
+        "puesto_desc": "Manuel Rivera - Mecatrónico"
+    },
+    "andres mora": {
+        "puesto_codigo": "GMCT_027",
+        "puesto_desc": "Andrés Mora - Mecatrónico"
+    },
+    "carlos silva": {
+        "puesto_codigo": "GMCT_028",
+        "puesto_desc": "Carlos Silva - Mecatrónico"
+    },
+    "christian zuniga": {
+        "puesto_codigo": "GMCT_029",
+        "puesto_desc": "Christian Zuñiga - Mecatrónico"
+    },
+    "angel villarroel": {
+        "puesto_codigo": "GMCT_030",
+        "puesto_desc": "Ángel Villarroel - Mecatrónico"
+    },
+    "edibeth ventura": {
+        "puesto_codigo": "GMCT_031",
+        "puesto_desc": "Edibeth Ventura - Mecatrónico"
+    },
+    "abiel espinoza": {
+        "puesto_codigo": "GMCT_032",
+        "puesto_desc": "Abiel Espinoza - Mecatrónico"
+    },
+    "jorge mella": {
+        "puesto_codigo": "GMCT_033",
+        "puesto_desc": "Jorge Mella - Mecatrónico"
+    },
+    "jonathan castro": {
+        "puesto_codigo": "GMCT_034",
+        "puesto_desc": "Jonathan Castro - Mecatrónico"
+    },
+    "claudio ramirez": {
+        "puesto_codigo": "GMCT_036",
+        "puesto_desc": "Claudio Ramírez - Mecatrónico"
+    },
+    "miguel palacios": {
+        "puesto_codigo": "GMCT_037",
+        "puesto_desc": "Miguel Palacios - Mecatrónico"
+    },
+    "leonardo alarcon": {
+        "puesto_codigo": "GMCT_038",
+        "puesto_desc": "Leonardo Alarcón - Mecatrónico"
+    },
+    "nicolas vera": {
+        "puesto_codigo": "GMCT_040",
+        "puesto_desc": "Nicolás Vera - Mecatrónico"
+    },
+    "rony lugo": {
+        "puesto_codigo": "GMCT_042",
+        "puesto_desc": "Rony Lugo - Mecatrónico"
+    },
+    "esteban mondaca": {
+        "puesto_codigo": "GMCT_043",
+        "puesto_desc": "Esteban Mondaca - Mecatrónico"
+    },
+    "marco yanez": {
+        "puesto_codigo": "GMCT_044",
+        "puesto_desc": "Marco Yañez - Mecatrónico"
+    },
+    "luis mella": {
+        "puesto_codigo": "GMCT_045",
+        "puesto_desc": "Luis Mella - Mecatrónico"
+    },
+    "nerio montilla": {
+        "puesto_codigo": "GMCT_046",
+        "puesto_desc": "Nerio Montilla - Mecatrónico"
+    },
+    "cristian curin": {
+        "puesto_codigo": "GMCT_047",
+        "puesto_desc": "Cristian Curin - Mecatrónico"
+    },
+    "jaime plaza": {
+        "puesto_codigo": "GMCT_048",
+        "puesto_desc": "Jaime Plaza - Mecatrónico"
+    },
+    "diego melgarejo": {
+        "puesto_codigo": "GMCT_049",
+        "puesto_desc": "Diego Melgarejo - Mecatrónico"
+    },
+    "sebastian huilipan": {
+        "puesto_codigo": "GMCT_050",
+        "puesto_desc": "Sebastián Huilipan - Mecatrónico"
+    },
+    "felipe alarcon": {
+        "puesto_codigo": "GMCT_051",
+        "puesto_desc": "Felipe Alarcón - Mecatrónico"
+    },
+    "javier reyes": {
+        "puesto_codigo": "GMEC_001",
+        "puesto_desc": "Javier Reyes - Mecánico"
+    },
+    "diego carrasco": {
+        "puesto_codigo": "GMEC_002",
+        "puesto_desc": "Diego Carrasco - Mecánico"
+    },
+    "enzo reyes": {
+        "puesto_codigo": "GMEC_003",
+        "puesto_desc": "Enzo Reyes - Mecánico"
+    },
+    "juan pablo medina": {
+        "puesto_codigo": "GMEC_004",
+        "puesto_desc": "Juan Pablo Medina - Mecánico"
+    },
+    "jonathan morales": {
+        "puesto_codigo": "GMEC_005",
+        "puesto_desc": "Jonathan Morales - Mecánico"
+    },
+    "francisco godoy": {
+        "puesto_codigo": "GMEC_006",
+        "puesto_desc": "Francisco Godoy - Mecánico"
+    },
+    "reyder martinez": {
+        "puesto_codigo": "GMEC_007",
+        "puesto_desc": "Reyder Martinez - Mecánico"
+    },
+    "jocelyn julio": {
+        "puesto_codigo": "GMEC_008",
+        "puesto_desc": "Jocelyn Julio - Mecánica"
+    },
+    "ruben rojas": {
+        "puesto_codigo": "GMEC_009",
+        "puesto_desc": "Ruben Rojas - Mecánico"
+    },
+    "cristian fajardo": {
+        "puesto_codigo": "GMEC_010",
+        "puesto_desc": "Cristian Fajardo - Mecánico"
+    },
+    "carlos torres": {
+        "puesto_codigo": "GMEC_011",
+        "puesto_desc": "Carlos Torres - Mecánico"
+    },
+    "emerson perez": {
+        "puesto_codigo": "GMEC_103",
+        "puesto_desc": "Emerson Perez - Mecánico"
+    },
+    "manuel acuna": {
+        "puesto_codigo": "GMEC_013",
+        "puesto_desc": "Manuel Acuña - Mecánico"
+    },
+    "angel arape": {
+        "puesto_codigo": "GMEC_014",
+        "puesto_desc": "Angel Arape - Mecánico"
+    },
+    "sergio munoz": {
+        "puesto_codigo": "GMEC_015",
+        "puesto_desc": "Sergio Muñoz - Mecánico"
+    },
+    "hernan san martin": {
+        "puesto_codigo": "GMEC_016",
+        "puesto_desc": "Hernán San Martín - Mecánico"
+    },
+    "sebastian ulloa": {
+        "puesto_codigo": "GMEC_017",
+        "puesto_desc": "Sebastian Ulloa - Mecánico"
+    },
+    "carlos reyes": {
+        "puesto_codigo": "GMEC_018",
+        "puesto_desc": "Carlos Reyes - Mecánico"
+    },
+    "javier pincheira": {
+        "puesto_codigo": "GMEC_019",
+        "puesto_desc": "Javier Pincheira - Mecánico"
+    },
+    "felipe escobar": {
+        "puesto_codigo": "GMEC_020",
+        "puesto_desc": "Felipe Escobar - Mecánico"
+    },
+    "hugo arriaza": {
+        "puesto_codigo": "GMEC_021",
+        "puesto_desc": "Hugo Arriaza - Mecánico"
+    },
+    "raimundo meneses": {
+        "puesto_codigo": "GMEC_022",
+        "puesto_desc": "Raimundo Meneses - Mecánico"
+    },
+    "pablo cuadra": {
+        "puesto_codigo": "GMEC_023",
+        "puesto_desc": "Pablo Cuadra - Mecánico"
+    },
+    "miguel vega": {
+        "puesto_codigo": "GMEC_046",
+        "puesto_desc": "Miguel Vega - Mecánico"
+    },
+    "roberto gajardo": {
+        "puesto_codigo": "GMEC_025",
+        "puesto_desc": "Roberto Gajardo - Mecánico"
+    },
+    "eduardo olguin": {
+        "puesto_codigo": "GMEC_026",
+        "puesto_desc": "Eduardo Olguín - Mecánico"
+    },
+    "juan perez": {
+        "puesto_codigo": "GMEC_027",
+        "puesto_desc": "Juan Pérez - Mecánico"
+    },
+    "carlos martinez": {
+        "puesto_codigo": "GMEC_028",
+        "puesto_desc": "Carlos Martínez - Mecánico"
+    },
+    "jose diaz": {
+        "puesto_codigo": "GMEC_029",
+        "puesto_desc": "José Díaz - Mecánico"
+    },
+    "francisco farias": {
+        "puesto_codigo": "GMEC_030",
+        "puesto_desc": "Francisco Farías - Mecánico"
+    },
+    "oscar cadenas": {
+        "puesto_codigo": "GMEC_031",
+        "puesto_desc": "Oscar Cadenas - Mecánico"
+    },
+    "miguel garate": {
+        "puesto_codigo": "GMEC_032",
+        "puesto_desc": "Miguel Garate - Mecánico"
+    },
+    "jorge farias": {
+        "puesto_codigo": "GMEC_033",
+        "puesto_desc": "Jorge Farías - Mecánico"
+    },
+    "matias penaloza": {
+        "puesto_codigo": "GMEC_034",
+        "puesto_desc": "Matias Peñaloza - Mecánico"
+    },
+    "raul osorio": {
+        "puesto_codigo": "GMEC_035",
+        "puesto_desc": "Raúl Osorio - Mecánico"
+    },
+    "sergio ramos": {
+        "puesto_codigo": "GMEC_036",
+        "puesto_desc": "Sergio Ramos - Mecánico"
+    },
+    "jose pacheco": {
+        "puesto_codigo": "GMEC_037",
+        "puesto_desc": "Jose Pacheco - Mecánico"
+    },
+    "ricardo jorquera": {
+        "puesto_codigo": "GMEC_038",
+        "puesto_desc": "Ricardo Jorquera - Mecánico"
+    },
+    "bastian munoz": {
+        "puesto_codigo": "PDM_03",
+        "puesto_desc": "Bastián Muñoz - Analista Predictivo"
+    },
+    "jesus herrera": {
+        "puesto_codigo": "GMEC_040",
+        "puesto_desc": "Jesús Herrera - Mecánico"
+    },
+    "jimmy guerra": {
+        "puesto_codigo": "GMEC_041",
+        "puesto_desc": "Jimmy Guerra - Mecánico"
+    },
+    "marco carrasco": {
+        "puesto_codigo": "GMEC_042",
+        "puesto_desc": "Marco Carrasco - Mecánico"
+    },
+    "luis rojas": {
+        "puesto_codigo": "GMEC_043",
+        "puesto_desc": "Luis Rojas - Mecánico"
+    },
+    "alejandro ulloa": {
+        "puesto_codigo": "GMEC_044",
+        "puesto_desc": "Alejandro Ulloa - Mecánico"
+    },
+    "yender suarez": {
+        "puesto_codigo": "GMEC_045",
+        "puesto_desc": "Yender Suárez - Mecánico"
+    },
+    "cristopher elgueta": {
+        "puesto_codigo": "GMEC_047",
+        "puesto_desc": "Cristopher Elgueta - Mecánico"
+    },
+    "gabriel cabezas": {
+        "puesto_codigo": "GMEC_048",
+        "puesto_desc": "Gabriel Cabezas - Mecánico"
+    },
+    "juan gonzalez": {
+        "puesto_codigo": "GMEC_049",
+        "puesto_desc": "Juan González - Mecánico"
+    },
+    "cristian lagos": {
+        "puesto_codigo": "GMEC_050",
+        "puesto_desc": "Cristian Lagos - Mecánico"
+    },
+    "emmanuel salas": {
+        "puesto_codigo": "GMEC_052",
+        "puesto_desc": "Emmanuel Salas - Mecánico"
+    },
+    "jose pavez": {
+        "puesto_codigo": "GMEC_053",
+        "puesto_desc": "José Pavez - Mecánico"
+    },
+    "pablo castro": {
+        "puesto_codigo": "GMEC_054",
+        "puesto_desc": "Pablo Castro - Mecánico"
+    },
+    "juan molina": {
+        "puesto_codigo": "GMEC_055",
+        "puesto_desc": "Juan Molina - Mecánico"
+    },
+    "heasmy rodriguez": {
+        "puesto_codigo": "GMEC_056",
+        "puesto_desc": "Heasmy Rodríguez - Mecánico"
+    },
+    "javier valenzuela": {
+        "puesto_codigo": "GMEC_057",
+        "puesto_desc": "Javier Valenzuela - Mecánico"
+    },
+    "felix castillo": {
+        "puesto_codigo": "GMEC_058",
+        "puesto_desc": "Felix Castillo - Mecánico"
+    },
+    "rodrigo navarro": {
+        "puesto_codigo": "GMEC_059",
+        "puesto_desc": "Rodrigo Navarro - Mecánico"
+    },
+    "diego garrido": {
+        "puesto_codigo": "GMEC_060",
+        "puesto_desc": "Diego Garrido - Mecánico"
+    },
+    "eddy martinez": {
+        "puesto_codigo": "GMEC_061",
+        "puesto_desc": "Eddy Martínez - Mecánico"
+    },
+    "miguel bustamante": {
+        "puesto_codigo": "GMEC_062",
+        "puesto_desc": "Miguel Bustamante - Mecánico"
+    },
+    "jesus fereira": {
+        "puesto_codigo": "GMEC_063",
+        "puesto_desc": "Jesús Fereira - Mecánico"
+    },
+    "pablo urzua": {
+        "puesto_codigo": "GMEC_064",
+        "puesto_desc": "Pablo Urzúa - Mecánico"
+    },
+    "marcelo altamirano": {
+        "puesto_codigo": "GMEC_065",
+        "puesto_desc": "Marcelo Altamirano - Mecánico"
+    },
+    "claudio castillo": {
+        "puesto_codigo": "GMEC_066",
+        "puesto_desc": "Claudio Castillo - Mecánico"
+    },
+    "tomas parra": {
+        "puesto_codigo": "GMEC_067",
+        "puesto_desc": "Tomás Parra - Mecánico"
+    },
+    "jose aponte": {
+        "puesto_codigo": "GMEC_068",
+        "puesto_desc": "José Aponte - Mecánico"
+    },
+    "patricio contreras": {
+        "puesto_codigo": "GMEC_070",
+        "puesto_desc": "Patricio Contreras - Mecánico"
+    },
+    "esteban gonzalez": {
+        "puesto_codigo": "GMEC_071",
+        "puesto_desc": "Esteban González - Mecánico"
+    },
+    "leopoldo papagallo": {
+        "puesto_codigo": "GMEC_072",
+        "puesto_desc": "Leopoldo Papagallo - Mecánico"
+    },
+    "tito sandoval": {
+        "puesto_codigo": "GMEC_073",
+        "puesto_desc": "Tito Sandoval - Mecánico"
+    },
+    "ricardo astudillo": {
+        "puesto_codigo": "GMEC_074",
+        "puesto_desc": "Ricardo Astudillo - Mecánico"
+    },
+    "alexander colina": {
+        "puesto_codigo": "GMEC_075",
+        "puesto_desc": "Alexander Colina - Mecánico"
+    },
+    "pablo marin": {
+        "puesto_codigo": "GMEC_076",
+        "puesto_desc": "Pablo Marin - Mecánico"
+    },
+    "kevin loyola": {
+        "puesto_codigo": "GMEC_077",
+        "puesto_desc": "Kevin Loyola - Mecánico"
+    },
+    "felipe escobedo": {
+        "puesto_codigo": "GMEC_078",
+        "puesto_desc": "Felipe Escobedo - Mecánico"
+    },
+    "javier garate": {
+        "puesto_codigo": "GMEC_079",
+        "puesto_desc": "Javier Garate - Mecánico"
+    },
+    "felipe carrasco": {
+        "puesto_codigo": "GMEC_080",
+        "puesto_desc": "Felipe Carrasco - Mecánico"
+    },
+    "moises simanca": {
+        "puesto_codigo": "GMEC_081",
+        "puesto_desc": "Moises Simanca - Mecánico"
+    },
+    "patricio cabrera": {
+        "puesto_codigo": "GMEC_082",
+        "puesto_desc": "Patricio Cabrera - Mecánico"
+    },
+    "alex jaque": {
+        "puesto_codigo": "GMEC_083",
+        "puesto_desc": "Alex Jaque - Mecánico"
+    },
+    "daniel navarro": {
+        "puesto_codigo": "GMEC_084",
+        "puesto_desc": "Daniel Navarro - Mecánico"
+    },
+    "ali colina": {
+        "puesto_codigo": "GMEC_085",
+        "puesto_desc": "Ali Colina - Mecánico"
+    },
+    "fernando collao": {
+        "puesto_codigo": "GMEC_086",
+        "puesto_desc": "Fernando Collao - Mecánico"
+    },
+    "wilmer davila": {
+        "puesto_codigo": "PM_M_01",
+        "puesto_desc": "Wilmer Dávila - Mecánico"
+    },
+    "nelson puebla": {
+        "puesto_codigo": "GMEC_088",
+        "puesto_desc": "Nelson Puebla - Mecánico"
+    },
+    "cristian cayuman": {
+        "puesto_codigo": "GMEC_089",
+        "puesto_desc": "Cristian Cayuman - Mecánico"
+    },
+    "david paredes": {
+        "puesto_codigo": "GMEC_090",
+        "puesto_desc": "David Paredes - Mecánico"
+    },
+    "jose caro": {
+        "puesto_codigo": "GMEC_091",
+        "puesto_desc": "José Caro - Mecánico"
+    },
+    "alejandro rodriguez": {
+        "puesto_codigo": "GMEC_092",
+        "puesto_desc": "Alejandro Rodríguez - Mecánico"
+    },
+    "erwin suazo": {
+        "puesto_codigo": "GMEC_093",
+        "puesto_desc": "Erwin Suazo - Mecánico"
+    },
+    "daniel linares": {
+        "puesto_codigo": "GMEC_094",
+        "puesto_desc": "Daniel Linares - Mecánico"
+    },
+    "eudys martinez": {
+        "puesto_codigo": "GMEC_095",
+        "puesto_desc": "Eudys Martínez - Mecánico"
+    },
+    "boris toro": {
+        "puesto_codigo": "GMEC_096",
+        "puesto_desc": "Boris Toro - Mecánico"
+    },
+    "juan valles": {
+        "puesto_codigo": "GMEC_097",
+        "puesto_desc": "Juan Valles - Mecánico"
+    },
+    "gustavo jara": {
+        "puesto_codigo": "GMEC_098",
+        "puesto_desc": "Gustavo Jara - Mecánico"
+    },
+    "francisco vasquez": {
+        "puesto_codigo": "GMEC_099",
+        "puesto_desc": "Francisco Vásquez - Mecánico"
+    },
+    "eduardo munoz": {
+        "puesto_codigo": "GMEC_100",
+        "puesto_desc": "Eduardo Muñoz - Mecánico"
+    },
+    "mauricio vega": {
+        "puesto_codigo": "GMEC_101",
+        "puesto_desc": "Mauricio Vega - Mecánico"
+    },
+    "juan pablo chacon": {
+        "puesto_codigo": "GMEC_102",
+        "puesto_desc": "Juan Pablo Chacón - Mecánico"
+    },
+    "martin orellana": {
+        "puesto_codigo": "GMEC_104",
+        "puesto_desc": "Martin orellana"
+    },
+    "mecanico": {
+        "puesto_codigo": "GMEC_24",
+        "puesto_desc": "Mecánico - Miguel Vega"
+    },
+    "bernardo lopez": {
+        "puesto_codigo": "GSFW_001",
+        "puesto_desc": "Bernardo Lopez - Ing. Software"
+    },
+    "eduardo colina": {
+        "puesto_codigo": "GSFW_002",
+        "puesto_desc": "Eduardo Colina - Ing. Software"
+    },
+    "hector gonzalez": {
+        "puesto_codigo": "GSFW_003",
+        "puesto_desc": "Héctor González - Ing. Software"
+    },
+    "miriam vega": {
+        "puesto_codigo": "GSFW_004",
+        "puesto_desc": "Miriam Vega  - Ing. Software"
+    },
+    "cristian fernandez": {
+        "puesto_codigo": "GSFW_005",
+        "puesto_desc": "Cristian Fernández - Ing.Software"
+    },
+    "mauricio salgado": {
+        "puesto_codigo": "GSFW_006",
+        "puesto_desc": "Mauricio Salgado - Ing.Software"
+    },
+    "rafael pernia": {
+        "puesto_codigo": "GSFW_007",
+        "puesto_desc": "Rafael Pernia - Ing.Software"
+    },
+    "ruperto morales": {
+        "puesto_codigo": "GSFW_008",
+        "puesto_desc": "Ruperto Morales - Ing.Software"
+    },
+    "cristian grandon": {
+        "puesto_codigo": "GSFW_009",
+        "puesto_desc": "Cristian Grandón - Ing.Software"
+    },
+    "jorge salgado": {
+        "puesto_codigo": "GTPO_002",
+        "puesto_desc": "Jorge Salgado - TPO"
+    },
+    "marcelo pina": {
+        "puesto_codigo": "GTPO_004",
+        "puesto_desc": "Marcelo Piña - TPO"
+    },
+    "juan manriquez": {
+        "puesto_codigo": "GTPO_005",
+        "puesto_desc": "Juan Manríquez - TPO"
+    },
+    "gum cal cg4 24 x 70 4 roll vertica": {
+        "puesto_codigo": "GUMCAL",
+        "puesto_desc": "\"GUM CAL CG4/ 24\"\" x 70\"\" 4 ROLL VERTICA"
+    },
+    "hf tire building machine": {
+        "puesto_codigo": "HF-TBM",
+        "puesto_desc": "HF TIRE BUILDING MACHINE"
+    },
+    "laboratorio quimico": {
+        "puesto_codigo": "LABCHEM",
+        "puesto_desc": "Laboratorio Quimico"
+    },
+    "laboratorio fisico": {
+        "puesto_codigo": "LABPHISI",
+        "puesto_desc": "Laboratorio Fisico"
+    },
+    "taller mantenimiento div a": {
+        "puesto_codigo": "LOG_A",
+        "puesto_desc": "TALLER MANTENIMIENTO (DIV A)"
+    },
+    "taller mantenimiento div b": {
+        "puesto_codigo": "LOG_B",
+        "puesto_desc": "TALLER MANTENIMIENTO (DIV B)"
+    },
+    "taller mantenimiento div c": {
+        "puesto_codigo": "LOG_C",
+        "puesto_desc": "TALLER MANTENIMIENTO (DIV C)"
+    },
+    "taller de facilities": {
+        "puesto_codigo": "LOG_FAC",
+        "puesto_desc": "TALLER DE FACILITIES"
+    },
+    "taller lubricacion": {
+        "puesto_codigo": "LOG_LUBR",
+        "puesto_desc": "TALLER LUBRICACIÓN"
+    },
+    "taller de maquina herramienta": {
+        "puesto_codigo": "LOG_MHER",
+        "puesto_desc": "TALLER DE MAQUINA HERRAMIENTA"
+    },
+    "taller gruas motorizadas": {
+        "puesto_codigo": "LOG_MONT",
+        "puesto_desc": "TALLER GRUAS MOTORIZADAS"
+    },
+    "reparacion de materiales": {
+        "puesto_codigo": "LOG_MRO",
+        "puesto_desc": "REPARACIÓN DE MATERIALES"
+    },
+    "eduardo ruiz": {
+        "puesto_codigo": "LOG_TAMB",
+        "puesto_desc": "Eduardo Ruiz"
+    },
+    "taller de npt": {
+        "puesto_codigo": "LOG_TNPT",
+        "puesto_desc": "TALLER DE NPT"
+    },
+    "taller de utilities": {
+        "puesto_codigo": "LOG_UTIL",
+        "puesto_desc": "TALLER DE UTILITIES"
+    },
+    "lubricador": {
+        "puesto_codigo": "LUB_01",
+        "puesto_desc": "LUBRICADOR"
+    },
+    "alejandro navarro": {
+        "puesto_codigo": "LUB_02",
+        "puesto_desc": "Alejandro Navarro - Lubricador"
+    },
+    "juan machuca": {
+        "puesto_codigo": "LUB_03",
+        "puesto_desc": "Juan Machuca - Lubricador"
+    },
+    "marcelo pezo": {
+        "puesto_codigo": "LUB_04",
+        "puesto_desc": "Marcelo Pezo - Lubricador"
+    },
+    "ariel bustos": {
+        "puesto_codigo": "LUB_05",
+        "puesto_desc": "Ariel Bustos - Lubricador"
+    },
+    "luis calderon": {
+        "puesto_codigo": "LUB_06",
+        "puesto_desc": "Luis Calderón - Lubricador"
+    },
+    "alejandro ramirez": {
+        "puesto_codigo": "LUB_07",
+        "puesto_desc": "Alejandro Ramírez - Lubricador"
+    },
+    "mold40289694": {
+        "puesto_codigo": "M0000642",
+        "puesto_desc": "MOLD40289694"
+    },
+    "mold40367463": {
+        "puesto_codigo": "M0000908",
+        "puesto_desc": "MOLD40367463"
+    },
+    "mold40367670": {
+        "puesto_codigo": "M0000909",
+        "puesto_desc": "MOLD40367670"
+    },
+    "mold40371738": {
+        "puesto_codigo": "M0000910",
+        "puesto_desc": "MOLD40371738"
+    },
+    "mold40371496": {
+        "puesto_codigo": "M0000911",
+        "puesto_desc": "MOLD40371496"
+    },
+    "mold40371955": {
+        "puesto_codigo": "M0000912",
+        "puesto_desc": "MOLD40371955"
+    },
+    "mold40371821": {
+        "puesto_codigo": "M0000913",
+        "puesto_desc": "MOLD40371821"
+    },
+    "mold40373005": {
+        "puesto_codigo": "M0000914",
+        "puesto_desc": "MOLD40373005"
+    },
+    "mold40373395": {
+        "puesto_codigo": "M0000915",
+        "puesto_desc": "MOLD40373395"
+    },
+    "mold40373580": {
+        "puesto_codigo": "M0000916",
+        "puesto_desc": "MOLD40373580"
+    },
+    "mold40372272": {
+        "puesto_codigo": "M0000917",
+        "puesto_desc": "MOLD40372272"
+    },
+    "mold40373585": {
+        "puesto_codigo": "M0000918",
+        "puesto_desc": "MOLD40373585"
+    },
+    "mold40370769": {
+        "puesto_codigo": "M0000919",
+        "puesto_desc": "MOLD40370769"
+    },
+    "mold40372495": {
+        "puesto_codigo": "M0000920",
+        "puesto_desc": "MOLD40372495"
+    },
+    "mold40373681": {
+        "puesto_codigo": "M0000921",
+        "puesto_desc": "MOLD40373681"
+    },
+    "mold40374108": {
+        "puesto_codigo": "M0000922",
+        "puesto_desc": "MOLD40374108"
+    },
+    "mold40306427": {
+        "puesto_codigo": "M0000923",
+        "puesto_desc": "MOLD40306427"
+    },
+    "mold40307279": {
+        "puesto_codigo": "M0000924",
+        "puesto_desc": "MOLD40307279"
+    },
+    "mold40374438": {
+        "puesto_codigo": "M0000925",
+        "puesto_desc": "MOLD40374438"
+    },
+    "mold40372280": {
+        "puesto_codigo": "M0000926",
+        "puesto_desc": "MOLD40372280"
+    },
+    "mold40372757": {
+        "puesto_codigo": "M0000927",
+        "puesto_desc": "MOLD40372757"
+    },
+    "mold40305832": {
+        "puesto_codigo": "M0000928",
+        "puesto_desc": "MOLD40305832"
+    },
+    "mold40373186": {
+        "puesto_codigo": "M0000929",
+        "puesto_desc": "MOLD40373186"
+    },
+    "mold40373323": {
+        "puesto_codigo": "M0000930",
+        "puesto_desc": "MOLD40373323"
+    },
+    "mold40306764": {
+        "puesto_codigo": "M0000931",
+        "puesto_desc": "MOLD40306764"
+    },
+    "mold40331229": {
+        "puesto_codigo": "M0000932",
+        "puesto_desc": "MOLD40331229"
+    },
+    "mold40374212": {
+        "puesto_codigo": "M0000933",
+        "puesto_desc": "MOLD40374212"
+    },
+    "mold40353580": {
+        "puesto_codigo": "M0000934",
+        "puesto_desc": "MOLD40353580"
+    },
+    "mold40373676": {
+        "puesto_codigo": "M0000935",
+        "puesto_desc": "MOLD40373676"
+    },
+    "mold40373512": {
+        "puesto_codigo": "M0000936",
+        "puesto_desc": "MOLD40373512"
+    },
+    "mold40373120": {
+        "puesto_codigo": "M0000937",
+        "puesto_desc": "MOLD40373120"
+    },
+    "mold40377021": {
+        "puesto_codigo": "M0000938",
+        "puesto_desc": "MOLD40377021"
+    },
+    "mold40373881": {
+        "puesto_codigo": "M0000939",
+        "puesto_desc": "MOLD40373881"
+    },
+    "mold40374222": {
+        "puesto_codigo": "M0000940",
+        "puesto_desc": "MOLD40374222"
+    },
+    "mold40377076": {
+        "puesto_codigo": "M0000941",
+        "puesto_desc": "MOLD40377076"
+    },
+    "mold40374854": {
+        "puesto_codigo": "M0000942",
+        "puesto_desc": "MOLD40374854"
+    },
+    "mold40377087": {
+        "puesto_codigo": "M0000943",
+        "puesto_desc": "MOLD40377087"
+    },
+    "mold40369283": {
+        "puesto_codigo": "M0000945",
+        "puesto_desc": "MOLD40369283"
+    },
+    "mold40375902": {
+        "puesto_codigo": "M0000946",
+        "puesto_desc": "MOLD40375902"
+    },
+    "mold40379108": {
+        "puesto_codigo": "M0000947",
+        "puesto_desc": "MOLD40379108"
+    },
+    "mold40378710": {
+        "puesto_codigo": "M0000948",
+        "puesto_desc": "MOLD40378710"
+    },
+    "mold40378945": {
+        "puesto_codigo": "M0000949",
+        "puesto_desc": "MOLD40378945"
+    },
+    "mold40378848": {
+        "puesto_codigo": "M0000950",
+        "puesto_desc": "MOLD40378848"
+    },
+    "mold40379119": {
+        "puesto_codigo": "M0000951",
+        "puesto_desc": "MOLD40379119"
+    },
+    "mold40375970": {
+        "puesto_codigo": "M0000952",
+        "puesto_desc": "MOLD40375970"
+    },
+    "mold40379233": {
+        "puesto_codigo": "M0000953",
+        "puesto_desc": "MOLD40379233"
+    },
+    "mold40379422": {
+        "puesto_codigo": "M0000955",
+        "puesto_desc": "MOLD40379422"
+    },
+    "mold40379532": {
+        "puesto_codigo": "M0000956",
+        "puesto_desc": "MOLD40379532"
+    },
+    "mold40379672": {
+        "puesto_codigo": "M0000957",
+        "puesto_desc": "MOLD40379672"
+    },
+    "mold40379505": {
+        "puesto_codigo": "M0000958",
+        "puesto_desc": "MOLD40379505"
+    },
+    "mold40379721": {
+        "puesto_codigo": "M0000959",
+        "puesto_desc": "MOLD40379721"
+    },
+    "mold40379855": {
+        "puesto_codigo": "M0000960",
+        "puesto_desc": "MOLD40379855"
+    },
+    "mold40380050": {
+        "puesto_codigo": "M0000961",
+        "puesto_desc": "MOLD40380050"
+    },
+    "mold40380014": {
+        "puesto_codigo": "M0000962",
+        "puesto_desc": "MOLD40380014"
+    },
+    "mold40378836": {
+        "puesto_codigo": "M0000963",
+        "puesto_desc": "MOLD40378836"
+    },
+    "mold40380404": {
+        "puesto_codigo": "M0000964",
+        "puesto_desc": "MOLD40380404"
+    },
+    "mold40381270": {
+        "puesto_codigo": "M0000965",
+        "puesto_desc": "MOLD40381270"
+    },
+    "mold40380607": {
+        "puesto_codigo": "M0000966",
+        "puesto_desc": "MOLD40380607"
+    },
+    "mold40380449": {
+        "puesto_codigo": "M0000967",
+        "puesto_desc": "MOLD40380449"
+    },
+    "mold40380380": {
+        "puesto_codigo": "M0000968",
+        "puesto_desc": "MOLD40380380"
+    },
+    "mold40381426": {
+        "puesto_codigo": "M0000969",
+        "puesto_desc": "MOLD40381426"
+    },
+    "mold40381470": {
+        "puesto_codigo": "M0000970",
+        "puesto_desc": "MOLD40381470"
+    },
+    "mold40380644": {
+        "puesto_codigo": "M0000971",
+        "puesto_desc": "MOLD40380644"
+    },
+    "mold40380809": {
+        "puesto_codigo": "M0000972",
+        "puesto_desc": "MOLD40380809"
+    },
+    "mold40381332": {
+        "puesto_codigo": "M0000974",
+        "puesto_desc": "MOLD40381332"
+    },
+    "mold40381128": {
+        "puesto_codigo": "M0000975",
+        "puesto_desc": "MOLD40381128"
+    },
+    "mold40380959": {
+        "puesto_codigo": "M0000976",
+        "puesto_desc": "MOLD40380959"
+    },
+    "mold40381761": {
+        "puesto_codigo": "M0000977",
+        "puesto_desc": "MOLD40381761"
+    },
+    "mold40381259": {
+        "puesto_codigo": "M0000978",
+        "puesto_desc": "MOLD40381259"
+    },
+    "mold40381248": {
+        "puesto_codigo": "M0000979",
+        "puesto_desc": "MOLD40381248"
+    },
+    "mold40380918": {
+        "puesto_codigo": "M0000980",
+        "puesto_desc": "MOLD40380918"
+    },
+    "mold40380886": {
+        "puesto_codigo": "M0000981",
+        "puesto_desc": "MOLD40380886"
+    },
+    "mold40381508": {
+        "puesto_codigo": "M0000982",
+        "puesto_desc": "MOLD40381508"
+    },
+    "mold40381994": {
+        "puesto_codigo": "M0000983",
+        "puesto_desc": "MOLD40381994"
+    },
+    "mold40382473": {
+        "puesto_codigo": "M0000984",
+        "puesto_desc": "MOLD40382473"
+    },
+    "mold40382799": {
+        "puesto_codigo": "M0000985",
+        "puesto_desc": "MOLD40382799"
+    },
+    "mold40381632": {
+        "puesto_codigo": "M0000986",
+        "puesto_desc": "MOLD40381632"
+    },
+    "mold40381754": {
+        "puesto_codigo": "M0000987",
+        "puesto_desc": "MOLD40381754"
+    },
+    "mold40381721": {
+        "puesto_codigo": "M0000988",
+        "puesto_desc": "MOLD40381721"
+    },
+    "mold40383685": {
+        "puesto_codigo": "M0000989",
+        "puesto_desc": "MOLD40383685"
+    },
+    "mold40381979": {
+        "puesto_codigo": "M0000990",
+        "puesto_desc": "MOLD40381979"
+    },
+    "mold40383468": {
+        "puesto_codigo": "M0000991",
+        "puesto_desc": "MOLD40383468"
+    },
+    "mold40383023": {
+        "puesto_codigo": "M0000992",
+        "puesto_desc": "MOLD40383023"
+    },
+    "mold40383286": {
+        "puesto_codigo": "M0000993",
+        "puesto_desc": "MOLD40383286"
+    },
+    "mold40382762": {
+        "puesto_codigo": "M0000994",
+        "puesto_desc": "MOLD40382762"
+    },
+    "mold40384160": {
+        "puesto_codigo": "M0000995",
+        "puesto_desc": "MOLD40384160"
+    },
+    "mold40383779": {
+        "puesto_codigo": "M0000996",
+        "puesto_desc": "MOLD40383779"
+    },
+    "mold40384273": {
+        "puesto_codigo": "M0000997",
+        "puesto_desc": "MOLD40384273"
+    },
+    "mold40383035": {
+        "puesto_codigo": "M0000998",
+        "puesto_desc": "MOLD40383035"
+    },
+    "mold40385828": {
+        "puesto_codigo": "M0001003",
+        "puesto_desc": "MOLD40385828"
+    },
+    "mold40385801": {
+        "puesto_codigo": "M0001004",
+        "puesto_desc": "MOLD40385801"
+    },
+    "mold40385950": {
+        "puesto_codigo": "M0001005",
+        "puesto_desc": "MOLD40385950"
+    },
+    "mold40385694": {
+        "puesto_codigo": "M0001006",
+        "puesto_desc": "MOLD40385694"
+    },
+    "mold40385487": {
+        "puesto_codigo": "M0001007",
+        "puesto_desc": "MOLD40385487"
+    },
+    "mold40386096": {
+        "puesto_codigo": "M0001008",
+        "puesto_desc": "MOLD40386096"
+    },
+    "mold40386518": {
+        "puesto_codigo": "M0001009",
+        "puesto_desc": "MOLD40386518"
+    },
+    "mold40386328": {
+        "puesto_codigo": "M0001010",
+        "puesto_desc": "MOLD40386328"
+    },
+    "mold40386867": {
+        "puesto_codigo": "M0001011",
+        "puesto_desc": "MOLD40386867"
+    },
+    "mold40386875": {
+        "puesto_codigo": "M0001012",
+        "puesto_desc": "MOLD40386875"
+    },
+    "mold40368668": {
+        "puesto_codigo": "M0001013",
+        "puesto_desc": "MOLD40368668"
+    },
+    "mold40387071": {
+        "puesto_codigo": "M0001014",
+        "puesto_desc": "MOLD40387071"
+    },
+    "mold40386777": {
+        "puesto_codigo": "M0001015",
+        "puesto_desc": "MOLD40386777"
+    },
+    "mold40386222": {
+        "puesto_codigo": "M0001016",
+        "puesto_desc": "MOLD40386222"
+    },
+    "mold40387353": {
+        "puesto_codigo": "M0001017",
+        "puesto_desc": "MOLD40387353"
+    },
+    "mold40371482": {
+        "puesto_codigo": "M0001018",
+        "puesto_desc": "MOLD40371482"
+    },
+    "mold40387348": {
+        "puesto_codigo": "M0001019",
+        "puesto_desc": "MOLD40387348"
+    },
+    "mold40387469": {
+        "puesto_codigo": "M0001020",
+        "puesto_desc": "MOLD40387469"
+    },
+    "mold40387495": {
+        "puesto_codigo": "M0001021",
+        "puesto_desc": "MOLD40387495"
+    },
+    "mold40387483": {
+        "puesto_codigo": "M0001022",
+        "puesto_desc": "MOLD40387483"
+    },
+    "mold40386792": {
+        "puesto_codigo": "M0001023",
+        "puesto_desc": "MOLD40386792"
+    },
+    "mold40387191": {
+        "puesto_codigo": "M0001024",
+        "puesto_desc": "MOLD40387191"
+    },
+    "mold40387198": {
+        "puesto_codigo": "M0001025",
+        "puesto_desc": "MOLD40387198"
+    },
+    "mold40387186": {
+        "puesto_codigo": "M0001026",
+        "puesto_desc": "MOLD40387186"
+    },
+    "mold40387456": {
+        "puesto_codigo": "M0001027",
+        "puesto_desc": "MOLD40387456"
+    },
+    "mold40387610": {
+        "puesto_codigo": "M0001028",
+        "puesto_desc": "MOLD40387610"
+    },
+    "mold40387948": {
+        "puesto_codigo": "M0001029",
+        "puesto_desc": "MOLD40387948"
+    },
+    "mold40371330": {
+        "puesto_codigo": "M0001030",
+        "puesto_desc": "MOLD40371330"
+    },
+    "mold40387533": {
+        "puesto_codigo": "M0001031",
+        "puesto_desc": "MOLD40387533"
+    },
+    "mold40388362": {
+        "puesto_codigo": "M0001032",
+        "puesto_desc": "MOLD40388362"
+    },
+    "mold40388048": {
+        "puesto_codigo": "M0001033",
+        "puesto_desc": "MOLD40388048"
+    },
+    "mold40388510": {
+        "puesto_codigo": "M0001034",
+        "puesto_desc": "MOLD40388510"
+    },
+    "mold40388349": {
+        "puesto_codigo": "M0001035",
+        "puesto_desc": "MOLD40388349"
+    },
+    "mold40387646": {
+        "puesto_codigo": "M0001036",
+        "puesto_desc": "MOLD40387646"
+    },
+    "mold40388984": {
+        "puesto_codigo": "M0001037",
+        "puesto_desc": "MOLD40388984"
+    },
+    "mold40389099": {
+        "puesto_codigo": "M0001038",
+        "puesto_desc": "MOLD40389099"
+    },
+    "mold40385334": {
+        "puesto_codigo": "M0001039",
+        "puesto_desc": "MOLD40385334"
+    },
+    "mold40385452": {
+        "puesto_codigo": "M0001040",
+        "puesto_desc": "MOLD40385452"
+    },
+    "mold40385482": {
+        "puesto_codigo": "M0001041",
+        "puesto_desc": "MOLD40385482"
+    },
+    "mold40385611": {
+        "puesto_codigo": "M0001042",
+        "puesto_desc": "MOLD40385611"
+    },
+    "mold40386101": {
+        "puesto_codigo": "M0001043",
+        "puesto_desc": "MOLD40386101"
+    },
+    "mold40386572": {
+        "puesto_codigo": "M0001044",
+        "puesto_desc": "MOLD40386572"
+    },
+    "mold40389113": {
+        "puesto_codigo": "M0001045",
+        "puesto_desc": "MOLD40389113"
+    },
+    "mold40387689": {
+        "puesto_codigo": "M0001046",
+        "puesto_desc": "MOLD40387689"
+    },
+    "mold40387842": {
+        "puesto_codigo": "M0001047",
+        "puesto_desc": "MOLD40387842"
+    },
+    "mold40387858": {
+        "puesto_codigo": "M0001048",
+        "puesto_desc": "MOLD40387858"
+    },
+    "mold40380392": {
+        "puesto_codigo": "M0001049",
+        "puesto_desc": "MOLD40380392"
+    },
+    "mold40393899": {
+        "puesto_codigo": "M0001050",
+        "puesto_desc": "MOLD40393899"
+    },
+    "mold40395003": {
+        "puesto_codigo": "M0001051",
+        "puesto_desc": "MOLD40395003"
+    },
+    "mold40395135": {
+        "puesto_codigo": "M0001052",
+        "puesto_desc": "MOLD40395135"
+    },
+    "mold40333346": {
+        "puesto_codigo": "M0001053",
+        "puesto_desc": "MOLD40333346"
+    },
+    "mold40382204": {
+        "puesto_codigo": "M0001054",
+        "puesto_desc": "MOLD40382204"
+    },
+    "mold40395130": {
+        "puesto_codigo": "M0001055",
+        "puesto_desc": "MOLD40395130"
+    },
+    "mold40395163": {
+        "puesto_codigo": "M0001056",
+        "puesto_desc": "MOLD40395163"
+    },
+    "mold40395212": {
+        "puesto_codigo": "M0001057",
+        "puesto_desc": "MOLD40395212"
+    },
+    "mold40388540": {
+        "puesto_codigo": "M0001058",
+        "puesto_desc": "MOLD40388540"
+    },
+    "mold40389196": {
+        "puesto_codigo": "M0001059",
+        "puesto_desc": "MOLD40389196"
+    },
+    "mold40395700": {
+        "puesto_codigo": "M0001060",
+        "puesto_desc": "MOLD40395700"
+    },
+    "mold40395875": {
+        "puesto_codigo": "M0001061",
+        "puesto_desc": "MOLD40395875"
+    },
+    "mold40396108": {
+        "puesto_codigo": "M0001062",
+        "puesto_desc": "MOLD40396108"
+    },
+    "mold40396012": {
+        "puesto_codigo": "M0001063",
+        "puesto_desc": "MOLD40396012"
+    },
+    "mold40399799": {
+        "puesto_codigo": "M0001064",
+        "puesto_desc": "MOLD40399799"
+    },
+    "mold40400043": {
+        "puesto_codigo": "M0001065",
+        "puesto_desc": "MOLD40400043"
+    },
+    "mold40426282": {
+        "puesto_codigo": "M0001066",
+        "puesto_desc": "MOLD40426282"
+    },
+    "mold40426443": {
+        "puesto_codigo": "M0001067",
+        "puesto_desc": "MOLD40426443"
+    },
+    "mold40396126": {
+        "puesto_codigo": "M0001068",
+        "puesto_desc": "MOLD40396126"
+    },
+    "mold40426666": {
+        "puesto_codigo": "M0001069",
+        "puesto_desc": "MOLD40426666"
+    },
+    "mold40426423": {
+        "puesto_codigo": "M0001070",
+        "puesto_desc": "MOLD40426423"
+    },
+    "mold40399281": {
+        "puesto_codigo": "M0001071",
+        "puesto_desc": "MOLD40399281"
+    },
+    "mold40396524": {
+        "puesto_codigo": "M0001072",
+        "puesto_desc": "MOLD40396524"
+    },
+    "mold40426393": {
+        "puesto_codigo": "M0001073",
+        "puesto_desc": "MOLD40426393"
+    },
+    "mold40335722": {
+        "puesto_codigo": "M0001074",
+        "puesto_desc": "MOLD40335722"
+    },
+    "mold40343309": {
+        "puesto_codigo": "M0001075",
+        "puesto_desc": "MOLD40343309"
+    },
+    "mold40389522": {
+        "puesto_codigo": "M0001076",
+        "puesto_desc": "MOLD40389522"
+    },
+    "mold40386558": {
+        "puesto_codigo": "M0001077",
+        "puesto_desc": "MOLD40386558"
+    },
+    "mold40385072": {
+        "puesto_codigo": "M0001078",
+        "puesto_desc": "MOLD40385072"
+    },
+    "mold40386299": {
+        "puesto_codigo": "M0001079",
+        "puesto_desc": "MOLD40386299"
+    },
+    "spiral overlay slitter": {
+        "puesto_codigo": "MINIOV",
+        "puesto_desc": "SPIRAL OVERLAY SLITTER"
+    },
+    "taller de moldes": {
+        "puesto_codigo": "MOLD",
+        "puesto_desc": "TALLER DE MOLDES"
+    },
+    "overlay cutter machine": {
+        "puesto_codigo": "MOTHER1",
+        "puesto_desc": "OVERLAY CUTTER MACHINE"
+    },
+    "mantenimiento preventivo banbury": {
+        "puesto_codigo": "MP_01",
+        "puesto_desc": "MANTENIMIENTO PREVENTIVO BANBURY"
+    },
+    "mantenimiento preventivo extrusion": {
+        "puesto_codigo": "MP_02",
+        "puesto_desc": "MANTENIMIENTO PREVENTIVO EXTRUSION"
+    },
+    "mantenimiento preventivo steelastic": {
+        "puesto_codigo": "MP_03",
+        "puesto_desc": "MANTENIMIENTO PREVENTIVO STEELASTIC"
+    },
+    "mantenimiento preventivo calandras": {
+        "puesto_codigo": "MP_04",
+        "puesto_desc": "MANTENIMIENTO PREVENTIVO CALANDRAS"
+    },
+    "mantenimiento preventivo apexer": {
+        "puesto_codigo": "MP_05",
+        "puesto_desc": "MANTENIMIENTO PREVENTIVO APEXER"
+    },
+    "mantenimiento preventivo pestanas": {
+        "puesto_codigo": "MP_06",
+        "puesto_desc": "MANTENIMIENTO PREVENTIVO PESTAÑAS"
+    },
+    "mantenimiento preventivo cortadoras": {
+        "puesto_codigo": "MP_07",
+        "puesto_desc": "MANTENIMIENTO PREVENTIVO CORTADORAS"
+    },
+    "mantenimiento preventivo construccion": {
+        "puesto_codigo": "MP_08",
+        "puesto_desc": "MANTENIMIENTO PREVENTIVO CONSTRUCCION"
+    },
+    "mantenimiento preventivo vulcanizacion": {
+        "puesto_codigo": "MP_09",
+        "puesto_desc": "MANTENIMIENTO PREVENTIVO VULCANIZACION"
+    },
+    "mantenimiento preventivo asrs y plummer": {
+        "puesto_codigo": "MP_10",
+        "puesto_desc": "MANTENIMIENTO PREVENTIVO ASRS Y PLUMMER"
+    },
+    "mantenimiento preventivo balanceadoras": {
+        "puesto_codigo": "MP_11",
+        "puesto_desc": "MANTENIMIENTO PREVENTIVO BALANCEADORAS"
+    },
+    "mantenimiento preventivo forzadoras": {
+        "puesto_codigo": "MP_12",
+        "puesto_desc": "MANTENIMIENTO PREVENTIVO FORZADORAS"
+    },
+    "mantenimiento preventivo pulidoras": {
+        "puesto_codigo": "MP_13",
+        "puesto_desc": "MANTENIMIENTO PREVENTIVO PULIDORAS"
+    },
+    "mantenimiento preventivo facilities": {
+        "puesto_codigo": "MP_14",
+        "puesto_desc": "MANTENIMIENTO PREVENTIVO FACILITIES"
+    },
+    "mantenimiento preventivo casa de maquina": {
+        "puesto_codigo": "MP_15",
+        "puesto_desc": "MANTENIMIENTO PREVENTIVO CASA DE MAQUINA"
+    },
+    "mantenimiento preventivo compresores": {
+        "puesto_codigo": "MP_16",
+        "puesto_desc": "MANTENIMIENTO PREVENTIVO COMPRESORES"
+    },
+    "mantenimiento preventivo subestaciones": {
+        "puesto_codigo": "MP_17",
+        "puesto_desc": "MANTENIMIENTO PREVENTIVO SUBESTACIONES"
+    },
+    "mantenimiento preventivo conveyors final": {
+        "puesto_codigo": "MP_18",
+        "puesto_desc": "MANTENIMIENTO PREVENTIVO CONVEYORS FINAL"
+    },
+    "mantenimiento mecatronico construccion": {
+        "puesto_codigo": "MT_IMA08",
+        "puesto_desc": "MANTENIMIENTO MECATRONICO CONSTRUCCION"
+    },
+    "mantenimiento mecatronico asrs y plummer": {
+        "puesto_codigo": "MT_IMA10",
+        "puesto_desc": "MANTENIMIENTO MECATRONICO ASRS Y PLUMMER"
+    },
+    "mantenimiento mecanico banbury": {
+        "puesto_codigo": "M_IMA01",
+        "puesto_desc": "MANTENIMIENTO MECANICO BANBURY"
+    },
+    "mantenimiento mecanico extrusion": {
+        "puesto_codigo": "M_IMA02",
+        "puesto_desc": "MANTENIMIENTO MECANICO EXTRUSION"
+    },
+    "mantenimiento mecanico steelastic": {
+        "puesto_codigo": "M_IMA03",
+        "puesto_desc": "MANTENIMIENTO MECANICO STEELASTIC"
+    },
+    "mantenimiento mecanico calandras": {
+        "puesto_codigo": "M_IMA04",
+        "puesto_desc": "MANTENIMIENTO MECANICO CALANDRAS"
+    },
+    "mantenimiento mecanico apexer": {
+        "puesto_codigo": "M_IMA05",
+        "puesto_desc": "MANTENIMIENTO MECANICO APEXER"
+    },
+    "mantenimiento mecanico pestanas": {
+        "puesto_codigo": "M_IMA06",
+        "puesto_desc": "MANTENIMIENTO MECANICO PESTAÑAS"
+    },
+    "mantenimiento mecanico cortadoras": {
+        "puesto_codigo": "M_IMA07",
+        "puesto_desc": "MANTENIMIENTO MECANICO CORTADORAS"
+    },
+    "mantenimiento mecanico construccion": {
+        "puesto_codigo": "M_IMA08",
+        "puesto_desc": "MANTENIMIENTO MECANICO CONSTRUCCION"
+    },
+    "mantenimiento mecanico vulcanizacion": {
+        "puesto_codigo": "M_IMA09",
+        "puesto_desc": "MANTENIMIENTO MECANICO VULCANIZACION"
+    },
+    "mantenimiento mecanico asrs y plummer": {
+        "puesto_codigo": "M_IMA10",
+        "puesto_desc": "MANTENIMIENTO MECANICO ASRS Y PLUMMER"
+    },
+    "mantenimiento mecanico balanceadoras": {
+        "puesto_codigo": "M_IMA11",
+        "puesto_desc": "MANTENIMIENTO MECANICO BALANCEADORAS"
+    },
+    "mantenimiento mecanico forzadoras": {
+        "puesto_codigo": "M_IMA12",
+        "puesto_desc": "MANTENIMIENTO MECANICO FORZADORAS"
+    },
+    "mantenimiento mecanico pulidoras": {
+        "puesto_codigo": "M_IMA13",
+        "puesto_desc": "MANTENIMIENTO MECANICO PULIDORAS"
+    },
+    "mantenimiento mecanico facilities": {
+        "puesto_codigo": "M_IMA14",
+        "puesto_desc": "MANTENIMIENTO MECANICO FACILITIES"
+    },
+    "mantenimiento mecanico casa de maquinas": {
+        "puesto_codigo": "M_IMA15",
+        "puesto_desc": "MANTENIMIENTO MECANICO CASA DE MAQUINAS"
+    },
+    "mantenimiento mecanico compresores": {
+        "puesto_codigo": "M_IMA16",
+        "puesto_desc": "MANTENIMIENTO MECANICO COMPRESORES"
+    },
+    "mantenimiento mecanico subestaciones": {
+        "puesto_codigo": "M_IMA17",
+        "puesto_desc": "MANTENIMIENTO MECANICO SUBESTACIONES"
+    },
+    "mantenimiento mecanico conveyors final": {
+        "puesto_codigo": "M_IMA18",
+        "puesto_desc": "MANTENIMIENTO MECANICO CONVEYORS FINAL"
+    },
+    "inspeccion de nueva defectuosa": {
+        "puesto_codigo": "NEWDEF",
+        "puesto_desc": "Inspeccion de Nueva defectuosa"
+    },
+    "nuevos desarrollos": {
+        "puesto_codigo": "NEWDEV",
+        "puesto_desc": "Nuevos desarrollos"
+    },
+    "pedro brete": {
+        "puesto_codigo": "PDM_01",
+        "puesto_desc": "Pedro Brete - Analista Predictivo"
+    },
+    "wilson jerez": {
+        "puesto_codigo": "PDM_02",
+        "puesto_desc": "WILSON JEREZ - Analista Predictivo"
+    },
+    "ruben arias": {
+        "puesto_codigo": "PDM_04",
+        "puesto_desc": "Ruben Arias - Analista Predictivo"
+    },
+    "predictivo apexer": {
+        "puesto_codigo": "PDM_05",
+        "puesto_desc": "PREDICTIVO APEXER"
+    },
+    "predictivo pestanas": {
+        "puesto_codigo": "PDM_06",
+        "puesto_desc": "PREDICTIVO PESTAÑAS"
+    },
+    "predictivo cortadoras": {
+        "puesto_codigo": "PDM_07",
+        "puesto_desc": "PREDICTIVO CORTADORAS"
+    },
+    "predictivo construccion": {
+        "puesto_codigo": "PDM_08",
+        "puesto_desc": "PREDICTIVO CONSTRUCCION"
+    },
+    "predictivo vulcanizacion": {
+        "puesto_codigo": "PDM_09",
+        "puesto_desc": "PREDICTIVO VULCANIZACION"
+    },
+    "predictivo asrs y plummer": {
+        "puesto_codigo": "PDM_10",
+        "puesto_desc": "PREDICTIVO ASRS Y PLUMMER"
+    },
+    "predictivo balanceadoras": {
+        "puesto_codigo": "PDM_11",
+        "puesto_desc": "PREDICTIVO BALANCEADORAS"
+    },
+    "predictivo forzadoras": {
+        "puesto_codigo": "PDM_12",
+        "puesto_desc": "PREDICTIVO FORZADORAS"
+    },
+    "predictivo pulidoras": {
+        "puesto_codigo": "PDM_13",
+        "puesto_desc": "PREDICTIVO PULIDORAS"
+    },
+    "predictivo facilities": {
+        "puesto_codigo": "PDM_14",
+        "puesto_desc": "PREDICTIVO FACILITIES"
+    },
+    "predictivo casa de maquinas": {
+        "puesto_codigo": "PDM_15",
+        "puesto_desc": "PREDICTIVO CASA DE MAQUINAS"
+    },
+    "predictivo compresores": {
+        "puesto_codigo": "PDM_16",
+        "puesto_desc": "PREDICTIVO COMPRESORES"
+    },
+    "predictivo subestaciones": {
+        "puesto_codigo": "PDM_17",
+        "puesto_desc": "PREDICTIVO SUBESTACIONES"
+    },
+    "predictivo conveyors final": {
+        "puesto_codigo": "PDM_18",
+        "puesto_desc": "PREDICTIVO CONVEYORS FINAL"
+    },
+    "juan salazar": {
+        "puesto_codigo": "PLANNER1",
+        "puesto_desc": "Juan Salazar - Planificador"
+    },
+    "gabriel munoz": {
+        "puesto_codigo": "PLANNER2",
+        "puesto_desc": "Gabriel Muñoz - Planificador"
+    },
+    "matias kirac": {
+        "puesto_codigo": "PLANNER3",
+        "puesto_desc": "Matías Kirac - Planificador"
+    },
+    "jonathan gutierrez": {
+        "puesto_codigo": "PLANNER4",
+        "puesto_desc": "Jonathan Gutiérrez - Planificador"
+    },
+    "darwin aguero": {
+        "puesto_codigo": "PLANNER5",
+        "puesto_desc": "Darwin Agüero - Planificador"
+    },
+    "willian sanchez": {
+        "puesto_codigo": "PLANNER6",
+        "puesto_desc": "Willian Sánchez - Planificador"
+    },
+    "andres osorio": {
+        "puesto_codigo": "PLANNER7",
+        "puesto_desc": "Andrés Osorio - Planificador"
+    },
+    "farid de lima": {
+        "puesto_codigo": "PLANNER8",
+        "puesto_desc": "Farid De Lima - Planificador"
+    },
+    "marcelo san martin": {
+        "puesto_codigo": "PLANNER9",
+        "puesto_desc": "Marcelo San Martin - Planificador"
+    },
+    "ana meza": {
+        "puesto_codigo": "PLIM_001",
+        "puesto_desc": "Ana Meza - Supervisor Limpieza Maquina"
+    },
+    "qtech area preparaccion": {
+        "puesto_codigo": "PREP.",
+        "puesto_desc": "QTECH area preparaccion"
+    },
+    "osvaldo castro": {
+        "puesto_codigo": "PROD_001",
+        "puesto_desc": "Osvaldo Castro - Op. Hexaplex Turno A"
+    },
+    "andres gonzalez": {
+        "puesto_codigo": "PROG_001",
+        "puesto_desc": "Andrés González - Programador"
+    },
+    "aseguramiento calidad y normas": {
+        "puesto_codigo": "QUA-NORM",
+        "puesto_desc": "Aseguramiento Calidad y normas"
+    },
+    "8 steelastic machine head type e": {
+        "puesto_codigo": "STEEL08",
+        "puesto_desc": "\"8\"\" STEELASTIC MACHINE, HEAD TYPE \"\"E\"\""
+    },
+    "10 steelastic machine head type e": {
+        "puesto_codigo": "STEEL10",
+        "puesto_desc": "\"10\"\" STEELASTIC MACHINE, HEAD TYPE \"\"E\""
+    },
+    "daniel maldonado": {
+        "puesto_codigo": "TGM_001",
+        "puesto_desc": "Daniel Maldonado - Supervisor"
+    },
+    "javier pena": {
+        "puesto_codigo": "TGM_002",
+        "puesto_desc": "Javier Peña - Tornero"
+    },
+    "sergio silva": {
+        "puesto_codigo": "TGM_003",
+        "puesto_desc": "Sergio Silva - Fresador"
+    },
+    "roberto poblete": {
+        "puesto_codigo": "TGM_004",
+        "puesto_desc": "Roberto Poblete - Soldador (6G)"
+    },
+    "miguel pez": {
+        "puesto_codigo": "TGM_005",
+        "puesto_desc": "Miguel Pez - Turno A"
+    },
+    "manuel mercado": {
+        "puesto_codigo": "TGM_006",
+        "puesto_desc": "Manuel Mercado - Turno B"
+    },
+    "edixon mardones": {
+        "puesto_codigo": "TGM_007",
+        "puesto_desc": "Edixon Mardones - Turno C"
+    },
+    "felipe paredes": {
+        "puesto_codigo": "TGM_008",
+        "puesto_desc": "Felipe Paredes - Turno D"
+    },
+    "laboratorio pruebas resiliometro": {
+        "puesto_codigo": "TIRELAB",
+        "puesto_desc": "Laboratorio Pruebas Resiliometro"
+    },
+    "bodega produto terminado": {
+        "puesto_codigo": "WAREFINS",
+        "puesto_desc": "Bodega produto terminado"
+    },
+    "bodega materia prima": {
+        "puesto_codigo": "WARERAWM",
+        "puesto_desc": "Bodega materia prima"
+    },
+    "fabric calender 24x68 adamson z": {
+        "puesto_codigo": "ZCAL",
+        "puesto_desc": "\"FABRIC CALENDER 24\"\"X68\"\" ADAMSON / \"\"Z"
+    }
+}
