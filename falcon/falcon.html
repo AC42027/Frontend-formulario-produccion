@@ -437,7 +437,7 @@
         <!-- Scanner / Quick Search -->
         <div class="scanner-container">
             <label for="txtScanEquipo">Escanear Barra de Equipo:</label>
-            <div id="txtScanEquipo" class="touch-input-simulated" style="color: #666666;">Acerque lector QR...</div>
+            <input type="text" id="txtScanEquipo" class="touch-input" placeholder="Acerque lector QR..." inputmode="none" autocomplete="off">
         </div>
 
         <form id="frmInspection" onsubmit="return handleFormSubmit(event);">
@@ -542,6 +542,9 @@
     var searchInput = document.getElementById("txtScanEquipo");
     var scanBuffer = "";
     var scanTimeout = null;
+    var lastSearchValue = "";
+    var debounceTimer = null;
+    var isProgrammaticChange = false;
 
     // Formulario de envío
     var now = new Date();
@@ -963,6 +966,13 @@
                 }
             }
         }
+        
+        // Autoenfocar el buscador para recibir el escaneo de la pistola directamente
+        setTimeout(function() {
+            try {
+                if (searchInput) searchInput.focus();
+            } catch(e) {}
+        }, 200);
     }
 
     function getQueryParam(name) {
@@ -1003,10 +1013,11 @@
 
         var cleanVal = extractEquipmentId(val);
         
-        // Mostrar el ID del equipo en el div simulado
+        isProgrammaticChange = true;
         if (searchInput) {
-            searchInput.innerHTML = cleanVal;
-            searchInput.style.color = "#111111"; // Color negro normal al tener valor
+            searchInput.value = cleanVal;
+            searchInput.style.color = "";
+            lastSearchValue = cleanVal;
         }
 
         if (!equipos || equipos.length === 0) {
@@ -1301,9 +1312,14 @@
         document.getElementById("sap-info-panel").style.display = "none";
 
         // Reset inputs
+        isProgrammaticChange = true;
         if (searchInput) {
-            searchInput.innerHTML = "Acerque lector QR...";
-            searchInput.style.color = "#666666";
+            searchInput.value = "";
+            searchInput.style.color = "";
+            lastSearchValue = "";
+            setTimeout(function() {
+                try { searchInput.focus(); } catch (e) {}
+            }, 100);
         }
         document.getElementById("txtObservacionesGral").value = "";
 
@@ -1334,70 +1350,104 @@
     // INICIALIZACIÓN Y CAPTURA GLOBAL DEL ESCÁNER QR
     // ----------------------------------------------------
 
-    // Procesa el buffer de escaneo QR
-    function processBufferedScan() {
-        if (scanTimeout) {
-            clearTimeout(scanTimeout);
-            scanTimeout = null;
-        }
-        var val = scanBuffer;
-        scanBuffer = "";
-        
-        if (val.replace(/^\s+|\s+$/g, "") !== "") {
-            lookupEquipment(val);
+    var searchInterval = null;
+
+    // Polling del Scanner con Debounce (Evita buscar textos incompletos por emulación de teclado)
+    function checkSearchSuggestions() {
+        var val = searchInput.value;
+        if (val !== lastSearchValue) {
+            lastSearchValue = val;
+            
+            if (debounceTimer) {
+                clearTimeout(debounceTimer);
+            }
+            
+            // Si el valor no está vacío, esperamos 200ms antes de ejecutar la búsqueda
+            if (val.replace(/^\s+|\s+$/g, "") !== "") {
+                // Ocultamos el texto temporalmente si es una URL larga
+                if (val.indexOf("http") === 0) {
+                    searchInput.style.color = "transparent";
+                    if (val.indexOf("equipo=") === -1) {
+                        return;
+                    }
+                } else {
+                    searchInput.style.color = "";
+                }
+                
+                debounceTimer = setTimeout(function() {
+                    lookupEquipment(searchInput.value);
+                }, 200);
+            } else {
+                searchInput.style.color = "";
+            }
         }
     }
 
-    // Escuchador global de caracteres (onkeypress) para la pistola
-    document.onkeypress = function(e) {
-        // Solo capturar escaneos si el usuario ha iniciado sesión (estamos en el formulario de inspección)
-        if (document.getElementById("card-inspection").style.display === "none") {
-            return true;
+    // Compuerta de Prefijo HTTP: Borra la escritura humana de inmediato
+    function checkAndCleanManualInput() {
+        if (isProgrammaticChange) {
+            isProgrammaticChange = false;
+            return;
         }
+        var val = searchInput.value;
+        if (val === "") return;
         
-        // Si el usuario está posicionado escribiendo en observaciones o detalles de hallazgos, no interferir
-        var activeElem = document.activeElement;
-        if (activeElem && (activeElem.tagName === "INPUT" || activeElem.tagName === "TEXTAREA")) {
-            return true;
+        var expectedPrefix = "http";
+        // Si el valor ingresado no coincide con el progreso de la palabra "http" y no empieza con "http"
+        if (expectedPrefix.indexOf(val) !== 0 && val.indexOf("http") !== 0) {
+            // Humano detectado (escribiendo números u otras letras): Borrar entrada
+            searchInput.value = "";
+            lastSearchValue = "";
         }
-        
-        var ev = e || window.event;
-        var charCode = ev.charCode || ev.keyCode;
-        
-        // Si no es Enter (13) ni Line Feed (10)
-        if (charCode !== 13 && charCode !== 10) {
-            var charStr = String.fromCharCode(charCode);
-            scanBuffer += charStr;
-            
-            // Programar el procesador de buffer si la pistola deja de enviar datos por 150ms
-            if (scanTimeout) clearTimeout(scanTimeout);
-            scanTimeout = setTimeout(processBufferedScan, 150);
-        }
-        
-        // Bloquear comportamiento de teclas en el resto de la interfaz (evita desplazamientos accidentales)
-        if (ev.preventDefault) ev.preventDefault();
-        else ev.returnValue = false;
-        return false;
+    }
+
+    searchInput.oninput = checkAndCleanManualInput;
+    searchInput.onpropertychange = checkAndCleanManualInput; // Soporte IE / ZetaKey
+
+    searchInput.onfocus = function() {
+        if (searchInterval) clearInterval(searchInterval);
+        searchInterval = setInterval(checkSearchSuggestions, 250);
     };
 
-    // Escuchador global de teclas de control (onkeydown) para detectar Enter de la pistola
-    document.onkeydown = function(e) {
-        if (document.getElementById("card-inspection").style.display === "none") {
-            return true;
-        }
-        
-        var activeElem = document.activeElement;
-        if (activeElem && (activeElem.tagName === "INPUT" || activeElem.tagName === "TEXTAREA")) {
-            return true;
-        }
-        
+    searchInput.onblur = function() {
+        setTimeout(function() {
+            if (searchInterval) {
+                clearInterval(searchInterval);
+                searchInterval = null;
+            }
+            if (debounceTimer) {
+                clearTimeout(debounceTimer);
+                debounceTimer = null;
+            }
+            
+            // Re-enfocar el buscador automáticamente al perder foco
+            // Excepción: Si el usuario hizo clic en un control de entrada manual (comentarios, desplegables)
+            var active = document.activeElement;
+            if (active && (active.tagName === "INPUT" || active.tagName === "TEXTAREA" || active.tagName === "SELECT")) {
+                return; // Dejar que interactúe con el otro campo
+            }
+            
+            if (document.getElementById("card-inspection").style.display !== "none") {
+                try { searchInput.focus(); } catch(e) {}
+            }
+        }, 120);
+    };
+
+    // Prevenir submit de Enter en el input de scanner
+    searchInput.onkeydown = function(e) {
         var ev = e || window.event;
         var code = ev.keyCode || ev.which;
         if (code === 13) {
             if (ev.preventDefault) ev.preventDefault();
             else ev.returnValue = false;
             
-            processBufferedScan();
+            if (debounceTimer) {
+                clearTimeout(debounceTimer);
+                debounceTimer = null;
+            }
+            
+            var val = searchInput.value;
+            lookupEquipment(val);
             return false;
         }
     };
