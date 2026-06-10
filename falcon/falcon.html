@@ -125,6 +125,22 @@
             opacity: 1;
         }
 
+        .touch-input-simulated {
+            width: 100%;
+            height: 42px;
+            border: 2px solid #003399;
+            border-radius: 6px;
+            padding: 0 8px;
+            font-size: 14px;
+            background-color: #ffffff;
+            color: #111111;
+            box-sizing: border-box;
+            line-height: 38px; /* Centrado vertical */
+            font-weight: bold;
+            text-align: center;
+            cursor: default;
+        }
+
         /* SCANNER SECTION */
         .scanner-container {
             background-color: #e8f0fe;
@@ -421,7 +437,7 @@
         <!-- Scanner / Quick Search -->
         <div class="scanner-container">
             <label for="txtScanEquipo">Escanear Barra de Equipo:</label>
-            <input type="text" id="txtScanEquipo" class="touch-input" placeholder="Acerque lector QR..." inputmode="none" autocomplete="off" readonly>
+            <div id="txtScanEquipo" class="touch-input-simulated" style="color: #666666;">Acerque lector QR...</div>
         </div>
 
         <form id="frmInspection" onsubmit="return handleFormSubmit(event);">
@@ -524,10 +540,6 @@
     
     // Bucle polling del escáner
     var searchInput = document.getElementById("txtScanEquipo");
-    var searchInterval = null;
-    var lastSearchValue = "";
-    var debounceTimer = null;
-    var lastKeyTime = 0;
     var scanBuffer = "";
     var scanTimeout = null;
 
@@ -982,20 +994,6 @@
         return val;
     }
 
-    // Controla la visibilidad del texto en el campo de escaneo de forma segura para navegadores antiguos
-    function setInputTextVisible(visible) {
-        try {
-            if (!searchInput) return;
-            if (visible) {
-                searchInput.style.color = "";
-                searchInput.style.fontSize = "";
-            } else {
-                searchInput.style.color = "transparent";
-                searchInput.style.fontSize = "0px";
-            }
-        } catch (e) {}
-    }
-
     // Acción al buscar/escanear equipo
     function lookupEquipment(val) {
         // Si empieza con http pero aún no tiene el parámetro equipo=, ignorar (aún se está escribiendo)
@@ -1005,11 +1003,11 @@
 
         var cleanVal = extractEquipmentId(val);
         
-        // Limpiar el input visualmente para que no se quede la URL larga pegada y restaurar color/tamaño
-        searchInput.value = cleanVal;
-        setInputTextVisible(true);
-        lastSearchValue = cleanVal;
-        lastKeyTime = 0;
+        // Mostrar el ID del equipo en el div simulado
+        if (searchInput) {
+            searchInput.innerHTML = cleanVal;
+            searchInput.style.color = "#111111"; // Color negro normal al tener valor
+        }
 
         if (!equipos || equipos.length === 0) {
             showMsg("Catálogo de equipos no cargado. Intente nuevamente en unos segundos.", "error");
@@ -1303,8 +1301,10 @@
         document.getElementById("sap-info-panel").style.display = "none";
 
         // Reset inputs
-        searchInput.value = "";
-        lastSearchValue = "";
+        if (searchInput) {
+            searchInput.innerHTML = "Acerque lector QR...";
+            searchInput.style.color = "#666666";
+        }
         document.getElementById("txtObservacionesGral").value = "";
 
         // Reset questions
@@ -1331,7 +1331,7 @@
     }
 
     // ----------------------------------------------------
-    // INICIALIZACIÓN Y BUCLE POLLING TECLADO FÍSICO
+    // INICIALIZACIÓN Y CAPTURA GLOBAL DEL ESCÁNER QR
     // ----------------------------------------------------
 
     // Procesa el buffer de escaneo QR
@@ -1348,64 +1348,19 @@
         }
     }
 
-    // Polling del Scanner con Debounce (Evita buscar textos incompletos por emulación de teclado)
-    function checkSearchSuggestions() {
-        var val = searchInput.value;
-        if (val !== lastSearchValue) {
-            lastSearchValue = val;
-            
-            if (debounceTimer) {
-                clearTimeout(debounceTimer);
-            }
-            
-            // Si el valor no está vacío, esperamos 200ms antes de ejecutar la búsqueda
-            if (val.replace(/^\s+|\s+$/g, "") !== "") {
-                // Si empieza con http, ocultamos visualmente el texto para no mostrar la URL larga
-                if (val.indexOf("http") === 0) {
-                    setInputTextVisible(false);
-                    // Si aún no tiene el parámetro equipo=, ignorar (aún se está escribiendo)
-                    if (val.indexOf("equipo=") === -1) {
-                        return;
-                    }
-                } else {
-                    setInputTextVisible(true);
-                }
-                
-                debounceTimer = setTimeout(function() {
-                    lookupEquipment(searchInput.value);
-                }, 200);
-            } else {
-                setInputTextVisible(true);
-            }
+    // Escuchador global de caracteres (onkeypress) para la pistola
+    document.onkeypress = function(e) {
+        // Solo capturar escaneos si el usuario ha iniciado sesión (estamos en el formulario de inspección)
+        if (document.getElementById("card-inspection").style.display === "none") {
+            return true;
         }
-    }
-
-    searchInput.onfocus = function() {
-        if (searchInterval) clearInterval(searchInterval);
-        searchInterval = setInterval(checkSearchSuggestions, 250);
-    };
-
-    searchInput.onblur = function() {
-        setTimeout(function() {
-            if (searchInterval) {
-                clearInterval(searchInterval);
-                searchInterval = null;
-            }
-            if (debounceTimer) {
-                clearTimeout(debounceTimer);
-                debounceTimer = null;
-            }
-            if (scanTimeout) {
-                clearTimeout(scanTimeout);
-                scanTimeout = null;
-            }
-            scanBuffer = "";
-            lastKeyTime = 0;
-        }, 300);
-    };
-
-    // Interceptar caracteres del scanner (emulación de teclado) en el campo Readonly
-    searchInput.onkeypress = function(e) {
+        
+        // Si el usuario está posicionado escribiendo en observaciones o detalles de hallazgos, no interferir
+        var activeElem = document.activeElement;
+        if (activeElem && (activeElem.tagName === "INPUT" || activeElem.tagName === "TEXTAREA")) {
+            return true;
+        }
+        
         var ev = e || window.event;
         var charCode = ev.charCode || ev.keyCode;
         
@@ -1419,24 +1374,28 @@
             scanTimeout = setTimeout(processBufferedScan, 150);
         }
         
-        // Bloquear la acción de escritura normal (ya es readonly, pero esto previene comportamientos extraños)
+        // Bloquear comportamiento de teclas en el resto de la interfaz (evita desplazamientos accidentales)
         if (ev.preventDefault) ev.preventDefault();
         else ev.returnValue = false;
         return false;
     };
 
-    // Prevenir submit de Enter en el input de scanner
-    searchInput.onkeydown = function(e) {
+    // Escuchador global de teclas de control (onkeydown) para detectar Enter de la pistola
+    document.onkeydown = function(e) {
+        if (document.getElementById("card-inspection").style.display === "none") {
+            return true;
+        }
+        
+        var activeElem = document.activeElement;
+        if (activeElem && (activeElem.tagName === "INPUT" || activeElem.tagName === "TEXTAREA")) {
+            return true;
+        }
+        
         var ev = e || window.event;
         var code = ev.keyCode || ev.which;
         if (code === 13) {
             if (ev.preventDefault) ev.preventDefault();
             else ev.returnValue = false;
-            
-            if (debounceTimer) {
-                clearTimeout(debounceTimer);
-                debounceTimer = null;
-            }
             
             processBufferedScan();
             return false;
