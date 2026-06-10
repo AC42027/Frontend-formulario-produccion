@@ -421,7 +421,7 @@
         <!-- Scanner / Quick Search -->
         <div class="scanner-container">
             <label for="txtScanEquipo">Escanear Barra de Equipo:</label>
-            <input type="text" id="txtScanEquipo" class="touch-input" placeholder="Acerque lector / Escriba ID..." inputmode="none" autocomplete="off">
+            <input type="text" id="txtScanEquipo" class="touch-input" placeholder="Acerque lector QR..." inputmode="none" autocomplete="off" readonly>
         </div>
 
         <form id="frmInspection" onsubmit="return handleFormSubmit(event);">
@@ -528,6 +528,8 @@
     var lastSearchValue = "";
     var debounceTimer = null;
     var lastKeyTime = 0;
+    var scanBuffer = "";
+    var scanTimeout = null;
 
     // Formulario de envío
     var now = new Date();
@@ -1332,6 +1334,20 @@
     // INICIALIZACIÓN Y BUCLE POLLING TECLADO FÍSICO
     // ----------------------------------------------------
 
+    // Procesa el buffer de escaneo QR
+    function processBufferedScan() {
+        if (scanTimeout) {
+            clearTimeout(scanTimeout);
+            scanTimeout = null;
+        }
+        var val = scanBuffer;
+        scanBuffer = "";
+        
+        if (val.replace(/^\s+|\s+$/g, "") !== "") {
+            lookupEquipment(val);
+        }
+    }
+
     // Polling del Scanner con Debounce (Evita buscar textos incompletos por emulación de teclado)
     function checkSearchSuggestions() {
         var val = searchInput.value;
@@ -1378,33 +1394,35 @@
             if (debounceTimer) {
                 clearTimeout(debounceTimer);
                 debounceTimer = null;
-                // Si quedaba una búsqueda pendiente al perder el foco, la ejecutamos de inmediato
-                lookupEquipment(searchInput.value);
             }
+            if (scanTimeout) {
+                clearTimeout(scanTimeout);
+                scanTimeout = null;
+            }
+            scanBuffer = "";
             lastKeyTime = 0;
         }, 300);
     };
 
-    // Compuerta de velocidad de tecleo: bloquea humanos (>50ms de retraso entre teclas) y acepta pistola QR
+    // Interceptar caracteres del scanner (emulación de teclado) en el campo Readonly
     searchInput.onkeypress = function(e) {
         var ev = e || window.event;
-        var now = new Date().getTime();
+        var charCode = ev.charCode || ev.keyCode;
         
-        if (lastKeyTime !== 0) {
-            var diff = now - lastKeyTime;
-            // Si el operario escribe a mano, el retraso será mayor a 50ms (la pistola escribe instantáneamente)
-            if (diff > 50) {
-                if (ev.preventDefault) ev.preventDefault();
-                else ev.returnValue = false;
-                
-                // Limpiar el campo y resetear tiempo para no permitir entrada
-                searchInput.value = "";
-                lastKeyTime = 0;
-                return false;
-            }
+        // Si no es Enter (13) ni Line Feed (10)
+        if (charCode !== 13 && charCode !== 10) {
+            var charStr = String.fromCharCode(charCode);
+            scanBuffer += charStr;
+            
+            // Programar el procesador de buffer si la pistola deja de enviar datos por 150ms
+            if (scanTimeout) clearTimeout(scanTimeout);
+            scanTimeout = setTimeout(processBufferedScan, 150);
         }
-        lastKeyTime = now;
-        return true;
+        
+        // Bloquear la acción de escritura normal (ya es readonly, pero esto previene comportamientos extraños)
+        if (ev.preventDefault) ev.preventDefault();
+        else ev.returnValue = false;
+        return false;
     };
 
     // Prevenir submit de Enter en el input de scanner
@@ -1420,9 +1438,7 @@
                 debounceTimer = null;
             }
             
-            var val = searchInput.value;
-            lookupEquipment(val);
-            lastKeyTime = 0;
+            processBufferedScan();
             return false;
         }
     };
