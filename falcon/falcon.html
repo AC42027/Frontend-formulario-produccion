@@ -527,6 +527,7 @@
     var searchInterval = null;
     var lastSearchValue = "";
     var debounceTimer = null;
+    var lastKeyTime = 0;
 
     // Formulario de envío
     var now = new Date();
@@ -1006,6 +1007,7 @@
         searchInput.value = cleanVal;
         setInputTextVisible(true);
         lastSearchValue = cleanVal;
+        lastKeyTime = 0;
 
         if (!equipos || equipos.length === 0) {
             showMsg("Catálogo de equipos no cargado. Intente nuevamente en unos segundos.", "error");
@@ -1379,7 +1381,30 @@
                 // Si quedaba una búsqueda pendiente al perder el foco, la ejecutamos de inmediato
                 lookupEquipment(searchInput.value);
             }
+            lastKeyTime = 0;
         }, 300);
+    };
+
+    // Compuerta de velocidad de tecleo: bloquea humanos (>50ms de retraso entre teclas) y acepta pistola QR
+    searchInput.onkeypress = function(e) {
+        var ev = e || window.event;
+        var now = new Date().getTime();
+        
+        if (lastKeyTime !== 0) {
+            var diff = now - lastKeyTime;
+            // Si el operario escribe a mano, el retraso será mayor a 50ms (la pistola escribe instantáneamente)
+            if (diff > 50) {
+                if (ev.preventDefault) ev.preventDefault();
+                else ev.returnValue = false;
+                
+                // Limpiar el campo y resetear tiempo para no permitir entrada
+                searchInput.value = "";
+                lastKeyTime = 0;
+                return false;
+            }
+        }
+        lastKeyTime = now;
+        return true;
     };
 
     // Prevenir submit de Enter en el input de scanner
@@ -1397,6 +1422,7 @@
             
             var val = searchInput.value;
             lookupEquipment(val);
+            lastKeyTime = 0;
             return false;
         }
     };
