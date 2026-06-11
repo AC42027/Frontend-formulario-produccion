@@ -704,6 +704,12 @@
         document.getElementById("card-inspection").style.display = "none";
         document.getElementById("card-success").style.display = "none";
         document.getElementById(cardId).style.display = "block";
+        
+        // Ocultar mensajes globales al cambiar de pantalla
+        var msgDiv = document.getElementById("msg-box");
+        if (msgDiv) {
+            msgDiv.style.display = "none";
+        }
     }
 
     function showLoader(show) {
