@@ -777,6 +777,12 @@
         fullName = full;
         document.getElementById("lblUsuario").innerHTML = "Usuario: " + fullName + " (" + username + ")";
         
+        // Ocultar cualquier mensaje de error previo
+        var msgDiv = document.getElementById("msg-box");
+        if (msgDiv) {
+            msgDiv.style.display = "none";
+        }
+        
         // Mostrar fecha actual del dispositivo y validar
         var deviceDate = new Date();
         var systemDateStr = getLocalDateString(deviceDate) + " " + getLocalTimeString(deviceDate);
