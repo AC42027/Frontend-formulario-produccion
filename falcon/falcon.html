@@ -1163,10 +1163,14 @@
             var desc = p.descripcion;
             var pId = p.id;
 
-            // Inicializar estados
+            // Inicializar estados usando la descripción como clave para compatibilidad con el backend
             formData.tecnicos[desc] = "";
             formData.criticos[desc] = false;
             formData.observacionesTecnicas[desc] = "";
+
+            // Escapar de forma ultra segura para inyectar en onclick="function('KEY')"
+            // Reemplazar comillas simples con la entidad hex de comilla simple \x27 para evitar romper el string JS
+            var safeJsKey = escapeJS(desc).replace(/'/g, "\\x27").replace(/"/g, "\\x22");
 
             html += '<div class="question-card" id="q-card-' + pId + '">';
             html += '  <div class="question-desc">' + (i + 1) + '. ' + escapeHTML(desc) + '</div>';
@@ -1174,22 +1178,22 @@
             
             // Botones OK / NOK / NA
             html += '    <div class="option-group">';
-            html += '      <button type="button" class="btn-opt" onclick="setQuestionOption(\'' + escapeJS(desc) + '\', \'OK\', ' + pId + ')">OK</button>';
-            html += '      <button type="button" class="btn-opt" onclick="setQuestionOption(\'' + escapeJS(desc) + '\', \'NOK\', ' + pId + ')">NOK</button>';
-            html += '      <button type="button" class="btn-opt" onclick="setQuestionOption(\'' + escapeJS(desc) + '\', \'NA\', ' + pId + ')">N/A</button>';
+            html += '      <button type="button" class="btn-opt" onclick="setQuestionOption(\'' + safeJsKey + '\', \'OK\', ' + pId + ')">OK</button>';
+            html += '      <button type="button" class="btn-opt" onclick="setQuestionOption(\'' + safeJsKey + '\', \'NOK\', ' + pId + ')">NOK</button>';
+            html += '      <button type="button" class="btn-opt" onclick="setQuestionOption(\'' + safeJsKey + '\', \'NA\', ' + pId + ')">N/A</button>';
             html += '    </div>';
 
             // Checkbox Crítico
             html += '    <div class="critico-container">';
             html += '      <span class="critico-lbl">¿Crítico?</span>';
-            html += '      <div class="touch-checkbox" onclick="toggleQuestionCritico(\'' + escapeJS(desc) + '\', ' + pId + ')">✓</div>';
+            html += '      <div class="touch-checkbox" onclick="toggleQuestionCritico(\'' + safeJsKey + '\', ' + pId + ')">✓</div>';
             html += '    </div>';
             
             html += '  </div>';
 
             // Comentario individual
             html += '  <div class="comment-container">';
-            html += '    <input type="text" class="touch-input txt-comment" placeholder="Detalle de hallazgo..." onchange="setQuestionComment(\'' + escapeJS(desc) + '\', this.value)">';
+            html += '    <input type="text" class="touch-input txt-comment" placeholder="Detalle de hallazgo..." onchange="setQuestionComment(\'' + safeJsKey + '\', this.value)">';
             html += '  </div>';
             html += '</div>';
         }
