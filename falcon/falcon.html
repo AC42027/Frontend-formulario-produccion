@@ -1070,6 +1070,19 @@
         if (found) {
             selectEquipment(found);
             showMsg("Equipo encontrado: " + found.nombre, "success");
+            
+            // Quitar foco al campo de búsqueda para evitar que el teclado/foco webview force el scroll hacia arriba
+            if (searchInput) {
+                searchInput.blur();
+            }
+            
+            // Scroll suave hasta el contenedor de la checklist
+            setTimeout(function() {
+                var checklist = document.getElementById("checklist-container");
+                if (checklist) {
+                    checklist.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 150);
         } else {
             showMsg("No se encontró ningún equipo con: '" + val + "'", "error");
         }
