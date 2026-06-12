@@ -1520,6 +1520,33 @@
         }
     };
 
+    // Prevenir que presionar ENTER dentro de cualquier campo de texto del formulario envíe la inspección
+    if (frm) {
+        frm.onkeydown = function(e) {
+            var ev = e || window.event;
+            var code = ev.keyCode || ev.which;
+            // Si presionan Enter (13)
+            if (code === 13) {
+                var target = ev.target || ev.srcElement;
+                // Si el foco está en un input de comentario o texto general, no enviar el formulario
+                if (target && target.tagName === "INPUT" && target.type === "text") {
+                    if (ev.preventDefault) ev.preventDefault();
+                    else ev.returnValue = false;
+
+                    // Avanzar foco al siguiente input del cuestionario si es posible
+                    var inputs = frm.getElementsByTagName("input");
+                    for (var i = 0; i < inputs.length; i++) {
+                        if (inputs[i] === target && i + 1 < inputs.length) {
+                            try { inputs[i + 1].focus(); } catch(err) {}
+                            break;
+                        }
+                    }
+                    return false;
+                }
+            }
+        };
+    }
+
     // Al cargar la página, validar sesión existente
     window.onload = function() {
         var savedUser = localStorage.getItem('usuario_inspeccion');
