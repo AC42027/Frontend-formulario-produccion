@@ -826,21 +826,21 @@
         showMsg("Sesión cerrada correctamente", "info");
     }
 
-    // Verificar si la sesión ha expirado (2 horas = 7200000 ms)
+    // Verificar si la sesión ha expirado (40 minutos = 2400000 ms)
     function checkSessionTimeout() {
         var savedTimestamp = localStorage.getItem('session_timestamp');
         if (savedTimestamp) {
             var nowTime = new Date().getTime();
             var diff = nowTime - parseInt(savedTimestamp, 10);
-            var twoHours = 2 * 60 * 60 * 1000; // 2 horas en milisegundos
-            if (diff > twoHours) {
+            var limit = 40 * 60 * 1000; // 40 minutos en milisegundos
+            if (diff > limit) {
                 // Sesión expirada
                 handleLogoutClick();
-                showMsg("Su sesión ha expirado tras 2 horas de inactividad. Inicie sesión nuevamente.", "info");
+                showMsg("Su sesión ha expirado tras 40 minutos de inactividad. Inicie sesión nuevamente.", "info");
                 return true;
             }
-            // Opcional: Actualizar el timestamp al realizar acciones para extender la sesión
-            // localStorage.setItem('session_timestamp', String(nowTime));
+            // Actualizar el timestamp al realizar acciones para extender la sesión
+            localStorage.setItem('session_timestamp', String(nowTime));
         }
         return false;
     }
