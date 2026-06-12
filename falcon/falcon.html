@@ -202,7 +202,7 @@
         }
         .option-group {
             display: table-cell;
-            width: 70%;
+            width: 65%; /* Ajustado para dejar más espacio al botón de Crítico */
             vertical-align: middle;
         }
         .btn-opt {
@@ -235,7 +235,7 @@
         }
         .critico-container {
             display: table-cell;
-            width: 30%;
+            width: 35%; /* Aumentado de 30% a 35% */
             text-align: right;
             vertical-align: middle;
         }
@@ -243,7 +243,8 @@
             display: none; /* Ocultar etiqueta anterior, ya que el nuevo botón contiene el texto */
         }
         .touch-checkbox {
-            width: 90px; /* Rediseñado como un botón toggle rectangular grande */
+            width: 100%; /* Ahora ocupa el 100% de la celda de su contenedor */
+            max-width: 95px; /* Límite de ancho para no desbordar */
             height: 46px;
             border: 2px solid #cccccc;
             border-radius: 6px;
