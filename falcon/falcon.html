@@ -1446,10 +1446,17 @@
             }
             
             // Re-enfocar el buscador automáticamente al perder foco
-            // Excepción: Si el usuario hizo clic en un control de entrada manual (comentarios, desplegables)
+            // Excepción: Si el usuario hizo clic en cualquier control de entrada, botón, selector o elemento interactivo
             var active = document.activeElement;
-            if (active && (active.tagName === "INPUT" || active.tagName === "TEXTAREA" || active.tagName === "SELECT")) {
-                return; // Dejar que interactúe con el otro campo
+            if (active && (
+                active.tagName === "INPUT" || 
+                active.tagName === "TEXTAREA" || 
+                active.tagName === "SELECT" || 
+                active.tagName === "BUTTON" ||
+                active.className.indexOf("touch-checkbox") !== -1 ||
+                active.className.indexOf("btn-opt") !== -1
+            )) {
+                return; // Dejar que interactúe con el otro campo o botón sin reenfocar el input del scanner
             }
             
             if (document.getElementById("card-inspection").style.display !== "none") {
