@@ -119,9 +119,10 @@
             outline: none;
         }
         .touch-input:disabled, select:disabled {
-            background-color: #e9ecef;
-            border-color: #cccccc;
-            color: #495057;
+            background-color: #333333; /* Color más oscuro para alto contraste */
+            border-color: #111111;
+            color: #ffffff; /* Texto blanco para legibilidad bajo luz solar directa o reflejos */
+            font-weight: bold;
             opacity: 1;
         }
 
@@ -206,10 +207,10 @@
         }
         .btn-opt {
             width: 31%;
-            height: 38px;
-            font-size: 12px;
+            height: 46px; /* Aumentado a 46px para mejor objetivo táctil en bodegas */
+            font-size: 13px;
             font-weight: bold;
-            border: 1px solid #cccccc;
+            border: 2px solid #cccccc; /* Borde más visible */
             background-color: #f1f3f6;
             color: #333333;
             cursor: pointer;
@@ -238,25 +239,25 @@
             vertical-align: middle;
         }
         .critico-lbl {
-            font-size: 11px;
+            font-size: 12px;
             color: #dc2626;
             font-weight: bold;
-            margin-right: 4px;
+            margin-right: 6px;
             vertical-align: middle;
         }
         .touch-checkbox {
-            width: 30px;
-            height: 30px;
-            border: 2px solid #cccccc;
+            width: 38px; /* Aumentado de 30px a 38px */
+            height: 38px;
+            border: 2px solid #aaaaaa;
             border-radius: 50%;
             display: inline-block;
             vertical-align: middle;
             cursor: pointer;
             background-color: #ffffff;
             text-align: center;
-            line-height: 26px;
+            line-height: 34px;
             font-weight: bold;
-            font-size: 16px;
+            font-size: 18px;
             color: transparent;
             box-sizing: border-box;
         }
@@ -269,9 +270,9 @@
             margin-top: 6px;
         }
         .txt-comment {
-            height: 36px !important;
-            font-size: 12px !important;
-            border: 1px solid #cccccc !important;
+            height: 42px !important; /* Aumentado a 42px */
+            font-size: 13px !important;
+            border: 2px solid #cccccc !important;
         }
 
         /* SUCCESS CARD */
