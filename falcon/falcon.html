@@ -1071,6 +1071,9 @@
             selectEquipment(found);
             showMsg("Equipo encontrado: " + found.nombre, "success");
             
+            // Reiniciar el flag de interacción al cargar un nuevo equipo para que el escáner funcione de nuevo
+            userInteractingWithForm = false;
+            
             // Quitar foco al campo de búsqueda para evitar que el teclado/foco webview force el scroll hacia arriba
             if (searchInput) {
                 searchInput.blur();
@@ -1329,6 +1332,7 @@
         document.getElementById("selArea").value = "";
         document.getElementById("selZona").value = "";
         document.getElementById("selEquipo").value = "";
+        userInteractingWithForm = false;
 
         // Reset SAP
         document.getElementById("txtTPLNR").value = "N/A";
@@ -1434,6 +1438,24 @@
         searchInterval = setInterval(checkSearchSuggestions, 250);
     };
 
+    // Variable global para detectar si el usuario está interactuando con el formulario
+    var userInteractingWithForm = false;
+
+    // Detectar cuando el usuario toca/hace clic en cualquier parte del formulario
+    var frm = document.getElementById("frmInspection");
+    if (frm) {
+        // Al tocar/hacer click en el formulario, activamos el flag
+        var setInteracting = function() {
+            userInteractingWithForm = true;
+        };
+        if (frm.addEventListener) {
+            frm.addEventListener("mousedown", setInteracting, true);
+            frm.addEventListener("touchstart", setInteracting, true);
+        } else if (frm.attachEvent) { // IE8/Legacy fallback
+            frm.attachEvent("onmousedown", setInteracting);
+        }
+    }
+
     searchInput.onblur = function() {
         setTimeout(function() {
             if (searchInterval) {
@@ -1445,18 +1467,17 @@
                 debounceTimer = null;
             }
             
-            // Re-enfocar el buscador automáticamente al perder foco
-            // Excepción: Si el usuario hizo clic en cualquier control de entrada, botón, selector o elemento interactivo
+            // Si el usuario está interactuando con el formulario o si el foco se movió a otro input/select
             var active = document.activeElement;
-            if (active && (
+            var isAnotherInput = active && (
                 active.tagName === "INPUT" || 
                 active.tagName === "TEXTAREA" || 
                 active.tagName === "SELECT" || 
-                active.tagName === "BUTTON" ||
-                active.className.indexOf("touch-checkbox") !== -1 ||
-                active.className.indexOf("btn-opt") !== -1
-            )) {
-                return; // Dejar que interactúe con el otro campo o botón sin reenfocar el input del scanner
+                active.tagName === "BUTTON"
+            );
+
+            if (userInteractingWithForm || isAnotherInput) {
+                return; // Dejar que interactúe con el formulario sin reenfocar
             }
             
             if (document.getElementById("card-inspection").style.display !== "none") {
