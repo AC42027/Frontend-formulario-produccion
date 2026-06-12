@@ -1163,14 +1163,10 @@
             var desc = p.descripcion;
             var pId = p.id;
 
-            // Inicializar estados usando la descripción como clave para compatibilidad con el backend
-            formData.tecnicos[desc] = "";
-            formData.criticos[desc] = false;
-            formData.observacionesTecnicas[desc] = "";
-
-            // Escapar de forma ultra segura para inyectar en onclick="function('KEY')"
-            // Reemplazar comillas simples con la entidad hex de comilla simple \x27 para evitar romper el string JS
-            var safeJsKey = escapeJS(desc).replace(/'/g, "\\x27").replace(/"/g, "\\x22");
+            // Inicializar estados usando el ID numérico
+            formData.tecnicos[pId] = "";
+            formData.criticos[pId] = false;
+            formData.observacionesTecnicas[pId] = "";
 
             html += '<div class="question-card" id="q-card-' + pId + '">';
             html += '  <div class="question-desc">' + (i + 1) + '. ' + escapeHTML(desc) + '</div>';
@@ -1178,22 +1174,22 @@
             
             // Botones OK / NOK / NA
             html += '    <div class="option-group">';
-            html += '      <button type="button" class="btn-opt" onclick="setQuestionOption(\'' + safeJsKey + '\', \'OK\', ' + pId + ')">OK</button>';
-            html += '      <button type="button" class="btn-opt" onclick="setQuestionOption(\'' + safeJsKey + '\', \'NOK\', ' + pId + ')">NOK</button>';
-            html += '      <button type="button" class="btn-opt" onclick="setQuestionOption(\'' + safeJsKey + '\', \'NA\', ' + pId + ')">N/A</button>';
+            html += '      <button type="button" class="btn-opt" onclick="setQuestionOption(' + pId + ', \'OK\')">OK</button>';
+            html += '      <button type="button" class="btn-opt" onclick="setQuestionOption(' + pId + ', \'NOK\')">NOK</button>';
+            html += '      <button type="button" class="btn-opt" onclick="setQuestionOption(' + pId + ', \'NA\')">N/A</button>';
             html += '    </div>';
 
             // Checkbox Crítico
             html += '    <div class="critico-container">';
             html += '      <span class="critico-lbl">¿Crítico?</span>';
-            html += '      <div class="touch-checkbox" onclick="toggleQuestionCritico(\'' + safeJsKey + '\', ' + pId + ')">✓</div>';
+            html += '      <div class="touch-checkbox" onclick="toggleQuestionCritico(' + pId + ')">✓</div>';
             html += '    </div>';
             
             html += '  </div>';
 
             // Comentario individual
             html += '  <div class="comment-container">';
-            html += '    <input type="text" class="touch-input txt-comment" placeholder="Detalle de hallazgo..." onchange="setQuestionComment(\'' + safeJsKey + '\', this.value)">';
+            html += '    <input type="text" class="touch-input txt-comment" placeholder="Detalle de hallazgo..." onchange="setQuestionComment(' + pId + ', this.value)">';
             html += '  </div>';
             html += '</div>';
         }
@@ -1202,8 +1198,8 @@
     }
 
     // Eventos interactivos en la tarjeta de preguntas
-    function setQuestionOption(desc, val, pId) {
-        formData.tecnicos[desc] = val;
+    function setQuestionOption(pId, val) {
+        formData.tecnicos[pId] = val;
         
         var qCard = document.getElementById("q-card-" + pId);
         if (qCard) {
@@ -1223,10 +1219,10 @@
         }
     }
 
-    function toggleQuestionCritico(desc, pId) {
-        var current = !!formData.criticos[desc];
+    function toggleQuestionCritico(pId) {
+        var current = !!formData.criticos[pId];
         var newVal = !current;
-        formData.criticos[desc] = newVal;
+        formData.criticos[pId] = newVal;
 
         var qCard = document.getElementById("q-card-" + pId);
         if (qCard) {
@@ -1242,8 +1238,8 @@
         }
     }
 
-    function setQuestionComment(desc, val) {
-        formData.observacionesTecnicas[desc] = val;
+    function setQuestionComment(pId, val) {
+        formData.observacionesTecnicas[pId] = val;
     }
 
     // Enviar Inspección Técnica al backend Django
@@ -1257,17 +1253,32 @@
             return false;
         }
 
-        // Formatear y agrupar fallas NOK con sus comentarios individuales
+        // Re-mapear las respuestas de ID numérico a Descripción de texto para el backend Django
+        var tecnicosMapped = {};
+        var criticosMapped = {};
+        var observacionesMapped = {};
         var nokItems = [];
-        for (var desc in formData.tecnicos) {
-            if (formData.tecnicos.hasOwnProperty(desc)) {
-                if (formData.tecnicos[desc] === "NOK") {
-                    var obs = formData.observacionesTecnicas[desc] || "";
-                    var item = desc + (obs ? ": " + obs : "");
-                    nokItems.push(item);
-                }
+
+        for (var i = 0; i < preguntasTecnicas.length; i++) {
+            var p = preguntasTecnicas[i];
+            var pId = p.id;
+            var desc = p.descripcion;
+
+            // Obtener valores respondidos o vacíos por defecto
+            var estado = formData.tecnicos[pId] !== undefined ? formData.tecnicos[pId] : "";
+            var critico = !!formData.criticos[pId];
+            var obs = formData.observacionesTecnicas[pId] !== undefined ? formData.observacionesTecnicas[pId] : "";
+
+            tecnicosMapped[desc] = estado;
+            criticosMapped[desc] = critico;
+            observacionesMapped[desc] = obs;
+
+            if (estado === "NOK") {
+                var item = desc + (obs ? ": " + obs : "");
+                nokItems.push(item);
             }
         }
+
         var nokDetailsText = nokItems.join(". ");
 
         // Hora fin
@@ -1288,9 +1299,9 @@
             sap_puesto_trabajo: puestoTrabajoUsuario,
             tipo_aviso: formData.tipo_aviso,
             observaciones: formData.observaciones,
-            tecnicos: formData.tecnicos,
-            criticos: formData.criticos,
-            observacionesTecnicas: formData.observacionesTecnicas,
+            tecnicos: tecnicosMapped,
+            criticos: criticosMapped,
+            observacionesTecnicas: observacionesMapped,
             usuario: fullName,
             owner: username,
             user: username,
