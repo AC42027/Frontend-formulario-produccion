@@ -440,7 +440,7 @@
             <input type="text" id="txtScanEquipo" class="touch-input" placeholder="Acerque lector QR..." inputmode="none" autocomplete="off">
         </div>
 
-        <form id="frmInspection" onsubmit="return handleFormSubmit(event);">
+        <form id="frmInspection">
             <!-- Divisiones/Areas/Zonas/Equipos selects (Read-only representation) -->
             <div class="form-group">
                 <label for="selDivision">División:</label>
@@ -1522,6 +1522,19 @@
 
     // Prevenir que presionar ENTER dentro de cualquier campo de texto del formulario envíe la inspección
     if (frm) {
+        // Bloquear el submit nativo si proviene de presionar ENTER en un input de texto
+        frm.onsubmit = function(e) {
+            var ev = e || window.event;
+            var active = document.activeElement;
+            // Si el elemento activo al hacer submit es un input de texto, bloquear el submit
+            if (active && active.tagName === "INPUT" && active.type === "text" && active.id !== "txtScanEquipo") {
+                if (ev.preventDefault) ev.preventDefault();
+                else ev.returnValue = false;
+                return false;
+            }
+            return handleFormSubmit(ev);
+        };
+
         frm.onkeydown = function(e) {
             var ev = e || window.event;
             var code = ev.keyCode || ev.which;
@@ -1529,11 +1542,13 @@
             if (code === 13) {
                 var target = ev.target || ev.srcElement;
                 // Si el foco está en un input de comentario o texto general, no enviar el formulario
-                if (target && target.tagName === "INPUT" && target.type === "text") {
+                if (target && target.tagName === "INPUT" && target.type === "text" && target.id !== "txtScanEquipo") {
                     if (ev.preventDefault) ev.preventDefault();
-                    else ev.returnValue = false;
+                    if (ev.stopPropagation) ev.stopPropagation();
+                    ev.cancelBubble = true;
+                    ev.returnValue = false;
 
-                    // Avanzar foco al siguiente input del cuestionario si es posible
+                    // Avanzar foco al siguiente input de comentario del cuestionario si es posible
                     var inputs = frm.getElementsByTagName("input");
                     for (var i = 0; i < inputs.length; i++) {
                         if (inputs[i] === target && i + 1 < inputs.length) {
