@@ -218,6 +218,7 @@
             margin-right: 1.5%;
             padding: 0;
             text-align: center;
+            touch-action: manipulation; /* Elimina retraso de 300ms de click táctil */
         }
         .btn-opt:last-child {
             margin-right: 0;
@@ -239,27 +240,25 @@
             vertical-align: middle;
         }
         .critico-lbl {
-            font-size: 12px;
-            color: #dc2626;
-            font-weight: bold;
-            margin-right: 6px;
-            vertical-align: middle;
+            display: none; /* Ocultar etiqueta anterior, ya que el nuevo botón contiene el texto */
         }
         .touch-checkbox {
-            width: 38px; /* Aumentado de 30px a 38px */
-            height: 38px;
-            border: 2px solid #aaaaaa;
-            border-radius: 50%;
+            width: 90px; /* Rediseñado como un botón toggle rectangular grande */
+            height: 46px;
+            border: 2px solid #cccccc;
+            border-radius: 6px;
             display: inline-block;
             vertical-align: middle;
             cursor: pointer;
-            background-color: #ffffff;
+            background-color: #f1f3f6;
+            color: #666666;
             text-align: center;
-            line-height: 34px;
+            line-height: 42px;
             font-weight: bold;
-            font-size: 18px;
-            color: transparent;
+            font-size: 12px;
             box-sizing: border-box;
+            touch-action: manipulation; /* Elimina retraso de 300ms táctil */
+            transition: all 0.2s ease;
         }
         .touch-checkbox.checked {
             background-color: #dc2626;
@@ -1183,7 +1182,7 @@
             // Checkbox Crítico
             html += '    <div class="critico-container">';
             html += '      <span class="critico-lbl">¿Crítico?</span>';
-            html += '      <div class="touch-checkbox" onclick="toggleQuestionCritico(' + pId + ')">✓</div>';
+            html += '      <div class="touch-checkbox" onclick="toggleQuestionCritico(' + pId + ')">CRÍTICO</div>';
             html += '    </div>';
             
             html += '  </div>';
