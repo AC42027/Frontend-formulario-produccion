@@ -760,6 +760,9 @@
                 if (full.replace(/^\s+|\s+$/g, "") === "") full = user;
                 localStorage.setItem('usuario_nombre', full);
                 
+                // Guardar timestamp de inicio de sesión
+                localStorage.setItem('session_timestamp', String(new Date().getTime()));
+                
                 initSession(user, full);
             } else {
                 showMsg(res.message || "Credenciales inválidas", "error");
@@ -814,12 +817,32 @@
     function handleLogoutClick() {
         localStorage.removeItem('usuario_inspeccion');
         localStorage.removeItem('usuario_nombre');
+        localStorage.removeItem('session_timestamp');
         username = "";
         fullName = "";
         puestoTrabajoUsuario = "";
         puestoTrabajoDesc = "";
         showCard("card-login");
         showMsg("Sesión cerrada correctamente", "info");
+    }
+
+    // Verificar si la sesión ha expirado (2 horas = 7200000 ms)
+    function checkSessionTimeout() {
+        var savedTimestamp = localStorage.getItem('session_timestamp');
+        if (savedTimestamp) {
+            var nowTime = new Date().getTime();
+            var diff = nowTime - parseInt(savedTimestamp, 10);
+            var twoHours = 2 * 60 * 60 * 1000; // 2 horas en milisegundos
+            if (diff > twoHours) {
+                // Sesión expirada
+                handleLogoutClick();
+                showMsg("Su sesión ha expirado tras 2 horas de inactividad. Inicie sesión nuevamente.", "info");
+                return true;
+            }
+            // Opcional: Actualizar el timestamp al realizar acciones para extender la sesión
+            // localStorage.setItem('session_timestamp', String(nowTime));
+        }
+        return false;
     }
 
     // Resolver el Puesto de Trabajo basado en el mapeo local
@@ -1249,6 +1272,11 @@
         if (ev.preventDefault) ev.preventDefault();
         else ev.returnValue = false;
 
+        // Validar expiración de sesión antes de enviar
+        if (checkSessionTimeout()) {
+            return false;
+        }
+
         if (!formData.equipo) {
             showMsg("Debe escanear o seleccionar un equipo antes de guardar.", "error");
             return false;
@@ -1313,6 +1341,10 @@
         showLoader(true);
         ajaxPost(API_URL + "/api/guardar/", payload, function(res) {
             showLoader(false);
+            
+            // Renovar timestamp de sesión tras una actividad exitosa
+            localStorage.setItem('session_timestamp', String(new Date().getTime()));
+            
             showCard("card-success");
         }, function(err) {
             showLoader(false);
@@ -1563,8 +1595,12 @@
         };
     }
 
-    // Al cargar la página, validar sesión existente
+    // Al cargar la página, validar sesión existente y expiración
     window.onload = function() {
+        if (checkSessionTimeout()) {
+            return; // Ya se redirigió a login y mostró mensaje
+        }
+        
         var savedUser = localStorage.getItem('usuario_inspeccion');
         var savedName = localStorage.getItem('usuario_nombre');
         
