@@ -126,6 +126,33 @@
             opacity: 1;
         }
 
+        /* PASSWORD TOGGLE */
+        .password-wrapper {
+            position: relative;
+        }
+        .password-wrapper .touch-input {
+            padding-right: 58px;
+        }
+        .toggle-pass {
+            position: absolute;
+            right: 4px;
+            top: 4px;
+            width: 50px;
+            height: 34px;
+            background-color: #e8f0fe;
+            border: 2px solid #003399;
+            border-radius: 4px;
+            color: #003399;
+            font-size: 11px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+        .toggle-pass:active {
+            background-color: #003399;
+            color: #ffffff;
+        }
+
         .touch-input-simulated {
             width: 100%;
             height: 42px;
@@ -415,7 +442,10 @@
             </div>
             <div class="form-group">
                 <label for="txtPass">Contraseña:</label>
-                <input type="password" id="txtPass" class="touch-input" placeholder="Ingrese su contraseña" required>
+                <div class="password-wrapper">
+                    <input type="password" id="txtPass" class="touch-input" placeholder="Ingrese su contraseña" required>
+                    <button type="button" class="toggle-pass" id="togglePass">Ver</button>
+                </div>
             </div>
             <button type="submit" class="btn-primary" style="margin-top: 15px;">INGRESAR</button>
             <span class="config-link" onclick="configureServerUrl();">Configurar Servidor</span>
@@ -774,6 +804,26 @@
 
         return false;
     }
+
+    // Toggle visibilidad de contraseña
+    (function() {
+        var btn = document.getElementById('togglePass');
+        var input = document.getElementById('txtPass');
+        var handler = function() {
+            if (input.type === 'password') {
+                input.type = 'text';
+                btn.textContent = 'Ocultar';
+            } else {
+                input.type = 'password';
+                btn.textContent = 'Ver';
+            }
+        };
+        if (btn.addEventListener) {
+            btn.addEventListener('click', handler, false);
+        } else {
+            btn.attachEvent('onclick', handler);
+        }
+    })();
 
     // Inicializar sesión de usuario
     function initSession(user, full) {
