@@ -576,6 +576,7 @@
     var lastSearchValue = "";
     var debounceTimer = null;
     var isProgrammaticChange = false;
+    var manualMode = false;
 
     // Formulario de envío
     var now = new Date();
@@ -1041,7 +1042,7 @@
         }
     }
 
-    // Chequear query parameter `?equipo=X`
+    // Chequear query parameter `?equipo=X` y `?manual=1`
     function checkUrlParameters() {
         var eqParam = getQueryParam("equipo");
         if (eqParam && equipos && equipos.length > 0) {
@@ -1051,6 +1052,12 @@
                     break;
                 }
             }
+        }
+        
+        if (getQueryParam("manual") === "1") {
+            manualMode = true;
+            searchInput.setAttribute("inputmode", "text");
+            searchInput.placeholder = "Ingrese código de equipo...";
         }
         
         // Autoenfocar el buscador para recibir el escaneo de la pistola directamente
@@ -1512,6 +1519,7 @@
 
     // Compuerta de Prefijo HTTP: Borra la escritura humana de inmediato
     function checkAndCleanManualInput() {
+        if (manualMode) return;
         if (isProgrammaticChange) {
             isProgrammaticChange = false;
             return;
