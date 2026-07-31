@@ -780,6 +780,7 @@
         var xhr = new XMLHttpRequest();
         xhr.open("POST", url, true);
         xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.setRequestHeader("X-API-Token", "fxoNqZPOR7nxwAYrbqFTONNEjUO2I1Hv3Wm34YGrEL4");
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4) {
                 if (xhr.status >= 200 && xhr.status < 300) {
