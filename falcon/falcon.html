@@ -293,6 +293,14 @@
             border-color: #dc2626;
             color: #ffffff;
         }
+        .touch-checkbox.disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            pointer-events: none;
+            background-color: #e5e7eb;
+            border-color: #d1d5db;
+            color: #9ca3af;
+        }
         .comment-container {
             margin-top: 6px;
         }
@@ -1401,19 +1409,39 @@
             // Checkbox Crítico
             html += '    <div class="critico-container">';
             html += '      <span class="critico-lbl">¿Crítico?</span>';
-            html += '      <div class="touch-checkbox" onclick="toggleQuestionCritico(' + pId + ')">CRÍTICO</div>';
+            html += '      <div class="touch-checkbox disabled" id="cb-critico-' + pId + '" onclick="toggleQuestionCritico(' + pId + ')">CRÍTICO</div>';
             html += '    </div>';
             
             html += '  </div>';
 
             // Comentario individual
             html += '  <div class="comment-container">';
-            html += '    <input type="text" class="touch-input txt-comment" placeholder="Detalle de hallazgo..." onchange="setQuestionComment(' + pId + ', this.value)">';
+            html += '    <input type="text" class="touch-input txt-comment" id="txt-comment-' + pId + '" placeholder="Detalle de hallazgo..." oninput="setQuestionComment(' + pId + ', this.value); updateCriticoState(' + pId + ')" onchange="setQuestionComment(' + pId + ', this.value); updateCriticoState(' + pId + ')">';
             html += '  </div>';
             html += '</div>';
         }
 
         container.innerHTML = html;
+        for (var i = 0; i < preguntasTecnicas.length; i++) {
+            updateCriticoState(preguntasTecnicas[i].id);
+        }
+    }
+
+    // Actualizar disponibilidad del botón CRÍTICO (solo con NOK y comentario no vacío)
+    function updateCriticoState(pId) {
+        var isNok = formData.tecnicos[pId] === "NOK";
+        var comment = formData.observacionesTecnicas[pId] !== undefined ? formData.observacionesTecnicas[pId] : "";
+        var hasComment = comment.trim().length > 0;
+        var enabled = isNok && hasComment;
+
+        if (!enabled) {
+            formData.criticos[pId] = false;
+        }
+
+        var cb = document.getElementById("cb-critico-" + pId);
+        if (cb) {
+            cb.className = "touch-checkbox" + (enabled ? "" : " disabled") + (formData.criticos[pId] ? " checked" : "");
+        }
     }
 
     // Eventos interactivos en la tarjeta de preguntas
@@ -1436,9 +1464,17 @@
                 targetBtn.className = "btn-opt " + (val === "NOK" ? "selected-nok" : "selected");
             }
         }
+
+        updateCriticoState(pId);
     }
 
     function toggleQuestionCritico(pId) {
+        var isNok = formData.tecnicos[pId] === "NOK";
+        var comment = formData.observacionesTecnicas[pId] !== undefined ? formData.observacionesTecnicas[pId] : "";
+        if (!isNok || comment.trim().length === 0) {
+            return;
+        }
+
         var current = !!formData.criticos[pId];
         var newVal = !current;
         formData.criticos[pId] = newVal;
