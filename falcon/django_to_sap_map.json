@@ -4342,5 +4342,41 @@
         "match_type": "assets_db_equnr",
         "sap_puesto_trabajo": "M_GDY10",
         "sap_puesto_trabajo_desc": "MANTENIMIENTO MECANICO ASRS Y PLUMMER"
+    },
+    "369": {
+        "django_id": 369,
+        "django_name": "Plummer 1",
+        "django_zona": "",
+        "sap_tplnr": "L504-PLMT01",
+        "sap_tplnr_desc": "PLUMMER LINEA 504 01",
+        "sap_equnr": "",
+        "sap_equnr_desc": "",
+        "match_type": "assets_db_tplnr",
+        "sap_puesto_trabajo": "M_GDY10",
+        "sap_puesto_trabajo_desc": "MANTENIMIENTO MECANICO ASRS Y PLUMMER"
+    },
+    "370": {
+        "django_id": 370,
+        "django_name": "Plummer 2",
+        "django_zona": "",
+        "sap_tplnr": "L504-PLMT02",
+        "sap_tplnr_desc": "PLUMMER LINEA 504 02",
+        "sap_equnr": "",
+        "sap_equnr_desc": "",
+        "match_type": "assets_db_tplnr",
+        "sap_puesto_trabajo": "M_GDY10",
+        "sap_puesto_trabajo_desc": "MANTENIMIENTO MECANICO ASRS Y PLUMMER"
+    },
+    "371": {
+        "django_id": 371,
+        "django_name": "Plummer 3",
+        "django_zona": "",
+        "sap_tplnr": "L504-PLMT03",
+        "sap_tplnr_desc": "PLUMMER LINEA 504 03",
+        "sap_equnr": "",
+        "sap_equnr_desc": "",
+        "match_type": "assets_db_tplnr",
+        "sap_puesto_trabajo": "M_GDY10",
+        "sap_puesto_trabajo_desc": "MANTENIMIENTO MECANICO ASRS Y PLUMMER"
     }
 }
