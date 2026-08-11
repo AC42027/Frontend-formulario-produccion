@@ -1024,23 +1024,58 @@
     }
 
     // Verificar si la sesión ha expirado (10 minutos = 600000 ms)
-    function checkSessionTimeout() {
+    function isSessionExpired() {
         var savedTimestamp = localStorage.getItem('session_timestamp');
-        if (savedTimestamp) {
-            var nowTime = new Date().getTime();
-            var diff = nowTime - parseInt(savedTimestamp, 10);
-            var limit = 10 * 60 * 1000; // 10 minutos en milisegundos
-            if (diff > limit) {
-                // Sesión expirada
-                handleLogoutClick();
-                showMsg("Su sesión ha expirado tras 10 minutos de inactividad. Inicie sesión nuevamente.", "info");
-                return true;
-            }
-            // Actualizar el timestamp al realizar acciones para extender la sesión
-            localStorage.setItem('session_timestamp', String(nowTime));
+        if (!savedTimestamp) return false;
+        var nowTime = new Date().getTime();
+        var diff = nowTime - parseInt(savedTimestamp, 10);
+        var limit = 10 * 60 * 1000; // 10 minutos en milisegundos
+        return diff > limit;
+    }
+
+    // Renovar el timestamp de sesión al detectar actividad del usuario
+    var lastSessionRenewal = 0;
+    function renewSession() {
+        if (!localStorage.getItem('session_timestamp')) return; // Sin sesión activa
+        var nowTime = new Date().getTime();
+        if (nowTime - lastSessionRenewal < 30000) return; // Debounce: máx. 1 renovación cada 30s
+        lastSessionRenewal = nowTime;
+        localStorage.setItem('session_timestamp', String(nowTime));
+    }
+
+    // Verificar sesión al cargar/enviar: expira o renueva
+    function checkSessionTimeout() {
+        if (isSessionExpired()) {
+            handleLogoutClick();
+            showMsg("Su sesión ha expirado tras 10 minutos de inactividad. Inicie sesión nuevamente.", "info");
+            return true;
         }
+        renewSession();
         return false;
     }
+
+    // Renovar la sesión ante cualquier actividad real del usuario (pistola, touch, clic, teclado)
+    function bindSessionActivityRenewal() {
+        var activities = ["mousedown", "touchstart", "keydown", "click", "scroll"];
+        var attach = function(eventName) {
+            if (document.addEventListener) {
+                document.addEventListener(eventName, renewSession, true);
+            } else if (document.attachEvent) {
+                document.attachEvent("on" + eventName, renewSession);
+            }
+        };
+        for (var i = 0; i < activities.length; i++) {
+            attach(activities[i]);
+        }
+    }
+
+    // Watchdog: cerrar sesión solo si estuvo realmente inactiva (sin renovar el timestamp)
+    setInterval(function() {
+        if (isSessionExpired()) {
+            handleLogoutClick();
+            showMsg("Su sesión ha expirado tras 10 minutos de inactividad. Inicie sesión nuevamente.", "info");
+        }
+    }, 60000);
 
     // Resolver el Puesto de Trabajo basado en el mapeo local
     function resolveUserPuesto() {
@@ -1710,8 +1745,14 @@
         }
     }
 
-    searchInput.oninput = checkAndCleanManualInput;
-    searchInput.onpropertychange = checkAndCleanManualInput; // Soporte IE / ZetaKey
+    searchInput.oninput = function() {
+        renewSession();
+        checkAndCleanManualInput();
+    };
+    searchInput.onpropertychange = function() { // Soporte IE / ZetaKey
+        renewSession();
+        checkAndCleanManualInput();
+    };
 
     searchInput.onfocus = function() {
         if (searchInterval) clearInterval(searchInterval);
@@ -1773,7 +1814,9 @@
         if (code === 13) {
             if (ev.preventDefault) ev.preventDefault();
             else ev.returnValue = false;
-            
+
+            renewSession();
+
             if (debounceTimer) {
                 clearTimeout(debounceTimer);
                 debounceTimer = null;
@@ -1829,6 +1872,9 @@
 
     // Al cargar la página, validar sesión existente y expiración
     window.onload = function() {
+        // Renovar la sesión ante cualquier actividad real (pistola, touch, clic, teclado)
+        bindSessionActivityRenewal();
+
         if (checkSessionTimeout()) {
             return; // Ya se redirigió a login y mostró mensaje
         }
