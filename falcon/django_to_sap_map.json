@@ -4390,5 +4390,17 @@
         "match_type": "precision_p_tag",
         "sap_puesto_trabajo": "M_GDY10",
         "sap_puesto_trabajo_desc": "MANTENIMIENTO MECANICO ASRS Y PLUMMER"
+    },
+    "373": {
+        "django_id": 373,
+        "django_name": "Plummer 4",
+        "django_zona": "",
+        "sap_tplnr": "L504-PLMT04",
+        "sap_tplnr_desc": "PLUMMER LINEA 504 04",
+        "sap_equnr": "",
+        "sap_equnr_desc": "",
+        "match_type": "assets_db_tplnr",
+        "sap_puesto_trabajo": "M_GDY10",
+        "sap_puesto_trabajo_desc": "MANTENIMIENTO MECANICO ASRS Y PLUMMER"
     }
 }
