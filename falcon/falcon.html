@@ -1183,19 +1183,25 @@
     }
 
     // Decorar objetos del listado de equipos con campos de SAP
+    // Prioridad: campos SAP guardados en el backend (Equipo). El mapa local
+    // django_to_sap_map.json queda como fallback para equipos sin datos en BD.
     function decorateEquipos() {
         if (!equipos || !djangoToSapMap) return;
         for (var i = 0; i < equipos.length; i++) {
             var eq = equipos[i];
             var mapping = djangoToSapMap[String(eq.id)];
-            if (mapping) {
-                eq.sap_tplnr = mapping.sap_tplnr || "";
-                eq.sap_equnr = mapping.sap_equnr || "";
-                eq.sap_puesto_trabajo = mapping.sap_puesto_trabajo || "";
-            } else {
+            if (!eq.sap_tplnr && mapping && mapping.sap_tplnr) {
+                eq.sap_tplnr = mapping.sap_tplnr;
+            } else if (!eq.sap_tplnr) {
                 eq.sap_tplnr = "";
+            }
+            if (!eq.sap_equnr && mapping && mapping.sap_equnr) {
+                eq.sap_equnr = mapping.sap_equnr;
+            } else if (!eq.sap_equnr) {
                 eq.sap_equnr = "";
-                eq.sap_puesto_trabajo = "";
+            }
+            if (!eq.sap_puesto_trabajo && mapping) {
+                eq.sap_puesto_trabajo = mapping.sap_puesto_trabajo || "";
             }
         }
     }
